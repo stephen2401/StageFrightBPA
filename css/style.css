@@ -918,16 +918,24 @@ button {
 
 #ho_efcet:hover .reader {background: #fafaf9;  transition: ease-in all 0.5s;}
 
-.bananaBoat{
+.bananaBoat1{
     border-bottom: 5px solid black;
     border-top: 5px solid black;
     width: 100%;
     height: 100px;
     display: flex;
     flex-direction: column;
+    text-align: left;
+}
+.bananaBoat1 .banana1{
+    font-size: 25px;
+    font-weight: 50px;
 }
 
-
+.bananaBoat1 .banana2{
+    font-size: 20px;
+    font: weight 4px;
+}
 
 .doctors::before {
     position: absolute;
