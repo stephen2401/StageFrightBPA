@@ -50,18 +50,19 @@ html {
 }
 
 body {
-     color: #666666;
+     color: white;
      font-size: 14px;
      font-family: 'Poppins', sans-serif;
      line-height: 1.80857;
      font-weight: normal;
+     background-color: #3e1a26;
 }
 
 
 /*font-family: 'Roboto', sans-serif;*/
 
 a {
-     color: #1f1f1f;
+     color: white;
      text-decoration: none !important;
      outline: none !important;
      -webkit-transition: all .3s ease-in-out;
@@ -153,7 +154,7 @@ p {
 }
 
 a {
-     color: #222222;
+     color: white;
      text-decoration: none;
      outline: none !important;
 }
@@ -189,7 +190,7 @@ img {
 .lead {
      font-size: 18px;
      line-height: 30px;
-     color: #767676;
+     color: white;
      margin: 0;
      padding: 0;
 }
@@ -268,7 +269,7 @@ button {
 .titlepage h2 {
     text-transform: uppercase;
      font-size: 45px;
-     color: #353d47;
+     color: white;
      line-height: 50px;
      font-weight: bold;
      padding: 0;
@@ -283,7 +284,7 @@ button {
 
 .read_more {
      font-size: 17px;
-     background-color: #05254d;
+     background-color: #3e1a26;
      color: #fff;
     
      width: 100%;
@@ -298,8 +299,8 @@ button {
 }
 
 .read_more:hover {
-     background: #ed1c24;
-     color: #fff;
+     background: white;
+     color: #3e1a26;
      transition: ease-in all 0.5s;
 }
 
@@ -378,7 +379,7 @@ button {
     color: #00132b;
 }
 .site-navbar ul li a.active {
-    color: grey;
+    color:#97114c;
 }
 
 /* navbar regular css end */
@@ -566,7 +567,7 @@ button {
     margin-right: 15px;
     font-weight: normal;
     background:#fff;
-    color: #000;
+    color:white;
     height: 50px;
     line-height: 50px;
     max-width: 204px;
@@ -583,7 +584,7 @@ button {
 #banner1 .carousel-control-next {
      width:80px;
      height: 80px;
-     background-color: #ed1c24;
+     background-color: #3e1a26;
      color: #fff;
      font-size: 35px;
      opacity: 1;
@@ -607,7 +608,7 @@ button {
 #banner1 .carousel-control-prev:focus,
 #banner1 .carousel-control-prev:hover {
      background-color: #fff;
-     color: #ed1c24;
+     color: #3e1a26;
 }
 
 
@@ -617,7 +618,7 @@ button {
 /** about section **/
 
 .about {
-    background: #fff;
+    background: #97114c;
     padding: 80px 50px;
     position: relative;
     margin: 0 70px;
@@ -647,7 +648,7 @@ button {
     position: absolute;
     content: "";
     bottom: 0px;
-    background: #ed1c24;
+    background: #3e1a26;
     width: 93px;
     height: 11px;
     left: 0;
@@ -657,7 +658,7 @@ button {
     font-weight: normal;
     font-size: 17px;
     line-height: 30px;
-    color: #111111;
+    color: white;
     padding: 35px 0px 50px 0px;
 }
 
@@ -672,7 +673,7 @@ button {
 /** coronata section **/
 
 .coronata {
-    background: #fff;
+    background: #3e1a26;
    padding-top: 100px;
   
 }
@@ -685,7 +686,7 @@ button {
     font-weight: normal;
     font-size: 17px;
     line-height: 30px;
-    color: #111111;
+    color: white;
     padding: 35px 0px 50px 0px;
 }
 
@@ -722,13 +723,13 @@ button {
 }
 .desktop {
     padding: 45px 20px 30px 20px;
-    background: #fff;
+    background: #97114c;
     border-radius: 20px;
 }
 
 
 .protect_box h3 {
-     color: #0d0e0e;
+     color: white;
      font-size: 17px;
      font-weight: bold;
      padding-top: 25px;
@@ -737,7 +738,7 @@ button {
 }
 
 .protect_box span {
-     color: #081419;
+     color: white;
      font-weight:normal;
 }
 .protect .read_more {
@@ -768,7 +769,7 @@ button {
 .owl-carousel .owl-nav button.owl-prev {
      width: 90px;
      height: 90px;
-     background-color: #ed1c24 !important;
+     background-color: #3e1a26 !important;
      color: #fff !important;
      font-size: 55px !important;
      line-height: 30px !important;
@@ -781,7 +782,7 @@ button {
 .owl-carousel .owl-nav button.owl-prev:hover {
      background-color: #fff !important;
      transition: ease-in all 0.5s;
-     color: #000 !important;
+     color: #3e1a26 !important;
 }
 .owl-next {
     position: absolute;
@@ -871,7 +872,7 @@ button {
 /** doctors section **/
 
 .doctors {
-    background: #fff;
+    background: #3e1a26;
    
    padding-top: 50px;
    position: relative;
@@ -905,7 +906,7 @@ button {
 
 
 .reader h3 {
-    color: #151515;
+    color: white;
     font-size: 20px;
     line-height: 20px;
     font-weight: bold;
@@ -915,12 +916,12 @@ button {
 
 .reader p {
     padding: 20px 0 40px 0;
-    color: #0f100d;
+    color: white;
     line-height: 28px;
     font-weight: normal;
 }
 
-#ho_efcet:hover .reader {background: #fafaf9;  transition: ease-in all 0.5s;}
+#ho_efcet:hover .reader {background: #97114c;  transition: ease-in all 0.5s;}
 
 
 
@@ -942,7 +943,7 @@ button {
 /** contact **/
 
 .contact {
-    background: #fff;
+    background: #97114c;
     padding-top: 50px;
 }
 
@@ -955,8 +956,8 @@ button {
      margin-bottom: 25px;
      width: 100%;
      height: 66px;
-     background: #fff;
-     color: #a3a3a2;
+     background: #3e1a26;
+     color: white;
      font-size: 17px;
      font-weight: normal;
      border: #9d9d9c solid 2px;
@@ -965,8 +966,8 @@ button {
 .main_form .textarea {
      margin-bottom: 30px;
      width: 100%;
-     background: #fff;
-     color: #a3a3a2;
+     background: #3e1a26;
+     color: white;
      font-size: 17px;
      font-weight: normal;
      padding: 40px 20px 10px 20px;
@@ -989,13 +990,13 @@ button {
 }
 
 .main_form .send_btn:hover {
-     background-color: #e92f0b;
+     background-color: #3e1a26;
      transition: ease-in all 0.5s;
      color: #fff;
 }
 
 #request *::placeholder {
-     color: #a3a3a2;
+     color: white;
      opacity: 1;
 }
 
@@ -1056,7 +1057,7 @@ padding: 80px 0;
     width: 100%;
     display: block;
     border: inherit;
-    background: #0a264a;
+    background: #3e1a26;
     border-radius: 50px;
     margin: 0 auto;
     margin-top: 30px;
@@ -1065,8 +1066,8 @@ padding: 80px 0;
 
 .subsci_btn:hover {
     transition: ease-in all 0.5s;
-    color: #fff;
-    background-color: #e92f0b;
+    color: #3e1a26;
+    background-color: #fff;
 }
 
 #colof *::placeholder {
@@ -1080,7 +1081,7 @@ padding: 80px 0;
 
 .footer {
     padding-top: 80px;
-    background: #111111;
+    background: #3e1a26;
     text-align: center;
 }
 
@@ -1107,7 +1108,7 @@ ul.menu_footer {
 }
 
 ul.menu_footer li a {
-    color: #979793;
+    color: white;
     font-size: 17px;
     line-height: 18px;
     padding-bottom: 10px;
@@ -1115,7 +1116,7 @@ ul.menu_footer li a {
 }
 
 ul.menu_footer li a:hover {
-    color: #e92f0b;
+    color: #3e1a26;
 }
 
 
@@ -1150,11 +1151,11 @@ ul.top_infomation li a {
 }
 
 ul.top_infomation li a:hover {
-    color: #e92f0b;
+    color: #3e1a26;
 }
 
 ul.top_infomation li i:hover {
-    background: #eb4746;
+    background: #3e1a26;
     color: #fff;
     border-radius: 25px;
     cursor: pointer;
@@ -1171,7 +1172,7 @@ ul.top_infomation li i:hover {
 .copyright p {
     border-top:#d1d1d1 solid 1px;
     padding-top: 20px;
-    color: #d1d1d1;
+    color: white;
     font-size: 17px;
     line-height: 22px;
     text-align: center;
@@ -1179,11 +1180,11 @@ ul.top_infomation li i:hover {
 }
 
 .copyright a {
-    color: #d1d1d1;
+    color: white;
 }
 
 .copyright a:hover {
-    color: #ed1c24;
+    color: #3e1a26;
 }
 
 
