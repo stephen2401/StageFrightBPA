@@ -50,7 +50,6 @@ html {
 }
 
 body {
-     color: #666666;
      font-size: 14px;
      font-family: 'Poppins', sans-serif;
      line-height: 1.80857;
@@ -876,67 +875,42 @@ button {
 }
 
 
-.reader {
-    margin-top: 45px;
-    background: #fff;
-    padding: 0px 30px 60px 30px;
-    box-shadow: 3px 0 62px rgba(13, 3, 3, 0.20);
-    border-radius: 10px;
-     transition: ease-in all 0.5s;
-     margin-bottom: 30px;
-}
-
-
-
-
-.reader i {
-    margin: 0;
-}
-
-.reader i img {
-   border-radius: 50%;  
-       box-shadow: 3px 0 62px rgba(13, 3, 3, 0.18);  margin-top: -50px;  
-}
-
-
-
-.reader h3 {
-    color: #151515;
-    font-size: 20px;
-    line-height: 20px;
-    font-weight: bold;
-    padding-top: 42px;
-    text-transform: uppercase;
-}
-
-.reader p {
-    padding: 20px 0 40px 0;
-    color: #0f100d;
-    line-height: 28px;
-    font-weight: normal;
-}
-
-#ho_efcet:hover .reader {background: #fafaf9;  transition: ease-in all 0.5s;}
-
 .bananaBoat1{
     border-bottom: 5px solid black;
     border-top: 5px solid black;
     width: 100%;
-    height: 100px;
     display: flex;
     flex-direction: column;
-    text-align: left;
+    text-align: center;
+    padding: 5px;
 }
 .bananaBoat1 .banana1{
-    font-size: 25px;
-    font-weight: 50px;
+    font-size: 30px;
+    font-weight: 900;
+    float: left;
 }
 
 .bananaBoat1 .banana2{
     font-size: 20px;
-    font: weight 4px;
+    font-weight: 700;
+    float:left
 }
-
+.bananaBoat1 .banana3{
+    font-size: 20px;
+    font-weight: 700;
+}
+.bananaBoat1 .tickets{
+    padding: 5px 28px;
+    background-color: red;
+    color: white;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    font-size: 16px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    float: right;
+    border: 5px solid black;
+}
 .doctors::before {
     position: absolute;
     content: "";
