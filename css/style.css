@@ -566,8 +566,8 @@ button {
 .photog .read_more {
     margin-right: 15px;
     font-weight: normal;
-    background:#fff;
-    color:black;
+    background:black;
+    color:white;
     height: 50px;
     line-height: 50px;
     max-width: 204px;
