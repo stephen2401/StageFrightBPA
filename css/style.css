@@ -299,8 +299,8 @@ button {
 }
 
 .read_more:hover {
-     background: white;
-     color: #000000;
+     background-color: black;
+     color: white;
      transition: ease-in all 0.5s;
 }
 
@@ -567,7 +567,7 @@ button {
     margin-right: 15px;
     font-weight: normal;
     background:#fff;
-    color:white;
+    color:black;
     height: 50px;
     line-height: 50px;
     max-width: 204px;
