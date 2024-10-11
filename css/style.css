@@ -882,13 +882,13 @@ button {
 
 
 .bananaBoat1{
-    border-bottom: 5px solid black;
-    border-top: 5px solid black;
+    border-bottom: 5px solid white;
+    border-top: 5px solid white;
     width: 100%;
     display: flex;
     flex-direction: column;
-    text-align: center;
-    padding: 5px;
+    justify-content: space-between;
+    padding: 10px;
 }
 .bananaBoat1 .banana1{
     font-size: 30px;
@@ -898,11 +898,14 @@ button {
 
 .bananaBoat1 .banana2{
     font-size: 20px;
-    font-weight: 700;
-    float:left
+    font-weight: 400;
+    float:left;
 }
 .bananaBoat1 .banana3{
-
+    position: absolute; /* or 'fixed' */
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
 .reader i img {
    border-radius: 50%;  
        box-shadow: 3px 0 62px rgba(13, 3, 3, 0.18);  margin-top: -50px;  
@@ -917,7 +920,6 @@ button {
 }
 .bananaBoat1 .tickets{
     padding: 5px 28px;
-    background-color: red;
     color: white;
     border: 2px solid transparent;
     border-radius: 8px;
@@ -925,14 +927,13 @@ button {
     letter-spacing: 1px;
     font-weight: 600;
     float: right;
-    border: 5px solid black;
+    border: 5px solid white;
+    transition: .25 ease;
 }
-    line-height: 20px;
-    font-weight: bold;
-    padding-top: 42px;
-    text-transform: uppercase;
+.tickets:hover{
+    background-color: #ba0000;
+    border-color: #ba0000;
 }
-
 .reader p {
     padding: 20px 0 40px 0;
     color: white;
