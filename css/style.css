@@ -674,6 +674,11 @@ button {
 .empty {
     height: 100px;
 }
+.crabt {
+    font-size: 100px;
+    text-align: center;
+    font-weight: 900;
+}
 .Crab1 {
     display: flex;
     justify-content: center;
@@ -906,13 +911,60 @@ button {
 .doctors {
     background: #000000;
    
-   padding-top: 50px;
+   padding-top: 0px;
    position: relative;
-
+}
+.BananaHeader{
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 30px;
 
 }
-
-
+.BananaHeader h2{
+    font-size: 100px;
+    font-weight: 900;
+}
+.BananaHeader h3 {
+    font-size: 30px;
+    font-weight: 700;
+}
+@media screen and (min-width: 620px) {
+    .bananaBoat1 .banana1{
+        font-size: 30px;
+        font-weight: 900;
+        float: left;
+    }
+    
+    .bananaBoat1 .banana2{
+        font-size: 20px;
+        font-weight: 400;
+        float:left;
+    }
+    .bananaBoat1 .banana3{
+        position: absolute; /* or 'fixed' */
+        left: 50%;
+        transform: translate(-50%, -50%);
+  }
+}
+@media screen and (max-width: 620px) {
+    .bananaBoat1 .banana1{
+        font-size: 15px;
+        font-weight: 900;
+        float: left;
+    }
+    
+    .bananaBoat1 .banana2{
+        font-size: 10px;
+        font-weight: 400;
+        float:left;
+    }
+    .bananaBoat1 .banana3{
+        position: absolute; /* or 'fixed' */
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 10px;
+  }
+}
 .bananaBoat1{
     border-bottom: 5px solid white;
     border-top: 5px solid white;
@@ -921,29 +973,14 @@ button {
     flex-direction: column;
     justify-content: space-between;
     padding: 10px;
-}
-.bananaBoat1 .banana1{
-    font-size: 30px;
-    font-weight: 900;
-    float: left;
+    margin-left: 50px;
+    margin-right: 50px;
 }
 
-.bananaBoat1 .banana2{
-    font-size: 20px;
-    font-weight: 400;
-    float:left;
-}
-.bananaBoat1 .banana3{
-    position: absolute; /* or 'fixed' */
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
 .reader i img {
    border-radius: 50%;  
        box-shadow: 3px 0 62px rgba(13, 3, 3, 0.18);  margin-top: -50px;  
 }
-
-
 
 .reader h3 {
     color: white;
