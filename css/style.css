@@ -914,6 +914,9 @@ button {
    padding-top: 0px;
    position: relative;
 }
+.BananaMain{
+    justify-content: center;
+}
 .BananaHeader{
     text-align: center;
     margin-top: 100px;
@@ -944,6 +947,18 @@ button {
         position: absolute; /* or 'fixed' */
         left: 50%;
         transform: translate(-50%, -50%);
+    }
+    .bananaBoat1 .tickets{
+        padding: 5px 28px;
+        color: white;
+        border: 2px solid transparent;
+        border-radius: 8px;
+        font-size: 16px;
+        letter-spacing: 1px;
+        font-weight: 600;
+        float: right;
+        border: 5px solid white;
+        transition: .25 ease;
   }
 }
 @media screen and (max-width: 620px) {
@@ -962,19 +977,30 @@ button {
         position: absolute; /* or 'fixed' */
         left: 50%;
         transform: translate(-50%, -50%);
-        font-size: 10px;
+        font-size: 7px;
   }
+    .bananaBoat1 .tickets{
+        padding: 3px 14px;
+        color: white;
+        border: 2px solid transparent;
+        border-radius: 8px;
+        font-size: 16px;
+        letter-spacing: 1px;
+        font-weight: 600;
+        float: right;
+        border: 5px solid white;
+        transition: .25 ease;
+    }
 }
 .bananaBoat1{
     border-bottom: 5px solid white;
     border-top: 5px solid white;
-    width: 100%;
+    width: 80%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     padding: 10px;
-    margin-left: 50px;
-    margin-right: 50px;
+    margin-bottom: 20px;
+    margin-left: auto;
 }
 
 .reader i img {
@@ -987,18 +1013,7 @@ button {
     font-size: 20px;
     font-weight: 700;
 }
-.bananaBoat1 .tickets{
-    padding: 5px 28px;
-    color: white;
-    border: 2px solid transparent;
-    border-radius: 8px;
-    font-size: 16px;
-    letter-spacing: 1px;
-    font-weight: 600;
-    float: right;
-    border: 5px solid white;
-    transition: .25 ease;
-}
+
 .tickets:hover{
     background-color: #ba0000;
     border-color: #ba0000;
