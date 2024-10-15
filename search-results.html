@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #000000;
+        }
+        h1 {
+            color: #ffffff;
+        }
+        .results {
+            margin-top: 20px;
+        }
+        .result-item {
+            padding: 10px;
+            border: 1px solid #000000;
+            margin-bottom: 10px;
+            background-color: #fff;
+            border-radius: 4px;
+        }
+        .no-results {
+            color: white;
+        }
+        p {
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Search Results</h1>
+
+<p>You searched for: <strong>
+<script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const query = urlParams.get('query') || "nothing"; // default to "nothing"
+    document.write(query);
+</script>
+</strong></p>
+
+<div class="results">
+    <script>
+        const searchQuery = query.toLowerCase();
+        const resultsContainer = document.querySelector('.results');
+
+        const exampleResults = [
+            { title: "About Us", content: "Learn more about our company." },
+            { title: "Our Services", content: "Discover the services we offer." },
+            { title: "Contact Us", content: "Get in touch with us." }
+        ];
+
+        const filteredResults = exampleResults.filter(item =>
+            item.title.toLowerCase().includes(searchQuery) || 
+            item.content.toLowerCase().includes(searchQuery)
+        );
+
+        if (filteredResults.length > 0) {
+            filteredResults.forEach(item => {
+                const resultDiv = document.createElement('div');
+                resultDiv.className = 'result-item';
+                resultDiv.innerHTML = `<h2>${item.title}</h2><p>${item.content}</p>`;
+                resultsContainer.appendChild(resultDiv);
+            });
+        } else {
+            resultsContainer.innerHTML = '<p class="no-results">No results found for your search.</p>';
+        }
+    </script>
+</div>
+
+</body>
+</html>

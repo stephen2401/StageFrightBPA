@@ -40,7 +40,12 @@
                     <!-- header -->
          <header class="header-area">
             <div class="left">
-               <a href="Javascript:void(0)"><i class="fa fa-search" aria-hidden="true"></i></a>
+               <div class="search-container">
+                  <img src="images/search.png" alt="Search" class="search-icon">
+                  <form action="search-results.html" method="GET">
+                      <input type="text" class="search-bar" name="query" placeholder="Type to search..." required>
+                  </form>
+              </div>
             </div>
             <div class="right">
                <a href="login.html"><i class="fa fa-user" aria-hidden="true"></i></a>

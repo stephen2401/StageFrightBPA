@@ -1237,3 +1237,39 @@ padding-bottom: 40px;}
     padding-top: 145px;
     padding-bottom: 80px;
 }
+
+
+/**search page code**/
+.search-container {
+    position: relative;
+    display: inline-block;
+}
+
+.search-icon {
+    cursor: pointer;
+}
+
+.search-bar {
+    display: none; /* Hidden by default */
+    position: absolute;
+    top: 0; /* Aligns the top of the search bar with the icon */
+    left: 100%; /* Positions the search bar to the right of the icon */
+    margin-left: 10px; /* Adds some space between the icon and the search bar */
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 4px;
+    background-color: #ba0000;
+    z-index: 1000; /* Ensures it appears above other elements */
+    color:#f1f1f1;
+}
+
+/* Show search bar when the icon is hovered or when the input is focused */
+.search-container:hover .search-bar,
+.search-container:focus-within .search-bar {
+    display: block; /* Shows the search bar when active */
+}
+
+/* Keep the search bar visible when focused */
+.search-container .search-bar:focus {
+    display: block; /* Ensures it remains visible when focused */
+}
