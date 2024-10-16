@@ -689,18 +689,19 @@ button {
     margin-top: 20px;
     margin-bottom: 20px;
 }
-.navbar21 a{
+.navbar21 button{
     font-size: 18px;
     color:white;
     font-weight: 500;
     margin: 0 20px;
     border: 3px solid transparent;
     transition: 0.25 ease;
+    background-color: transparent;
 }
-.navbar21 a:hover {
+.navbar21 button:hover {
     border-bottom: 5px solid brown;
 }
-.navber21 a:active {
+.navber21 button:active {
     font-weight: 600;
 }
 .Crab1 {
@@ -709,7 +710,7 @@ button {
     flex-flow:row wrap;
 }
 .crab {
-    display:flex;
+    display: none;
     margin: 10px;
     width: 370px;
     padding: 26px;
