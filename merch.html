@@ -84,10 +84,10 @@
        <div class="crabt">Our Merch</div>
        <div class="shop">
          <button id="crabButton">Apparel</button>
-         <button>Vinyls</button>
-         <button>Accessories</button>
-         <button>Posters</button>
-         <button>Shop All</button>
+         <button id="crabButton1">Vinyls</button>
+         <button id="crabButton2">Accessories</button>
+         <button id="crabButton3">Posters</button>
+         <button id="crabButton4">Shop All</button>
       </div>
       <div id="Crab1">
          <div class="crab">
@@ -227,13 +227,25 @@
       </div>
       <script>
          const targetDiv = document.getElementById("Crab1");
+         const targetDiv2 = document.getElementById("Crab12");
+         const targetDiv3 = document.getElementById("Crab13");
+         const targetDiv4 = document.getElementById("Crab14");
          const btn = document.getElementById("crabButton");
+         const btn1 = document.getElementById("crabButton1");
+         const btn2 = document.getElementById("crabButton2");
+         const btn3 = document.getElementById("crabButton3");
+         const btn4 = document.getElementById("crabButton4");
          btn.onclick = function () {
-         if (targetDiv.style.display == "none") {
-            targetDiv.style.display = "none";
-         } else {
+            btn.style.color="brown";
+            btn1.style.color="white";
+            btn2.style.color="white";
+            btn3.style.color="white";
+            btn4.style.color="white";
             targetDiv.style.display = "flex";
-         }
+            targetDiv2.style.display = "none";
+            targetDiv3.style.display = "none";
+            targetDiv4.style.display = "none";
+
          };
       </script>
      <!-- coronata -->

@@ -689,9 +689,12 @@ button {
     margin-top: 20px;
     margin-bottom: 20px;
 }
+.Crab1 {
+    color:#ba0000
+}
 .shop button{
+    color:#fff;
     font-size: 18px;
-    color:white;
     font-weight: 500;
     margin: 0 20px;
     border: 3px solid transparent;
