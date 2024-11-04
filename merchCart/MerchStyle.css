@@ -9,7 +9,6 @@ body{
     padding-top: 10px;
 }
 svg{
-   width:30px 
 }
 header{
     display: flex;
@@ -17,9 +16,15 @@ header{
     justify-content: space-between;
     padding: 20px 0;
 }
+
 header .icon-cart span{
-    display: flex;
-    width: 30px;
-    height: 30px;
+    display: inline;
+    width: 20px;
+    height: 20px;
     background-color: red;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    border-radius: 50%;
+    border: 2px solid red;
 }
