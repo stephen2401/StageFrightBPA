@@ -5,8 +5,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Checkout</title>
 </head>
-
 <body>
-    
+    <h1 class="title1">Select a Ticket</h1>
+    <main class="checkout-cont">
+        <div class="plans-container">
+            <label for="general-ticket-select" class="general-tickets">
+                <input 
+                type="radio" 
+                name="plan-container" 
+                id="general-ticket-select" 
+                value="general-ticket-select"
+                class="plan-selector"
+                checked
+                >
+                <div class="general-ticket-description">
+                    
+                    <h3 class="ticket-title">General tickets</h3>
+                    <small class="ticket-description">
+                        General admission ticket, which allows entry to the Concert.
+
+                    </small>
+                </div>
+            </label>
+            <label for="vip-ticket-select" class="vip-tickets">
+                <input 
+                type="radio" 
+                name="plan-container" 
+                id="vip-ticket-select" 
+                value="vip-ticket-select"
+                class="plan-selector"
+                
+                >
+                <div class="vip-ticket-description">
+                    
+                    <h3 class="ticket-title">VIP tickets</h3>
+                    <small class="ticket-description">
+                        VIP admission ticket, Perks include: Front row VIP seats, Early Admission, and Free refreshments.
+
+                    </small>
+                </div>
+            </label>
+
+        </div>
+        <div class="checkout-container"></div>
+
+
+    </main>
+
+
+
 </body>
 </html>
