@@ -281,10 +281,29 @@ button {
      align-items: center;
      flex-wrap: wrap;
 }
+.mem:hover {
+    color:#640817;
+    background-color: white;
+}
+.mem {
+    font-size: 17px;
+     background-color: #640817;
+     color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+     width: 100%;
+     max-width: 275px;
+     text-align: center;
+     display: inline-block;
+     transition: ease-in all 0.5s;
+     font-weight: bold;
+     height: 75px;
+     text-transform: uppercase;
+     line-height: 75px;
+}
 
 .read_more {
      font-size: 17px;
-     background-color: #000000;
+     background-color: black;
      color: #fff;
     
      width: 100%;
@@ -299,8 +318,8 @@ button {
 }
 
 .read_more:hover {
-     background-color: black;
-     color: white;
+     background-color: white;
+     color: #640817;
      transition: ease-in all 0.5s;
 }
 
@@ -1146,7 +1165,7 @@ button {
 .main_form .send_btn {
      font-size: 15px;
      transition: ease-in all 0.5s;
-     background-color: #640817;
+     background-color: #000000;
      text-transform: uppercase;
      color: #fff;
      max-width: 200px;
@@ -1158,9 +1177,9 @@ button {
 }
 
 .main_form .send_btn:hover {
-     background-color: #000000;
+     background-color: white;
      transition: ease-in all 0.5s;
-     color: #fff;
+     color: black;
 }
 
 #request *::placeholder {
@@ -1420,4 +1439,16 @@ padding-bottom: 40px;}
 /* Keep the search bar visible when focused */
 .search-container .search-bar:focus {
     display: block; /* Ensures it remains visible when focused */
+}
+
+.stage-slogan {
+    font-family: Garamond ;
+    font-size:25px;
+}
+
+.georgia {
+    font-family: Georgia
+}
+.gara {
+    font-family: Garamond ;
 }
