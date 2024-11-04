@@ -1452,3 +1452,7 @@ padding-bottom: 40px;}
 .gara {
     font-family: Garamond ;
 }
+
+#music {
+    background: url(/images/music.png);
+}
