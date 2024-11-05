@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --primary-color: #f2f2f2;
+    --secondary-color: #000000;
+    --tertiary-color: #2962ff;
+    --quaternary-color: #7a6d86;
+    --quinary-color: #131722;
+}
+
+body {
+    font-family: sans-serif;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+.title {
+    font-size: 52px;
+    text-align: center;
+    margin: 4rem 0;
+}

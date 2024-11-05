@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="checkout.css">
     <title>Checkout</title>
 </head>
 <body>
@@ -23,9 +24,11 @@
                     <h3 class="ticket-title">General tickets</h3>
                     <small class="ticket-description">
                         General admission ticket, which allows entry to the Concert.
-
                     </small>
                 </div>
+                <section class="general-ticket-price">
+                    <h3 class="general-price">$25.00</h3>
+                </section>
             </label>
             <label for="vip-ticket-select" class="vip-tickets">
                 <input 
@@ -40,19 +43,29 @@
                     
                     <h3 class="ticket-title">VIP tickets</h3>
                     <small class="ticket-description">
-                        VIP admission ticket, Perks include: Front row VIP seats, Early Admission, and Free refreshments.
+                        VIP admission ticket, Perks include: Front row VIP seats, Early Admission, access to closer restrooms, access to VIP parking lot, and free refreshments.
 
                     </small>
                 </div>
+                <section class="vip-ticket-price">
+                    <h3 class="vip-price">$55.00</h3>
+                </section>
             </label>
 
         </div>
-        <div class="checkout-container"></div>
-
-
+        <div class="checkout-container">
+            <h3 class="ticket-type">
+                <span class="ticket-type-description">General Ticket</span>
+                <span class="ticket-type-amount">$25.00</span>
+            </h3>
+            <div class="billing">
+                <div class="billing-description">
+                    <h4>Total</h4>
+                </div>
+                <input id="ticket-total" type="number" value="0" readonly>
+            </div>
+            <button class="checkout-btn">Checkout</button>
+        </div>
     </main>
-
-
-
 </body>
 </html>
