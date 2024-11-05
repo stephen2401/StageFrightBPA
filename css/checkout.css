@@ -21,3 +21,41 @@ body {
     text-align: center;
     margin: 4rem 0;
 }
+.checkout-cont {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+.general-tickets,
+.vip-tickets {
+    display: grid;
+    grid-template-columns: 1fr 8fr 3fr;
+    gap: 1rem;
+    width: 100%;
+    &:first-child {
+        border-bottom: 1px solid var(--quaternary-color);
+    }
+    transition: all 0.3s ease-in-out;
+    &:hover{
+        cursor: pointer;
+        background-color: var(--quinary-color);
+        border-radius: 0.5rem;
+        border-bottom: none;
+    }
+    .ticket-title {
+        margin-bottom: 0.5rem;
+    }
+}
+small {
+    color: var(--quaternary-color);
+}
+.general-ticket-price,
+.vip-ticket-price {
+    display: block;
+    margin-top: 0.5rem;
+    text-align: right;
+}
+
