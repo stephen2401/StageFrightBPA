@@ -10,7 +10,7 @@
     <h1 class="title">Select a Ticket</h1>
     <main class="checkout-cont">
         <div class="plans-container">
-            <label for="general-ticket-select" class="general-tickets">
+            <label for="general-ticket-select" class="plans general-tickets">
                 <input 
                 type="radio" 
                 name="plan-container" 
@@ -28,9 +28,13 @@
                 </div>
                 <section class="general-ticket-price">
                     <h3 class="general-price">$25.00</h3>
+                    <span class="ticket-number">Number of tickets:
+                        <input id="ticket-count" class="ticket-count" value="1" readonly>
+                    </span>
                 </section>
             </label>
-            <label for="vip-ticket-select" class="vip-tickets">
+            
+            <label for="vip-ticket-select" class="plans vip-tickets">
                 <input 
                 type="radio" 
                 name="plan-container" 
@@ -49,6 +53,9 @@
                 </div>
                 <section class="vip-ticket-price">
                     <h3 class="vip-price">$55.00</h3>
+                    <span class="ticket-number"><br>Number of tickets:
+                        <input id="ticket-count" class="ticket-count" readonly>
+                    </span>
                 </section>
             </label>
 
@@ -58,14 +65,16 @@
                 <span class="ticket-type-description">General Ticket</span>
                 <span class="ticket-type-amount">$25.00</span>
             </h3>
+        
             <div class="billing">
                 <div class="billing-description">
                     <h4>Total</h4>
                 </div>
-                <input id="ticket-total" type="number" value="0" readonly>
+                <input id="ticket-total" class="ticket-total" readonly>
             </div>
             <button class="checkout-btn">Checkout</button>
         </div>
     </main>
+    <script src="js/ticket-chk-out.js"></script>
 </body>
 </html>
