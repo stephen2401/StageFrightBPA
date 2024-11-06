@@ -80,7 +80,7 @@ small {
             border-bottom: 1px solid var(--quaternary-color);
         }
         &:nth-child(3) {
-            background-color: var(--teriary-color);
+            background-color: var(--tertiary-color);
 
             border: none;
             outline: none;
