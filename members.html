@@ -37,16 +37,15 @@
       </div>
       <!-- end loader -->
       <!-- top -->
-                    <!-- header -->
-         <header class="header-area">
-            <div class="left">
-               <div class="search-container">
-                  <img src="images/search.png" alt="Search" class="search-icon">
-                  <form action="search-results.html" method="GET">
-                      <input type="text" class="search-bar" name="query" placeholder="Type to search..." required>
-                  </form>
-              </div>
-            </div>
+        <!-- header -->
+          <header class="header-area">
+              <div class="left">
+                         <div class="search-container">
+                             <img src="images/search.png" alt="Search" class="search-icon">
+                             <input type="text" class="search-bar" id="searchInput" placeholder="Type to search..." oninput="highlightText()">
+                         </div>
+               </div>
+                 
             <div class="right">
                <a href="login.html"><i class="fa fa-user" aria-hidden="true"></i></a>
             </div>
@@ -86,11 +85,11 @@
             <!-- carousel code -->
             <div id="banner1" class="carousel slide slider_main">
                <ol class="carousel-indicators ">
-                  <li data-target="#banner1" data-slide-to="0" class="indicator-li-1">01</li>
-                  <li data-target="#banner1" data-slide-to="1" class="">02</li>
-                  <li data-target="#banner1" data-slide-to="2" class="active">03</li>
-                  <li data-target="#banner1" data-slide-to="3" class="active">04</li>
-                  <li data-target="#banner1" data-slide-to="4" class="active">05 </li>
+                  <li data-target="#banner1" data-slide-to="0" class="indicator-li-1">01</li> <!--dimensions: 1920 x 906-->
+                  <li data-target="#banner1" data-slide-to="1" class="">02</li> <!--dimensions: 1920 x 906-->
+                  <li data-target="#banner1" data-slide-to="2" class="active">03</li> <!--dimensions: 1920 x 906-->
+                  <li data-target="#banner1" data-slide-to="3" class="active">04</li> <!--dimensions: 1920 x 906-->
+                  <li data-target="#banner1" data-slide-to="4" class="active">05 </li> <!--dimensions: 1920 x 906-->
                </ol>
                <div class="carousel-inner">
 
@@ -100,7 +99,7 @@
                         <div class="container">
                            <div class="row">
                               <div class="col-md-8">
-                                 <div class="photog">
+                                 <div class="photog" id="content">
                                     <h1 class="georgia">Members</h> <br><br>
                                     <p class="gara" style="font-size:23px;">StageFright is a dynamic rock band featuring Alex Reed, Maya Torres, Jaxon Lee, and Sophie Nguyen. Blending classic and modern rock influences, they deliver electrifying performances and heartfelt lyrics.</p>
                                  </div>
@@ -116,7 +115,7 @@
                         <div class="container">
                            <div class="row">
                               <div class="col-md-8">
-                                <div class="photog">
+                                <div class="photog" id="content">
                                  <h1 class="georgia">   Alex <br>“Axel” Reed</h1>
                                  <p class="gara" style="font-size:23px;"> (Lead Guitar/Vocals)
                                     Alex is the heart and soul of StageFright. With his electrifying guitar solos and powerful vocals, he draws fans into every performance. Known for his magnetic stage presence and heartfelt lyrics, Alex blends classic rock vibes with modern influences, creating a sound that resonates deeply with audiences. When he’s not on stage, you might find him jamming with friends or exploring new music.</p>
@@ -133,7 +132,7 @@
                        <div class="container">
                           <div class="row">
                              <div class="col-md-8">
-                               <div class="photog">
+                               <div class="photog" id="content">
                                 <h1 class="georgia">   Maya <br>“Rhythm” Torres</h1>
                                 <p class="gara" style="font-size:23px;">(Bass Guitar) 
                                  Maya is the driving force behind StageFright’s infectious grooves. As the bass guitarist, she lays down the foundation that keeps the band locked in sync. Her sharp wit and playful energy make her a crowd favorite, both on and off stage. Maya is passionate about music that moves people, and her love for rhythm shines through in every note. Outside of music, she enjoys photography and skateboarding.</p>
@@ -151,7 +150,7 @@
                    <div class="container">
                       <div class="row">
                          <div class="col-md-8">
-                           <div class="photog">
+                           <div class="photog" id="content">
                             <h1 class="georgia">   Jaxon <br>“Drumline” Lee</h1>
                             <p  class="gara" style="font-size:23px;">(Drummer) Jaxon is the heartbeat of StageFright. His high-energy drumming and infectious enthusiasm bring every song to life. A master of rhythm, he knows how to keep the audience engaged and dancing. Jaxon’s versatility allows him to experiment with different styles, ensuring that no two performances are ever the same. When he’s not behind the drums, he loves hiking and discovering new trails.</p>
                             </div>
@@ -167,7 +166,7 @@
                  <div class="container">
                     <div class="row">
                        <div class="col-md-8">
-                         <div class="photog">
+                         <div class="photog" id="content">
                           <h1 class="georgia">   Sophie <br>“Synth” Nguyen</h1>
                           <p   class="gara" style="font-size:23px;">(Keyboard/Vocals) Sophie adds a unique layer to StageFright with her captivating synth melodies and harmonies. As the band’s keyboardist and vocalist, she brings a fresh, modern twist to their rock sound. Her creativity and passion for music shine through in every performance. Outside of music, Sophie enjoys painting and experimenting with new recipes in the kitchen.</p>
                           </div>
@@ -214,7 +213,7 @@
                            </div>
                         </div>
                         <div class="col-lg-3 col-md-6 col-sm-6">
-                           <div class="hedingh3 text_align_left">
+                           <div class="hedingh3 text_align_left" id="content">
                              <h3>About</h3>
                               <p>This is StageFright. This was created by 4 kids from DACC</p>
                            </div>
@@ -269,5 +268,25 @@
       <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.js"></script>
       <script src="js/owl.carousel.min.js"></script>
       <script src="js/custom.js"></script>
+      
+      <!-- JavaScript for Highlighting -->
+    <script>
+      function highlightText() {
+          const query = document.getElementById("searchInput").value.toLowerCase();
+          const contentElements = document.querySelectorAll("#content p, #content h2, #content h3");
+
+          // Remove existing highlights
+          contentElements.forEach(element => {
+              element.innerHTML = element.innerHTML.replace(/<mark class="highlight">(.*?)<\/mark>/g, "$1");
+          });
+
+          if (query) {
+              const regex = new RegExp(`(${query})`, 'gi');
+              contentElements.forEach(element => {
+                  element.innerHTML = element.innerHTML.replace(regex, '<mark class="highlight">$1</mark>');
+              });
+          }
+      }
+  </script>
    </body>
 </html>

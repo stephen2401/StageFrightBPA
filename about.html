@@ -112,15 +112,14 @@
       <!-- end loader -->
       <!-- top -->
        <!-- header -->
-         <header class="header-area">
-            <div class="left">
-               <div class="search-container">
-                  <img src="images/search.png" alt="Search" class="search-icon">
-                  <form action="search-results.html" method="GET">
-                      <input type="text" class="search-bar" name="query" placeholder="Type to search..." required>
-                  </form>
-              </div>
+       <header class="header-area">
+        <div class="left">
+            <div class="search-container">
+                <img src="images/search.png" alt="Search" class="search-icon">
+                <input type="text" class="search-bar" id="searchInput" placeholder="Type to search..." oninput="highlightText()">
             </div>
+        </div>
+    
             <div class="right">
                <a href="login.html"><i class="fa fa-user" aria-hidden="true"></i></a>
             </div>
@@ -156,7 +155,7 @@
       <!-- about -->
    <div class="heros">
       <!-- Hero Section -->
-      <div class="hero">
+      <div class="hero" id="content">
          <h1>Stage Fright</h1>
          <p>Own the Stage, Banish the Fright</p>
          <br><br>
@@ -168,22 +167,29 @@
       <div class="features">
          <div class="feature">
             <img src="https://via.placeholder.com/50" alt="Responsive Design Icon"> <!--dimensions: 50 x 50-->
-            <h3>Our Sound</h3>
+            <div  id="content">
+                <h3>Our Sound</h3>
             <br>
             <p>Drawing from influences like led zeppelin, foo fighters, and arctic monkeys, stagefright pushes boundaries while staying true to the roots of rock. their music is a mix of powerful riffs, haunting melodies, and lyrics that tell stories of love, loss, and everything in between.</p>
-         </div>
+
+            </div>
+          </div>
          <div class="feature">
             <img src="https://via.placeholder.com/50" alt="Award Winning Quality Icon"> <!--dimensions: 50 x 50-->
+            <div  id="content">
             <h3>Our Mission</h3>
             <br>
             <p>Stagefright is committed to creating music that connects with people on a deep level. they believe in the power of live music to bring people together and aim to create a space where fans can lose themselves in the music, if only for a little while.</p>
-         </div>
+        </div>
+        </div>
          <div class="feature">
             <img src="https://via.placeholder.com/50" alt="Loaded With Energy Icon"> <!--dimensions: 50 x 50-->
+            <div  id="content">
             <h3>Join us on the Journey</h3> 
             <br>
             <p>With a growing fan base and electrifying shows across the country, stagefright is ready to take their sound to new heights. whether you’re a lifelong rock fan or new to the genre, stagefright’s music is here to move you.</p>
          </div>
+        </div>
       </div>   
    </div>      
 <!-- end about -->
@@ -255,5 +261,25 @@
       <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.js"></script>
       <script src="js/owl.carousel.min.js"></script>
       <script src="js/custom.js"></script>
+
+      <!-- JavaScript for Highlighting -->
+    <script>
+        function highlightText() {
+            const query = document.getElementById("searchInput").value.toLowerCase();
+            const contentElements = document.querySelectorAll("#content p, #content h2, #content h3");
+
+            // Remove existing highlights
+            contentElements.forEach(element => {
+                element.innerHTML = element.innerHTML.replace(/<mark class="highlight">(.*?)<\/mark>/g, "$1");
+            });
+
+            if (query) {
+                const regex = new RegExp(`(${query})`, 'gi');
+                contentElements.forEach(element => {
+                    element.innerHTML = element.innerHTML.replace(regex, '<mark class="highlight">$1</mark>');
+                });
+            }
+        }
+    </script>
    </body>
 </html>
