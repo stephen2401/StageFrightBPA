@@ -17,7 +17,7 @@
                 id="general-ticket-select" 
                 value="general-ticket-select"
                 class="plan-selector"
-                checked
+                
                 >
                 <div class="general-ticket-description">
                     
@@ -28,8 +28,11 @@
                 </div>
                 <section class="general-ticket-price">
                     <h3 class="general-price">$25.00</h3>
-                    <span class="ticket-number">Number of tickets:
+                    <span class="gen-ticket-number">Number of tickets:
+                        <button id="plus" class="plus">+</button>
                         <input id="ticket-count" class="ticket-count" value="1" readonly>
+                        <button id="minus" class="minus">-</button>
+
                     </span>
                 </section>
             </label>
@@ -53,8 +56,8 @@
                 </div>
                 <section class="vip-ticket-price">
                     <h3 class="vip-price">$55.00</h3>
-                    <span class="ticket-number">Number of tickets:
-                        <input id="ticket-count" class="ticket-count" readonly>
+                    <span class="vip-ticket-number">Number of tickets:
+                     <input id="ticket-count" class="ticket-count" readonly>
                     </span>
                 </section>
             </label>
@@ -62,15 +65,15 @@
         </div>
         <div class="checkout-container">
             <h3 class="ticket-type">
-                <span class="ticket-type-description">General Ticket</span>
-                <span class="ticket-type-amount">$25.00</span>
+                <span class="ticket-type-description"></span>
+                <span class="ticket-type-amount"></span>
             </h3>
         
             <div class="billing">
                 <div class="billing-description">
                     <h4>Total</h4>
                 </div>
-                <input id="ticket-total" class="ticket-total" readonly>
+                <h3 id="ticket-total" class="ticket-total"></h3>
             </div>
             <button class="checkout-btn">Checkout</button>
         </div>

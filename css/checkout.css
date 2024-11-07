@@ -137,3 +137,14 @@ small {
         background-color: var(--quaternary-color);
     }
 }
+.ticket-count {
+    width: 10%;
+    text-align: center;
+    font-size: 110%;
+}
+.plus, .minus {
+    width:5%;
+    background-color:aliceblue;
+    border: none;
+    height: 50%;
+}
