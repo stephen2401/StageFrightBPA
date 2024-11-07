@@ -671,11 +671,93 @@ button {
 
 
 /** coronata section **/
+.cart-modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 600px;
+    margin: 0 auto;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Cart Item styling */
+.cart-modal ul li {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.cart-modal .cart-item-info {
+    display: flex;
+    align-items: center;
+}
+
+.cart-modal .cart-item-info span {
+    margin-left: 10px;
+}
+
+.cart-modal .cart-item-quantity {
+    display: flex;
+    align-items: center;
+}
+
+.cart-modal .cart-item-quantity button {
+    background-color: #640817;
+    color: #fff;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 0 5px;
+}
+
+.cart-modal .cart-item-quantity span {
+    font-weight: bold;
+}
+
+.cart-modal .remove-item {
+    background-color: transparent;
+    color: red;
+    border: none;
+    cursor: pointer;
+}
+
+.cart-modal .checkout-button {
+    background-color: #640817;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.cart-modal .checkout-button:hover {
+    background-color: #4a0c14;
+}
+
+.cart-modal .close-cart {
+    background-color: #ccc;
+    color: #333;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.cart-modal .close-cart:hover {
+    background-color: #999;
+}
 .empty {
     width: 100%;
     height: 100px;
     background-color:#640817;
 }
+
 .CrabColor{
     background-color: rgba(100, 8, 23, 1);
     padding: 10px;
@@ -692,7 +774,7 @@ button {
     border-radius: 50%;
 }
 .crabBackground{
-    background: url(../images/merchBackground.jpeg);
+    background: url(../images/Merch.jpg!d);
     background-repeat: no-repeat;
     background-size: 1700px 1000px;
     background-attachment: fixed;
@@ -703,9 +785,10 @@ button {
     font-weight: 900;
     background-color:#640817;
 }
-.shopA{
+.shopA {
     display: flex;
     flex-direction: row;
+    gap: 15px; /* Adds spacing between buttons */
 }
 .shop{
     width: 100%;
@@ -716,6 +799,7 @@ button {
     padding-bottom: 10px;
     padding-top: 10px;
 }
+
 .shopB{
     display: flex;
     justify-content: center;
@@ -725,18 +809,22 @@ button {
     margin-top: 10px;
     background-color:#640817;
     border-radius: 50%;
-    width: 70px;
-    height: 70px;
+    width: 50px;
+    height: 50px;
+    float: right;
 }
-.shopB .icon-cart{
-    color:#fff;
+.shopB .icon-cart {
+    color: #fff;
     font-size: 14px;
     font-weight: 500;
     border: 5px solid transparent;
-    transition: 0.25 ease;
+    transition: 0.25s ease;
     background-color: transparent;
     position: relative;
     border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .icon-cart span{
     display: flex;
@@ -747,7 +835,7 @@ button {
     color: #fff;
     position: absolute;
     top: 50%;
-    right: -20px;
+    right: -10px;
 }
 .shop button{
     color:#fff;
@@ -756,7 +844,7 @@ button {
     margin: 0 20px;
     border: 5px solid transparent;
     transition: 0.25 ease;
-    background-color: transparent;
+    background-color: rgba(0, 0, 0, 0.5);
 }
 .shop button:hover {
     border-bottom: 5px solid brown;
@@ -807,16 +895,12 @@ button {
     margin-bottom: 40px;
 }
 .crab .img:hover {
-    display:flex;
-    height: 175px;
-    width: 300px;
-    border-radius: 30px;
-    margin-bottom: 15px;
     background: url(../images/shirt2.webp);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-} 
+    filter: brightness(1.2); /* Adding brightness change on hover */
+}
 .crabShop{
     padding: 5px 28px;
     color: white;

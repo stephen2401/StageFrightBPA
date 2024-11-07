@@ -83,13 +83,25 @@
        <div class="empty"></div>
        <div class="crabt">Our Merch</div>
        <div class="crabBackground">
+         <!-- Cart Modal (hidden by default) -->
+         <div class="cart-modal" id="cart-modal">
+            <div class="cart-modal-content">
+               <h2>Your Cart</h2>
+               <ul id="cart-items"></ul>
+               <div class="cart-total">
+                  <strong>Total: $<span id="total-price">0.00</span></strong>
+               </div>
+               <button class="checkout-button">Proceed to Checkout</button>
+               <button class="close-cart" onclick="closeCart()">Close</button>
+            </div>
+         </div>
          <div class="shopA">
             <div class="shop">
-               <button id="crabButton">Apparel</button>
-               <button id="crabButton1">Vinyls</button>
-               <button id="crabButton2">Accessories</button>
-               <button id="crabButton3">Posters</button>
-               <button id="crabButton4">Shop All</button>
+               <button id="crabButton"><span>Apparel</span></button>
+               <button id="crabButton1"><span>Vinyls</span></button>
+               <button id="crabButton2"><span>Accessories</span></button>
+               <button id="crabButton3"><span>Posters</span></button>
+               <button id="crabButton4"><span>Shop All</span></button>
             </div>
             <div class="shopB">
                <button class="icon-cart">
@@ -202,6 +214,7 @@
 
          };
       </script>
+      
      <!-- coronata -->
       <div class="coronata">
          <div class="container">
