@@ -511,14 +511,16 @@ button {
 /** banner section **/
 
 .full_bg {
-     background: url(../images/banner.png);
-     background-size: cover;
-     background-position: center;
-     background-repeat: no-repeat;
-     height: 100vh;
+    background: url(../images/banner.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
     padding-bottom: 150px;
-     position: relative;
+    position: relative;
+    background-attachment: fixed; /* Make the background fixed while scrolling */
 }
+
 
 .full_bg .carousel-indicators {
     bottom: -43px;
@@ -667,7 +669,7 @@ button {
     position: absolute;
     content: "";
     bottom: 0px;
-    background: #000000;
+    
     width: 93px;
     height: 11px;
     left: 0;
