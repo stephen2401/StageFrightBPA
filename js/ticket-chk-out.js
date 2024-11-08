@@ -27,6 +27,12 @@ plansSelectors.forEach((planSelector) => {
         }
     });
 });
+//Credit cart and billing info.
+
+
+
+
+
 // checkout
 
 document.querySelector(".checkout-btn").onclick = () =>
