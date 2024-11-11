@@ -28,3 +28,10 @@ header .icon-cart span{
     border-radius: 50%;
     border: 2px solid red;
 }
+.item .image {
+    display: flex;
+    width: 90%;
+    height: 100px;
+    background: url(../images/merchPlaceholder.png);
+    filter: drop-shadow(0 50px 20px #0009);
+}
