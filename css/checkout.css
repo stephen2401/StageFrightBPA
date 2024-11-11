@@ -148,3 +148,45 @@ small {
     border: none;
     height: 50%;
 }
+.checkout-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--quinary-color);
+    padding: 1.5rem;
+    border-radius: 15px;
+    min-width: 400px;
+}
+
+.checkout-form h2 {
+    margin-bottom: 1rem;
+}
+
+.checkout-form label {
+    color: var(--primary-color);
+    margin-top: 0.5rem;
+    font-size: 1rem;
+}
+
+.checkout-form input {
+    padding: 0.5rem;
+    width: 100%;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    border: none;
+}
+
+.confirm-btn {
+    background-color: var(--tertiary-color);
+    color: var(--primary-color);
+    border: none;
+    padding: 1rem;
+    border-radius: 15px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 1.2rem;
+}
+
+.confirm-btn:hover {
+    background-color: var(--quaternary-color);
+}

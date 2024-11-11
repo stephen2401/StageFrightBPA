@@ -80,15 +80,55 @@ vipMinusBtn.addEventListener("click", () => {
     }
 });
 
-// Checkout functionality
+// Initial checkout button action
 document.querySelector(".checkout-btn").onclick = () => {
-    document.querySelector(".title").innerHTML = "Checkout";
-    document.querySelector(".checkout-cont").innerHTML = `
+    // Hide ticket selection and show payment form
+    document.querySelector(".checkout-cont").style.display = "none";
+    document.querySelector(".checkout-form").style.display = "flex";
+};
+
+// Payment form validation
+document.getElementById("payment-form").onsubmit = function (event) {
+    event.preventDefault(); // Prevent page reload on submit
+
+    const email = document.getElementById("email").value;
+    const cardNumber = document.getElementById("card-number").value;
+    const expiry = document.getElementById("expiry").value;
+    const cvv = document.getElementById("cvv").value;
+
+    // Basic validation for card number, expiry, and CVV
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const cardPattern = /^\d{16}$/;
+    const expiryPattern = /^\d{2}\/\d{2}$/;
+    const cvvPattern = /^\d{3}$/;
+
+    if (!emailPattern.test(email)) {
+        alert("Please enter a valid email.");
+        return;
+    }
+    if (!cardPattern.test(cardNumber)) {
+        alert("Please enter a valid 16-digit card number.");
+        return;
+    }
+    if (!expiryPattern.test(expiry)) {
+        alert("Please enter a valid expiry date (MM/YY).");
+        return;
+    }
+    if (!cvvPattern.test(cvv)) {
+        alert("Please enter a valid 3-digit CVV.");
+        return;
+    }
+
+    // Show confirmation message
+    document.querySelector(".title").innerHTML = "Checkout Complete";
+    document.querySelector(".checkout-form").innerHTML = `
         <div class="success-container">
             <div class="success-icon">&#10004;</div>
-            <h1>Thanks for your purchase!</h1>
+            <h1>Thank you for your purchase!</h1>
+            <p>A receipt has been sent to ${email}.</p>
             <button class="back-btn">Back</button>
-        </div>`;
+        </div>
+    `;
 
     document.querySelector(".back-btn").onclick = () => location.reload();
 };

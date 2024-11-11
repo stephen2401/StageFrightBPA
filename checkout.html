@@ -79,7 +79,27 @@
             </div>
             <button class="checkout-btn">Checkout</button>
         </div>
+
     </main>
+            <!-- Checkout Form -->
+            <div class="checkout-form" style="display:none">
+                <h2>Payment Information</h2>
+                <form id="payment-form">
+                <label for="email">Email:</label>
+                <input type="email" id="email" required>
+    
+            <label for="card-number">Card Number:</label>
+            <input type="text" id="card-number" maxlength="16" required pattern="\d{16}" placeholder="1234 5678 9012 3456">
+    
+            <label for="expiry">Expiry Date:</label>
+            <input type="text" id="expiry" maxlength="5" required placeholder="MM/YY" pattern="\d{2}/\d{2}">
+    
+            <label for="cvv">CVV:</label>
+            <input type="text" id="cvv" maxlength="3" required pattern="\d{3}" placeholder="123">
+    
+            <button type="submit" class="confirm-btn">Confirm Purchase</button>
+        </form>
+    </div>
     <script src="js/ticket-chk-out.js"></script>
 </body>
 </html>
