@@ -1,8 +1,10 @@
-*{
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 :root {
     --primary-color: #f2f2f2;
     --secondary-color: #000000;
@@ -16,11 +18,13 @@ body {
     background-color: var(--secondary-color);
     color: var(--primary-color);
 }
+
 .title {
     font-size: 52px;
     text-align: center;
     margin: 4rem 0;
 }
+
 .checkout-cont {
     display: flex;
     flex-direction: row;
@@ -29,35 +33,73 @@ body {
     gap: 2rem;
     margin-top: 2rem;
 }
-.general-tickets,
-.vip-tickets {
+
+/* Ticket Selection */
+.plans-container label {
     display: grid;
     grid-template-columns: 1fr 8fr 3fr;
     gap: 1rem;
     width: 100%;
-    &:first-child {
-        border-bottom: 1px solid var(--quaternary-color);
-    }
+    padding: 1rem;
+    border: 1px solid transparent;
     transition: all 0.3s ease-in-out;
-    &:hover{
-        cursor: pointer;
-        background-color: var(--quinary-color);
-        border-radius: 0.5rem;
-        border-bottom: none;
-    }
-    .ticket-title {
-        margin-bottom: 0.5rem;
-    }
 }
+
+.general-tickets,
+.vip-tickets {
+    border-bottom: 1px solid var(--quaternary-color);
+}
+
+.general-tickets:hover,
+.vip-tickets:hover {
+    cursor: pointer;
+    background-color: var(--quinary-color);
+    border-radius: 0.5rem;
+    border-bottom: none;
+}
+
+.ticket-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
 small {
     color: var(--quaternary-color);
 }
+
 .general-ticket-price,
 .vip-ticket-price {
-    display: block;
-    margin-top: 0.5rem;
     text-align: right;
+    margin-top: 0.5rem;
 }
+
+/* Ticket Count */
+.ticket-count {
+    width: 40px;
+    text-align: center;
+    font-size: 20px;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    border-radius: 5px;
+    border: none;
+}
+
+.plus, .minus {
+    width: 30px;
+    background-color: var(--tertiary-color);
+    color: var(--primary-color);
+    border: none;
+    height: 30px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.plus:hover, .minus:hover {
+    background-color: var(--quaternary-color);
+}
+
+/* Checkout Container */
 .checkout-container {
     display: flex;
     flex-direction: column;
@@ -68,86 +110,41 @@ small {
     background-color: var(--quinary-color);
     padding: 1.5rem;
     border-radius: 15px;
-    .ticket-type,
-    .billing,
-    .checkout-btn {
-        width: 100%;
-        padding-bottom: 1rem;
-        margin-bottom: 0.5rem;
-        display: flex;
-        justify-content: space-between;
-        &:nth-child(1) {
-            border-bottom: 1px solid var(--quaternary-color);
-        }
-        &:nth-child(3) {
-            background-color: var(--tertiary-color);
-
-            border: none;
-            outline: none;
-            color: var(--primary-color);
-            cursor: pointer;
-            border-radius: 15px;
-            padding: 1rem 35%;
-            font-size: 1.2rem;
-            transition: all 0.3s ease-in-out;
-            &:hover {
-                background-color: var(--quaternary-color);
-            }
-        }
-    }
-
-    
-}
-@media screen and (max-width:768px) {
-    .checkout-cont{
-        flex-direction: column;
-        gap: 40vh;
-    }
-    .checkout-container {
-        min-width: 80%;
-    }
 }
 
-.success-icon {
-    width: 100px;
-    height: 100px;
-    background-color: var(--tertiary-color);
-    margin: 0 auto;
-    margin-bottom: 1rem;
-    border-radius: 50%;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 50px;
-}
-.back-btn {
-    background-color: var(--tertiary-color);
+.ticket-type,
+.billing {
     width: 100%;
-    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 1rem;
+    margin-bottom: 0.5rem;
+    border-bottom: 1px solid var(--quaternary-color);
+}
+
+.ticket-total {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--tertiary-color);
+}
+
+.checkout-btn {
+    background-color: var(--tertiary-color);
     border: none;
-    outline: none;
     color: var(--primary-color);
     cursor: pointer;
     border-radius: 15px;
     padding: 1rem 35%;
     font-size: 1.2rem;
     transition: all 0.3s ease-in-out;
-    &:hover {
-        background-color: var(--quaternary-color);
-    }
+    width: 100%;
 }
-.ticket-count {
-    width: 10%;
-    text-align: center;
-    font-size: 110%;
+
+.checkout-btn:hover {
+    background-color: var(--quaternary-color);
 }
-.plus, .minus {
-    width:5%;
-    background-color:aliceblue;
-    border: none;
-    height: 50%;
-}
+
+/* Checkout Form */
 .checkout-form {
     display: flex;
     flex-direction: column;
@@ -174,6 +171,8 @@ small {
     margin-bottom: 1rem;
     border-radius: 5px;
     border: none;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
 }
 
 .confirm-btn {
@@ -185,8 +184,64 @@ small {
     cursor: pointer;
     width: 100%;
     font-size: 1.2rem;
+    transition: all 0.3s ease-in-out;
+}
+.cancel-btn {
+    background-color: var(--tertiary-color);
+    color: var(--primary-color);
+    border: none;
+    padding: 1rem;
+    border-radius: 15px;
+    cursor: pointer;
+    width: 25%;
+    text-align: center;
+    font-size: 1.2rem;
+    transition: all 0.3s ease-in-out;
 }
 
 .confirm-btn:hover {
     background-color: var(--quaternary-color);
+}
+
+/* Success Icon */
+.success-icon {
+    width: 100px;
+    height: 100px;
+    background-color: var(--tertiary-color);
+    margin: 0 auto;
+    margin-bottom: 1rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+}
+
+/* Back Button */
+.back-btn {
+    background-color: var(--tertiary-color);
+    width: 100%;
+    margin-top: 1rem;
+    border: none;
+    color: var(--primary-color);
+    cursor: pointer;
+    border-radius: 15px;
+    padding: 1rem 35%;
+    font-size: 1.2rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.back-btn:hover {
+    background-color: var(--quaternary-color);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .checkout-cont {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .checkout-container {
+        min-width: 80%;
+    }
 }
