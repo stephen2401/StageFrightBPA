@@ -367,7 +367,7 @@ button {
 }
 .site-navbar {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
 }
 
@@ -395,10 +395,10 @@ button {
 }
 
 .site-navbar ul li a:hover {
-    color: #640817;
+    color: #a40922;
 }
 .site-navbar ul li a.active {
-    color:#640817;
+    color:#a40922;
 }
 
 /* navbar regular css end */
@@ -689,9 +689,42 @@ button {
 }
 
 /** end about section **/
-
-
-/** coronata section **/
+/* merch page */
+.mheader{
+    text-align: center;
+    background: url(../images/merchMoon.jpg);
+    background-size: cover;
+    background-position: center;
+    justify-content: center;
+    padding: 120px 20px;
+}
+.mheader h1{
+    font-size: 50px;
+    font-weight:900;
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: black;
+}
+.mheader p{
+    background-color: rgba(100, 8, 23, 0.8);;
+    width: 650px;
+    margin: auto;
+}
+.mrow {
+    display: flex;
+    justify-content: center;
+    flex-flow: row;
+}
+.msub1{
+    margin-right: 50px;
+    margin-left:50px;
+}
+.mbody{
+    width: 100%;
+}
+.mclick{
+    justify-self: center;
+}
+/** shop page **/
 /* Background */
 .crabBackground {
     background: url(../images/Merch.jpg!d) no-repeat center center fixed;
