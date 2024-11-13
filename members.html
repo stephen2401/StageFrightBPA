@@ -15,7 +15,7 @@
         .carousel-inner,
         .carousel-item {
             height: 90vh; /* Full viewport height */
-            min-height: 600px; /* Ensures it's not too short on smaller screens */
+            min-height: 600px; /* Makes it responsive on smaller screens */
         }
 
         /* Bottom-right aligned captions */
@@ -275,7 +275,7 @@ function highlightText() {
     const query = document.getElementById("searchInput").value.toLowerCase();
     const contentElements = document.querySelectorAll("#content p, #content h2, #content h3");
 
-    // Remove existing highlights
+    // Remove the existing highlights. For the search bar
     contentElements.forEach(element => {
         element.innerHTML = element.innerHTML.replace(/<mark class="highlight">(.*?)<\/mark>/g, "$1");
     });
@@ -288,10 +288,10 @@ function highlightText() {
     }
 }
     $(document).ready(function(){
-        // Ensure carousel auto-cycles
+        // Makes it go through the slides every 10 seconds
         $('#membersCarousel').carousel();
 
-        // Pause auto-slide on hover
+        // Pause the slide on hover
         $('#membersCarousel').hover(function() {
             $(this).carousel('pause');
         }, function() {
