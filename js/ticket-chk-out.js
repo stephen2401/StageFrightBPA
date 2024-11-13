@@ -1,5 +1,5 @@
 
-const plansSelectors = document.querySelectorAll(".plans");
+    const plansSelectors = document.querySelectorAll(".plans");
 const ticketTypeDescription = document.querySelector(".ticket-type-description");
 const ticketTypeAmount = document.querySelector(".ticket-type-amount");
 const ticketTotal = document.querySelector(".ticket-total");
@@ -119,7 +119,6 @@ document.getElementById("payment-form").onsubmit = function (event) {
         return;
     }
 
-
     // Show confirmation message
     document.querySelector(".title").innerHTML = "Checkout Complete";
     document.querySelector(".checkout-form").innerHTML = `
@@ -133,7 +132,17 @@ document.getElementById("payment-form").onsubmit = function (event) {
 
     document.querySelector(".back-btn").onclick = () => location.reload();
 };
-    
-    document.querySelector(".cancel-btn").onclick = () => location.reload();
 
-    document.querySelector(".return-btn").onclick = () => location.assign("tours.html");
+// Optional: handle cancel button if it exists
+const cancelButton = document.querySelector(".cancel-btn");
+if (cancelButton) {
+    cancelButton.onclick = () => location.reload();
+}
+
+// Optional: handle return button if it exists
+const returnButton = document.querySelector(".return-btn");
+if (returnButton) {
+    returnButton.onclick = () => location.assign("tours.html");
+}
+
+    
