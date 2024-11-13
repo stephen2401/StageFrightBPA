@@ -139,6 +139,17 @@ small {
     transition: all 0.3s ease-in-out;
     width: 100%;
 }
+.return-btn {
+    background-color: var(--tertiary-color);
+    border: none;
+    color: var(--primary-color);
+    cursor: pointer;
+    border-radius: 15px;
+    padding: 1rem 35%;
+    font-size: 1.2rem;
+    transition: all 0.3s ease-in-out;
+    width: 100%;
+}
 
 .checkout-btn:hover {
     background-color: var(--quaternary-color);
@@ -194,9 +205,10 @@ small {
     border-radius: 15px;
     cursor: pointer;
     width: 25%;
-    text-align: center;
+    align-items:center;
     font-size: 1.2rem;
     transition: all 0.3s ease-in-out;
+    
 }
 
 .confirm-btn:hover {

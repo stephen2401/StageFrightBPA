@@ -119,6 +119,7 @@ document.getElementById("payment-form").onsubmit = function (event) {
         return;
     }
 
+
     // Show confirmation message
     document.querySelector(".title").innerHTML = "Checkout Complete";
     document.querySelector(".checkout-form").innerHTML = `
@@ -132,5 +133,7 @@ document.getElementById("payment-form").onsubmit = function (event) {
 
     document.querySelector(".back-btn").onclick = () => location.reload();
 };
+    
+    document.querySelector(".cancel-btn").onclick = () => location.reload();
 
-
+    document.querySelector(".return-btn").onclick = () => location.assign("tours.html");
