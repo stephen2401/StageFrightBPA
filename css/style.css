@@ -717,10 +717,10 @@ button {
 .msub1{
     margin-right: 50px;
     margin-left:50px;
-    width: 300px;
+    width: 200px;
     background-color:#1e191a;
     border: 3px solid #640817;
-    padding: 20px;
+    padding: 50px;
 }
 .mbody{
     width: 100%;
@@ -729,6 +729,9 @@ button {
     justify-self: center;
     margin-top: 75px;
     margin-bottom: 75px;
+}
+.mimage{
+    transform: scale(0.5);
 }
 
 /** shop page **/
