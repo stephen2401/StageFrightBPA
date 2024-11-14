@@ -717,13 +717,20 @@ button {
 .msub1{
     margin-right: 50px;
     margin-left:50px;
+    width:400px;
+    background-color:#1e191a;
+    border: 3px solid #640817;
+    padding: 20px;
 }
 .mbody{
     width: 100%;
 }
 .mclick{
     justify-self: center;
+    margin-top: 75px;
+    margin-bottom: 75px;
 }
+
 /** shop page **/
 /* Background */
 .crabBackground {
