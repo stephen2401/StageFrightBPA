@@ -1,0 +1,259 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #f2f2f2;
+    --secondary-color: #000000;
+    --tertiary-color: #2962ff;
+    --quaternary-color: #7a6d86;
+    --quinary-color: #131722;
+}
+
+body {
+    font-family: sans-serif;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+.title {
+    font-size: 52px;
+    text-align: center;
+    margin: 4rem 0;
+}
+
+.checkout-cont {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+/* Ticket Selection */
+.plans-container label {
+    display: grid;
+    grid-template-columns: 1fr 8fr 3fr;
+    gap: 1rem;
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid transparent;
+    transition: all 0.3s ease-in-out;
+}
+
+.general-tickets,
+.vip-tickets {
+    border-bottom: 1px solid var(--quaternary-color);
+}
+
+.general-tickets:hover,
+.vip-tickets:hover {
+    cursor: pointer;
+    background-color: var(--quinary-color);
+    border-radius: 0.5rem;
+    border-bottom: none;
+}
+
+.ticket-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+small {
+    color: var(--quaternary-color);
+}
+
+.general-ticket-price,
+.vip-ticket-price {
+    text-align: right;
+    margin-top: 0.5rem;
+}
+
+/* Ticket Count */
+.ticket-count {
+    width: 40px;
+    text-align: center;
+    font-size: 20px;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    border-radius: 5px;
+    border: none;
+}
+
+.plus, .minus {
+    width: 30px;
+    background-color: var(--tertiary-color);
+    color: var(--primary-color);
+    border: none;
+    height: 30px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.plus:hover, .minus:hover {
+    background-color: var(--quaternary-color);
+}
+
+/* Checkout Container */
+.checkout-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    min-width: 400px;
+    background-color: var(--quinary-color);
+    padding: 1.5rem;
+    border-radius: 15px;
+}
+
+.ticket-type,
+.billing {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 1rem;
+    margin-bottom: 0.5rem;
+    border-bottom: 1px solid var(--quaternary-color);
+}
+
+.ticket-total {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--tertiary-color);
+}
+
+.checkout-btn {
+    background-color: var(--tertiary-color);
+    border: none;
+    color: var(--primary-color);
+    cursor: pointer;
+    border-radius: 15px;
+    padding: 1rem 35%;
+    font-size: 1.2rem;
+    transition: all 0.3s ease-in-out;
+    width: 100%;
+}
+.return-btn {
+    background-color: var(--tertiary-color);
+    border: none;
+    color: var(--primary-color);
+    cursor: pointer;
+    border-radius: 15px;
+    padding: 1rem 35%;
+    font-size: 1.2rem;
+    transition: all 0.3s ease-in-out;
+    width: 100%;
+}
+
+.checkout-btn:hover {
+    background-color: var(--quaternary-color);
+}
+
+/* Checkout Form */
+.checkout-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--quinary-color);
+    padding: 1.5rem;
+    border-radius: 15px;
+    min-width: 400px;
+}
+
+.checkout-form h2 {
+    margin-bottom: 1rem;
+}
+
+.checkout-form label {
+    color: var(--primary-color);
+    margin-top: 0.5rem;
+    font-size: 1rem;
+}
+
+.checkout-form input {
+    padding: 0.5rem;
+    width: 100%;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    border: none;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+.confirm-btn {
+    background-color: var(--tertiary-color);
+    color: var(--primary-color);
+    border: none;
+    padding: 1rem;
+    border-radius: 15px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 1.2rem;
+    transition: all 0.3s ease-in-out;
+}
+.cancel-btn {
+    background-color: var(--tertiary-color);
+    color: var(--primary-color);
+    border: none;
+    padding: 1rem;
+    border-radius: 15px;
+    cursor: pointer;
+    width: 25%;
+    align-items:center;
+    font-size: 1.2rem;
+    transition: all 0.3s ease-in-out;
+    
+}
+
+.confirm-btn:hover {
+    background-color: var(--quaternary-color);
+}
+
+/* Success Icon */
+.success-icon {
+    width: 100px;
+    height: 100px;
+    background-color: var(--tertiary-color);
+    margin: 0 auto;
+    margin-bottom: 1rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+}
+
+/* Back Button */
+.back-btn {
+    background-color: var(--tertiary-color);
+    width: 100%;
+    margin-top: 1rem;
+    border: none;
+    color: var(--primary-color);
+    cursor: pointer;
+    border-radius: 15px;
+    padding: 1rem 35%;
+    font-size: 1.2rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.back-btn:hover {
+    background-color: var(--quaternary-color);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .checkout-cont {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .checkout-container {
+        min-width: 80%;
+    }
+}

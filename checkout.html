@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/checkout.css">
+    <title>Checkout</title>
+</head>
+<body>
+    <h1 class="title">Select a Ticket</h1>
+    <main class="checkout-cont">
+        <div class="plans-container">
+            <label for="general-ticket-select" class="plans general-tickets">
+                <input 
+                type="radio" 
+                name="plan-container" 
+                id="general-ticket-select" 
+                value="general-ticket-select"
+                class="plan-selector"
+                
+                >
+                <div class="general-ticket-description">
+                    
+                    <h3 class="ticket-title">General tickets</h3>
+                    <small class="ticket-description">
+                        General admission ticket, which allows entry to the Concert.
+                    </small>
+                </div>
+                <section class="general-ticket-price">
+                    <h3 class="general-price">$25.00</h3>
+                    <div class="gen-ticket-number">Number of tickets:
+                        <button id="plus" class="plus">+</button>
+                        <input id="ticket-count" class="ticket-count" value="1" readonly>
+                        <button id="minus" class="minus">-</button>
+
+                    </div>
+                </section>
+            </label>
+            
+            <label for="vip-ticket-select" class="plans vip-tickets">
+                <input 
+                type="radio" 
+                name="plan-container" 
+                id="vip-ticket-select" 
+                value="vip-ticket-select"
+                class="plan-selector"
+                
+                >
+                <div class="vip-ticket-description">
+                    
+                    <h3 class="ticket-title">VIP tickets</h3>
+                    <small class="ticket-description">
+                        VIP admission ticket, Perks include: Front row VIP seats, Early Admission, access to closer restrooms, access to VIP parking lot, and free refreshments.
+
+                    </small>
+                </div>
+                <section class="vip-ticket-price">
+                    <h3 class="vip-price">$55.00</h3>
+                    <div class="vip-ticket-number">Number of tickets:
+                        <button id="plus" class="plus">+</button>
+                        <input id="ticket-count1" class="ticket-count" value="1" readonly>
+                        <button id="minus" class="minus">-</button>
+                    </div>
+                </section>
+            </label>
+
+        </div>
+        <div class="checkout-container">
+            <h3 class="ticket-type">
+                <span class="ticket-type-description"></span>
+                <span class="ticket-type-amount"></span>
+            </h3>
+        
+            <div class="billing">
+                <div class="billing-description">
+                    <h4>Total</h4>
+                </div>
+                <h3 id="ticket-total" class="ticket-total"></h3>
+            </div>
+            <button class="checkout-btn">Checkout</button>
+            <br>
+            <button class="return-btn">Return</button>
+        </div>
+
+    </main>
+            <!-- Checkout Form -->
+            <div class="checkout-form" style="display:none">
+                <h2>Payment Information</h2>
+                <form id="payment-form">
+                <label for="email">Email:</label>
+                <input type="email" id="email" required>
+    
+            <label for="card-number">Card Number:</label>
+            <input type="text" id="card-number" maxlength="16" required pattern="\d{16}" placeholder="1234 5678 9012 3456">
+    
+            <label for="expiry">Expiry Date:</label>
+            <input type="text" id="expiry" maxlength="5" required placeholder="MM/YY" pattern="\d{2}/\d{2}">
+    
+            <label for="cvv">CVV:</label>
+            <input type="text" id="cvv" maxlength="3" required pattern="\d{3}" placeholder="123">
+    
+            <button type="submit" class="confirm-btn">Confirm Purchase</button>
+            <br>
+        </form>
+        <br>
+        <button type="reset" class="cancel-btn">Cancel Purchase</button>
+    </div>
+    <script src="js/ticket-chk-out.js"></script>
+</body>
+</html>
