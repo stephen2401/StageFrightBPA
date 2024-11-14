@@ -720,7 +720,7 @@ button {
     width: 200px;
     background-color:#1e191a;
     border: 3px solid #640817;
-    padding: 50px;
+    padding: 30px;
 }
 .mbody{
     width: 100%;
@@ -731,7 +731,7 @@ button {
     margin-bottom: 75px;
 }
 .mimage{
-    transform: scale(0.5);
+    padding-bottom: 20px;
 }
 
 /** shop page **/
