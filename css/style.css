@@ -640,6 +640,7 @@ button {
 
 .about {
     background: #640817;
+    opacity:0.9;
     padding: 80px 50px;
     position: relative;
     margin: 0 70px;
