@@ -48,7 +48,7 @@ plansSelectors.forEach((planSelector) => {
 
 // General ticket count adjustment
 generalPlusBtn.addEventListener("click", () => {
-    if (generalTicketSelect.checked) {
+    if (generalTicketSelect.checked && ticketCount < 10) {
         ticketCount++;
         generalTicketCount.value = ticketCount;
         updateTicketDisplay("General Ticket", 25.00, ticketCount);
@@ -65,7 +65,7 @@ generalMinusBtn.addEventListener("click", () => {
 
 // VIP ticket count adjustment
 vipPlusBtn.addEventListener("click", () => {
-    if (vipTicketSelect.checked) {
+    if (vipTicketSelect.checked && ticketCount < 10) {
         ticketCount++;
         vipTicketCount.value = ticketCount;
         updateTicketDisplay("VIP Ticket", 55.00, ticketCount);
