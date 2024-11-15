@@ -257,9 +257,9 @@
       <div class="container">
          <div class="row">
             <div class="col-md-12">
-               <form id="colof" class="form_subscri">
-                  <input class="newsl" placeholder="Your Email" type="text" name="Email">
-                  <button class="subsci_btn">Subscribe Now</button> <!--doesn't work yet but its there-->
+               <form id="colof" class="form_subscri" onsubmit="sendEmail(event)">
+                  <input class="newsl" placeholder="Your Email" type="email" name="user_email" required>
+                  <button class="subsci_btn" class="send_btn" type="submit">Subscribe Now</button> <!--doesn't work yet but its there-->
                </form>
             </div>
          </div>
@@ -363,5 +363,27 @@
           }
       }
   </script>
+  <!-- EmailJS Script -->
+<script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script type="text/javascript">
+    // Initialize EmailJS with your user ID
+    (function() {
+        emailjs.init("UvrYnCjoKAdlVK8yG"); // public key id on emailjs
+    })();
+
+    function sendEmail(event) {
+        event.preventDefault(); // prevents form from submitting normally
+
+        emailjs.sendForm("service_vtq3gpr", "template_uxn647a", event.target) 
+        .then((response) => {
+            console.log('SUCCESS!', response.status, response.text);
+            alert('Subscribed! Check your email :) ');
+            document.getElementById("request").reset(); // clear form
+        }, (error) => {
+            console.error('FAILED...', error);
+            alert('Oops, something went wrong.');
+        });
+}
+</script>
    </body>
 </html>
