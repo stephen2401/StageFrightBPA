@@ -715,12 +715,17 @@ button {
     flex-flow: row;
 }
 .msub1{
-    margin-right: 50px;
-    margin-left:50px;
-    width: 200px;
-    background-color:#1e191a;
-    border: 3px solid #640817;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+    margin-top: 50px;
     padding: 30px;
+    width: 200px;
+    background-color: rgba(44, 32, 34, 0.7);
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 .mbody{
     width: 100%;
