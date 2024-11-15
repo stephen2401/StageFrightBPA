@@ -732,13 +732,29 @@ button {
 }
 .mclick{
     justify-self: center;
-    margin-top: 75px;
+    margin-top: 50px;
     margin-bottom: 75px;
 }
 .mimage{
     padding-bottom: 20px;
 }
+.mshop {
+    padding: 10px 50px;
+    background-color: #640817;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    position: relative;
+}
 
+.mshop:hover {
+    background-color: #8c0a24;
+    transform: scale(1.05);
+}
 /** shop page **/
 /* Background */
 .crabBackground {
