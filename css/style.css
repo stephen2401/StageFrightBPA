@@ -715,14 +715,45 @@ button {
     flex-flow: row;
 }
 .msub1{
-    margin-right: 50px;
-    margin-left:50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+    margin-top: 50px;
+    padding: 30px;
+    width: 200px;
+    background-color: rgba(44, 32, 34, 0.7);
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 .mbody{
     width: 100%;
 }
 .mclick{
     justify-self: center;
+    margin-top: 50px;
+    margin-bottom: 75px;
+}
+.mimage{
+    padding-bottom: 20px;
+}
+.mshop {
+    padding: 10px 50px;
+    background-color: #640817;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    position: relative;
+}
+
+.mshop:hover {
+    background-color: #8c0a24;
+    transform: scale(1.05);
 }
 /** shop page **/
 /* Background */
