@@ -697,7 +697,7 @@ button {
     background-size: cover;
     background-position: center;
     justify-content: center;
-    padding: 120px 20px;
+    padding: 75px 20px;
 }
 .mheader h1{
     font-size: 50px;
@@ -722,7 +722,8 @@ button {
     margin: 20px;
     margin-top: 50px;
     padding: 30px;
-    width: 200px;
+    width: 250px;
+    height: 350px;
     background-color: rgba(44, 32, 34, 0.7);
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -759,8 +760,8 @@ button {
 /** shop page **/
 /* Background */
 .crabBackground {
-    background: url(../images/Merch.jpg!d) no-repeat center center fixed;
-    background-size: cover; /* Ensures the background image covers the entire page */
+    background: url(../images/music.png) no-repeat center center fixed;
+    background-size:cover; /* Ensures the background image covers the entire page */
     min-height: 100vh; /* Ensures it covers the full viewport height */
     display: flex;
     flex-direction: column;
@@ -799,6 +800,7 @@ button {
     cursor: pointer;
     transition: background-color 0.3s, transform 0.2s;
     position: relative;
+    font-size: 17px;
 }
 
 .crabButton:hover {
@@ -872,7 +874,7 @@ button {
     margin: 20px;
     padding: 15px;
     width: 280px;
-    background-color: rgba(100, 8, 23, 0.7);
+    background-color: rgba(0, 0, 0, 0.7);
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s, box-shadow 0.3s;
@@ -908,8 +910,8 @@ button {
 /* Product Button Styling */
 .crabShop {
     padding: 10px 20px;
-    color: white;
-    border: none;
+    color: #8c0a24;
+    border: 2px solid #8c0a24;
     border-radius: 8px;
     font-size: 16px;
     font-weight: bold;
@@ -919,6 +921,7 @@ button {
 }
 
 .crabShop:hover {
+    color: #000;
     background-color: #8c0a24;
     transform: scale(1.1);
 }
