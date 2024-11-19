@@ -86,10 +86,14 @@ document.querySelector(".checkout-btn").onclick = () => {
     document.querySelector(".checkout-cont").style.display = "none";
     document.querySelector(".checkout-form").style.display = "flex";
     if (generalTicketSelect.checked) {
+        sessionStorage.setItem("General Ticket", generalTicketCount.value);
         console.log(generalTicketCount.value, "General Ticket");
+        sessionStorage.removeItem("VIP Ticket");
     }
     if (vipTicketSelect.checked) {
+        sessionStorage.setItem("VIP Ticket", vipTicketCount.value);
         console.log(vipTicketCount.value, "VIP Ticket");
+        sessionStorage.removeItem("General Ticket");
     }
 };
 
