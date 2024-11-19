@@ -28,6 +28,24 @@
       <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+      <style>
+         #read-aloud-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            padding: 15px 20px;
+            background-color: #000000;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 16px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+        #read-aloud-button:hover {
+            background-color: #640817;
+        }
+      </style>
    </head>
    <!-- body -->
    <body class="main-layout">
@@ -114,7 +132,7 @@
                      <h2 class="georgia">About Stage Fright </h2>
                      <p  style="font-family: Garamond; font-size:25px;">StageFright is a dynamic rock band, Blending classic and modern rock influences, they deliver electrifying performances and heartfelt lyrics.
                      </p>
-                     <a class="read_more" href="about.html">About More</a> <!--About webpage-->
+                     <a class="read_more" href="about.html" onclick="readSection('about')">About More</a> <!--About webpage-->
                   </div>
                </div>
                <div class="col-md-5">
@@ -141,7 +159,7 @@
                      <h2 class="georgia">Who makes up Stage Fright?</h2>
                      <p class="gara" style="font-size: 21px;">Stage Fright is made up of Four members: Alex Reed, Maya Torres, Jaxon Lee, and Sophie Nguyen.
                      </p>
-                     <a class="mem" href="members.html">Members</a> <!--members page-->
+                     <a class="mem" href="members.html" onclick="readSection('members')">Members</a> <!--members page-->
                   </div>
                </div>
             </div>
@@ -218,7 +236,7 @@
                <div class=" col-md-4">
                   <div class="latest text_align_center">
                      <figure><img src="images/tick.jpg" alt="#"/></figure> <!--no need for images here a backdrop wiil be used-->
-                      <a class="read_more" href="cases.html">Order Tickets</a> <!--leads to ticket page that stephen works on-->
+                      <a class="read_more" href="tours.html"  onclick="readSection('ticket1')">Order Tickets</a> <!--leads to ticket page that stephen works on-->
                      <div class="nostrud"  id="content">
                         <h3>StageFright Live at PNC Music Pavilion</h3> <br>
                         <p>Experience the raw energy of stagefright as they light up pnc music pavilion! with a unique blend of classic and modern rock, Alex, Maya, Jaxon, and Sophie bring a powerful sound and unforgettable vibe to every show. get ready for a night of electrifying music!</p>
@@ -228,7 +246,7 @@
                <div class=" col-md-4">
                   <div class="latest text_align_center">
                      <figure><img src="images/tick.jpg" alt="#"/></figure> <!--no need for images here a backdrop wiil be used-->
-                      <a class="read_more" href="cases.html">Order Tickets</a> <!--leads to ticket page that stephen works on-->
+                      <a class="read_more" href="tours.html" onclick="readSection('ticket2')">Order Tickets</a> <!--leads to ticket page that stephen works on-->
                      <div class="nostrud"  id="content"> 
                         <h3>Stagefright Live at Atlanta Coliseum</h3> <br>
                         <p>Get ready, atlanta! stagefright is bringing their explosive rock sound to the coliseum. with powerful vocals and dynamic performances, Alex, maya, Jaxon, and Sophie are set to deliver a night you won’t forget. don’t miss the energy and the music that’ll shake the stage!</p>
@@ -238,7 +256,7 @@
                <div class=" col-md-4">
                   <div class="latest text_align_center">
                      <figure><img src="images/tick.jpg" alt="#"/></figure> <!--no need for images here a backdrop wiil be used-->
-                      <a class="read_more" href="cases.html">Order Tickets</a> <!--leads to ticket page that stephen works on-->
+                      <a class="read_more" href="tours.html"  onclick="readSection('ticket3')">Order Tickets</a> <!--leads to ticket page that stephen works on-->
                      <div class="nostrud"   id="content">
                         <h3>Stagefright Live at the Columbus Athenaeum</h3> <br>
                         <p>Columbus's own StageFright is back to electrify the Athenaeum! Hometown legends Alex, Maya, Jaxon, and Sophie will deliver their mix of classic and modern rock, promising a night that’s intense, raw, and unforgettable. Columbus, it’s time to rock with your own!</p>
@@ -259,13 +277,14 @@
             <div class="col-md-12">
                <form id="colof" class="form_subscri" onsubmit="sendEmail(event)">
                   <input class="newsl" placeholder="Your Email" type="email" name="user_email" required>
-                  <button class="subsci_btn" class="send_btn" type="submit">Subscribe Now</button> <!--doesn't work yet but its there-->
+                  <button class="subsci_btn" class="send_btn" type="submit"  onclick="readSection('subscribe')">Subscribe Now</button> <!--doesn't work yet but its there-->
                </form>
             </div>
          </div>
       </div>
    </div>
 </div>
+<button id="read-aloud-button" onclick="readText()">🔊 Read Page</button>
 <!-- update -->
       <!--  footer -->
       <footer>
@@ -384,6 +403,27 @@
             alert('Oops, something went wrong.');
         });
 }
+   //test for read aloud feauture
+   function readText() {
+            const text = "Hello welome to the home page of the band stage fright! Our slogan: Own the Stage, Banish the Fright. About Stage Fright: StageFright is a dynamic rock band, Blending classic and modern rock influences, they deliver electrifying performances and heartfelt lyrics. Who Makes Up Stage Fright?: Stage Fright is made up of Four members: Alex Reed, Maya Torres, Jaxon Lee, and Sophie Nguyen. Merchandise: Support the up and coming band Stage Fright, while showing off your Spirit and Style! Upcoming Tours: Our up and coming tours. Type in your email to subscribe to our newsletters and to get updates on our band. Some of our reasorces: Home, What we do, Media, Travel Advice, Protection, Care";
+            const speech = new SpeechSynthesisUtterance(text);
+            speech.lang = "en-US";
+            window.speechSynthesis.speak(speech);
+        }
+        function readSection(section) {
+            const text = {
+                about: "More about us",
+                members: "The members of our band",
+                ticket1: "Order tickets for our concert at the PNC Music Pavilion",
+                ticket2: "Order tickets for our concert at the Atlanta Coliseum",
+                ticket3: "Order tickets for our concert at the Columbus Athenaeum",
+                subscribe: "You just subscribed! You will recieve an email for confirmation1",
+            };
+            const speech = new SpeechSynthesisUtterance(text[section]);
+            speech.lang = "en-US";
+            window.speechSynthesis.speak(speech);
+        }
+
 </script>
    </body>
 </html>
