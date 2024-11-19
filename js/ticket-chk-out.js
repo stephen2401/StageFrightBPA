@@ -85,6 +85,12 @@ document.querySelector(".checkout-btn").onclick = () => {
     // Hide ticket selection and show payment form
     document.querySelector(".checkout-cont").style.display = "none";
     document.querySelector(".checkout-form").style.display = "flex";
+    if (generalTicketSelect.checked) {
+        console.log(generalTicketCount.value, "General Ticket");
+    }
+    if (vipTicketSelect.checked) {
+        console.log(vipTicketCount.value, "VIP Ticket");
+    }
 };
 
 // Payment form validation
@@ -118,6 +124,7 @@ document.getElementById("payment-form").onsubmit = function (event) {
         alert("Please enter a valid 3-digit CVV.");
         return;
     }
+
 
     // Show confirmation message
     document.querySelector(".title").innerHTML = "Checkout Complete";
