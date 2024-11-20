@@ -395,10 +395,10 @@ button {
 }
 
 .site-navbar ul li a:hover {
-    color: #640817;
+    color: #9e1122;
 }
 .site-navbar ul li a.active {
-    color:#640817;
+    color:#9e1122;
 }
 
 /* navbar regular css end */
@@ -760,7 +760,7 @@ button {
 /** shop page **/
 /* Background */
 .crabBackground {
-    background: url(../images/music.png) no-repeat center center fixed;
+    background: url(../images/merchbg.jpg) no-repeat center center fixed;
     background-size:cover; /* Ensures the background image covers the entire page */
     min-height: 100vh; /* Ensures it covers the full viewport height */
     display: flex;
@@ -792,7 +792,7 @@ button {
 
 .crabButton {
     padding: 10px 20px;
-    background-color: #640817;
+    background-color: black;
     color: white;
     font-weight: bold;
     border: none;
@@ -804,18 +804,19 @@ button {
 }
 
 .crabButton:hover {
-    background-color: #8c0a24;
+    background-color: black;
     transform: scale(1.05);
+    color: #9e1122;
 }
 
 /* Active Category Button Styling */
 .crabButton.active {
-    background-color: #8c0a24; /* Highlight active button */
-    color: #fff;
+    background-color: black; /* Highlight active button */
+    color: #9e1122;
 }
 
 .crabButton.active:hover {
-    background-color: #9e1122; /* Darker shade on hover when active */
+    background-color: black; /* Darker shade on hover when active */
 }
 
 /* Cart Button Styling */
