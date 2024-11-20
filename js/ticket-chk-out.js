@@ -158,6 +158,8 @@ document.getElementById("payment-form").onsubmit = function (event) {
 const cancelButton = document.querySelector(".cancel-btn");
 if (cancelButton) {
     cancelButton.onclick = () => location.reload();
+    sessionStorage.removeItem("General Ticket");
+    sessionStorage.removeItem("VIP Ticket");
 }
 
 // Optional: handle return button if it exists
