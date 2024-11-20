@@ -129,6 +129,7 @@ document.getElementById("payment-form").onsubmit = function (event) {
         return;
     }
 
+    
 
     // Show confirmation message
     document.querySelector(".title").innerHTML = "Checkout Complete";
@@ -140,7 +141,16 @@ document.getElementById("payment-form").onsubmit = function (event) {
             <button class="back-btn">Back</button>
         </div>
     `;
-
+    if (sessionStorage.getItem("General Ticket") > 1) {
+    let ticketData = sessionStorage.getItem("General Ticket");
+    localStorage.setItem("General Ticket", ticketData);
+    sessionStorage.removeItem("General Ticket");
+    }
+    if (sessionStorage.getItem("VIP Ticket") > 1) {
+        let ticketData = sessionStorage.getItem("VIP Ticket");
+        localStorage.setItem("VIP Ticket", ticketData);
+        sessionStorage.removeItem("VIP Ticket");
+        }
     document.querySelector(".back-btn").onclick = () => location.reload();
 };
 
