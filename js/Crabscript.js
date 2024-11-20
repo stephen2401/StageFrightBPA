@@ -80,8 +80,8 @@ function addToCart(productId) {
     }
 
     // Save the updated cart to localStorage
-    localStorage.setItem('cart', JSON.stringify(cart));
-    alert(`Added ${productId} to the cart!`);
+    localStorage.setItem("cart", JSON.stringify(cart));
+    showNotification(); // Display a nice notification
 }
 
 // Change active category button
@@ -91,3 +91,21 @@ function changeCategory(category) {
     document.querySelector(`.crabButton[onclick="changeCategory('${category}')"]`).classList.add('active');
     renderProducts(category);
 }
+
+// Function to show a notification when an item is added to the cart
+function showNotification() {
+    const notification = document.createElement("div");
+    notification.className = "notification";
+    notification.innerText = "Item added to cart!";
+    document.body.appendChild(notification);
+  
+    // Remove the notification after 3 seconds
+    setTimeout(() => {
+      notification.remove();
+    }, 3000);
+  }
+  
+  // Automatically display Category 1 on page load
+  document.addEventListener("DOMContentLoaded", () => {
+    renderProducts("category1"); // Render Category 1 products
+  });
