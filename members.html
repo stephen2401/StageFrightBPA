@@ -41,6 +41,22 @@
             margin: 0;
             max-width: 700px;
         }
+        #read-aloud-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            padding: 15px 20px;
+            background-color: #000000;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 16px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+        #read-aloud-button:hover {
+            background-color: #640817;
+        }
   </style>
 </head>
 <body class="main-layout">
@@ -100,7 +116,7 @@
     <div class="carousel-inner">
 
       <!-- first slide -->
-      <div class="carousel-item active" style="background: url(/images/bgmem.jpg);">
+      <div class="carousel-item active" style="background: url(/images/mem.jpg);">
          <div class="carousel-caption cuplle">
             <div class="container">
                <div class="row">
@@ -116,13 +132,13 @@
       </div>
 
       <!-- second slide -->
-      <div class="carousel-item" style="background: url(/images/bgmem.jpg);">
+      <div class="carousel-item" style="background: url(/images/alex.jpg);">
          <div class="carousel-caption cuplle">
             <div class="container">
                <div class="row">
                   <div class="col-md-8">
                     <div class="photog" id="content">
-                     <h1 class="georgia">   Alex <br>“Axel” Reed</h>
+                     <h1 class="georgia">Alex <br>“Axel” Reed</h>
                      <p class="gara" style="font-size:23px;"> (Lead Guitar/Vocals)
                         Alex is the heart and soul of StageFright. With his electrifying guitar solos and powerful vocals, he draws fans into every performance. Known for his magnetic stage presence and heartfelt lyrics, Alex blends classic rock vibes with modern influences, creating a sound that resonates deeply with audiences. When he’s not on stage, you might find him jamming with friends or exploring new music.</p>
                      </div>
@@ -133,7 +149,7 @@
       </div>
       
       <!-- third slide -->
-      <div class="carousel-item" style="background: url(/images/bgmem.jpg);">
+      <div class="carousel-item" style="background: url(/images/maya.jpg);">
         <div class="carousel-caption cuplle">
            <div class="container">
               <div class="row">
@@ -151,7 +167,7 @@
    
 
    <!-- fourth slide -->
-   <div class="carousel-item" style="background: url(/images/bgmem.jpg);">
+   <div class="carousel-item" style="background: url(/images/jaxon.jpg);">
     <div class="carousel-caption cuplle">
        <div class="container">
           <div class="row">
@@ -167,7 +183,7 @@
  </div>
 
  <!-- fifth slide -->
- <div class="carousel-item" style="background: url(/images/bgmem.jpg);">
+ <div class="carousel-item" style="background: url(/images/sophie.jpg);">
   <div class="carousel-caption cuplle">
      <div class="container">
         <div class="row">
@@ -191,7 +207,7 @@
         <span class="sr-only">Next</span>
     </a>
 </div>
-
+<button id="read-aloud-button" onclick="readText()">🔊 Read Page</button>
 <!-- Footer -->
 <footer>
    <div class="footer">
@@ -298,6 +314,43 @@ function highlightText() {
             $(this).carousel('cycle');
         });
     });
+  // Function to read text aloud when the element comes into view
+function readText(element) {
+    const text = element.innerText; // Get the text of the element
+    const speech = new SpeechSynthesisUtterance(text);
+    speech.lang = "en-US"; // Language for speech
+    window.speechSynthesis.speak(speech);
+}
+
+// Intersection Observer to detect when carousel item comes into view
+const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            // Read the text inside the carousel item
+            const h1 = entry.target.querySelector('h1');
+            const p = entry.target.querySelector('p');
+            if (h1) {
+                readText(h1); // Read aloud the h1 text (name)
+            }
+            if (p) {
+                readText(p); // Read aloud the p text (description)
+            }
+            // Optionally, stop observing the element after it has been read aloud
+            observer.unobserve(entry.target);
+        }
+    });
+}, { threshold: 0.5 }); // Element must be at least 50% visible
+
+// Select all carousel items to observe
+const carouselItems = document.querySelectorAll('.carousel-item');
+
+// Add event listener to the button to activate the observer
+document.getElementById('read-aloud-button').addEventListener('click', () => {
+    carouselItems.forEach(item => {
+        observer.observe(item); // Start observing the carousel item
+    });
+});
+
 </script>
 </body>
 </html>

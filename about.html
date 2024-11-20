@@ -101,6 +101,22 @@
              color: #ddd;
              font-family: Garamond;
          }
+         #read-aloud-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            padding: 15px 20px;
+            background-color: #000000;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 16px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+        #read-aloud-button:hover {
+            background-color: #640817;
+        }
      </style>
    </head>
    <!-- body -->
@@ -159,7 +175,7 @@
          <h1>Stage Fright</h1>
          <p>Own the Stage, Banish the Fright</p>
          <br><br>
-         <a href="music.html" class="btn">View Our Music</a> <!--leads to music page. Like a sub page, not in header. Maybe???-->
+         <a href="music.html" class="btn"  onclick="readSection('music')">View Our Music</a> <!--leads to music page. Like a sub page, not in header. Maybe???-->
          
       </div>
 
@@ -192,6 +208,7 @@
         </div>
       </div>   
    </div>      
+   <button id="read-aloud-button" onclick="readText()">🔊 Read Page</button>
 <!-- end about -->
       <!--  footer -->
       <footer>
@@ -280,6 +297,23 @@
                 });
             }
         }
+
+        //test for read aloud feauture
+   function readText() {
+            const text = "About Stage Fright. Our sound: Drawing from influences like led zeppelin, foo fighters, and arctic monkeys, stagefright pushes boundaries while staying true to the roots of rock. their music is a mix of powerful riffs, haunting melodies, and lyrics that tell stories of love, loss, and everything in between. Our mission: Stagefright is committed to creating music that connects with people on a deep level. they believe in the power of live music to bring people together and aim to create a space where fans can lose themselves in the music, if only for a little while. Join us on the Journey: With a growing fan base and electrifying shows across the country, stagefright is ready to take their sound to new heights. whether you’re a lifelong rock fan or new to the genre, stagefright’s music is here to move you.";            
+            const speech = new SpeechSynthesisUtterance(text);
+            speech.lang = "en-US"; 
+            window.speechSynthesis.speak(speech);
+        }
+        function readSection(section) {
+            const text = {
+                music: "These are some of our music demos.",
+            };
+            const speech = new SpeechSynthesisUtterance(text[section]);
+            speech.lang = "en-US";
+            window.speechSynthesis.speak(speech);
+        }
+
     </script>
    </body>
 </html>

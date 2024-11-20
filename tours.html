@@ -28,6 +28,24 @@
       <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+      <style>
+         #read-aloud-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            padding: 15px 20px;
+            background-color: #000000;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 16px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+        #read-aloud-button:hover {
+            background-color: #640817;
+        }
+      </style>
    </head>
    <!-- body -->
    <body class="main-layout inner_page" style="background: url(/images/ticket.jpg)">
@@ -87,27 +105,26 @@
       </div>
       <div class="BananaMain">
          <div class="bananaBoat1">
-            <p class="bananap"><span class="banana1">October 19th</span><a href="checkout.html" class="tickets">tickets</a><br><span class="banana2">Columbus Athenaeum</span><span class="banana3">Columbus, OH</span></p>
+            <p class="bananap"><span class="banana1">October 19th</span><a href="checkout.html" class="tickets" onclick="readSection('ticket1')">tickets</a><br><span class="banana2">Columbus Athenaeum</span><span class="banana3">Columbus, OH</span></p>
          </div>
          <div class="bananaBoat1">
-            <p class="bananap"><span class="banana1">January 21st</span><a href="checkout.html" class="tickets">tickets</a><br><span class="banana2">Atlanta Coliseum</span><span class="banana3">Duluth, GA</span></p>
+            <p class="bananap"><span class="banana1">January 21st</span><a href="checkout.html" class="tickets" onclick="readSection('ticket2')">tickets</a><br><span class="banana2">Atlanta Coliseum</span><span class="banana3">Duluth, GA</span></p>
          </div>
          <div class="bananaBoat1">
-            <p class="bananap"><span class="banana1">February 13th</span><a href="checkout.html" class="tickets">tickets</a><br><span class="banana2">Legacy Arena</span><span class="banana3">Birmingham, AL</span></p>
+            <p class="bananap"><span class="banana1">February 13th</span><a href="checkout.html" class="tickets" onclick="readSection('ticket3')">tickets</a><br><span class="banana2">Legacy Arena</span><span class="banana3">Birmingham, AL</span></p>
          </div>
          <div class="bananaBoat1">
-            <p class="bananap"><span class="banana1">March 15th</span><a href="checkout.html" class="tickets">tickets</a><br><span class="banana2">BroadBent Arena</span><span class="banana3">Louisville, KY</span></p>
+            <p class="bananap"><span class="banana1">March 15th</span><a href="checkout.html" class="tickets" onclick="readSection('ticket4')">tickets</a><br><span class="banana2">BroadBent Arena</span><span class="banana3">Louisville, KY</span></p>
          </div>
          <div class="bananaBoat1">
-            <p class="bananap"><span class="banana1">March 26th</span><a href="checkout.html" class="tickets">tickets</a><br><span class="banana2">PNC Music pavilion</span><span class="banana3">Charlotte, NC</span></p>
+            <p class="bananap"><span class="banana1">March 26th</span><a href="checkout.html" class="tickets" onclick="readSection('ticket5')">tickets</a><br><span class="banana2">PNC Music pavilion</span><span class="banana3">Charlotte, NC</span></p>
          </div>
          <div class="bananaBoat1">
-            <p class="bananap"><span class="banana1">July 18th</span><a href="checkout.html" class="tickets">tickets</a><br><span class="banana2">Bogart's</span><span class="banana3">Cincinnati, OH</span></p>
+            <p class="bananap"><span class="banana1">July 18th</span><a href="checkout.html" class="tickets" onclick="readSection('ticket6')">tickets</a><br><span class="banana2">Bogart's</span><span class="banana3">Cincinnati, OH</span></p>
          </div>
       </div>
-      <script>
-         
-      </script>
+      <button id="read-aloud-button" onclick="readText()">🔊 Read Page</button>
+      
       <!-- end cases -->
       <!--  footer -->
       <footer>
@@ -178,5 +195,28 @@
       <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.js"></script>
       <script src="js/owl.carousel.min.js"></script>
       <script src="js/custom.js"></script>
+      <script>
+         //test for read aloud feauture
+   function readText() {
+            const text = "Hello! Check out our tickets. October 19th is at Columbus Athenaem in Columbus, Ohio. January 21st is at Atlanta Coliseum in Duluth, Georgia. February 13th is at Legacy Arena in Birmingham, Alabama. March 15th is at BroadBent Arena in Louisville, Kentucky. March 26th is at PNC Music Pavilion in Charlotte North Carolina. July 18th is at Bogart's in Cincinnati, Ohio. ";
+            const speech = new SpeechSynthesisUtterance(text);
+            speech.lang = "en-US"; 
+            window.speechSynthesis.speak(speech);
+        
+        function readSection(section) {
+            const text = {
+                ticket1: "Tickets for Columbus",
+                ticket2: "Tickets for Duluth",
+                ticket3: "Tickets for Birmingham",
+                ticket4: "Tickets for Louisville",
+                ticket5: "Tickets for Charlotte",
+                ticket6: "Tickets for Cincinnati",
+            };
+            const speech = new SpeechSynthesisUtterance(text[section]);
+            speech.lang = "en-US";
+            window.speechSynthesis.speak(speech);
+        }
+      }
+      </script>
    </body>
 </html>

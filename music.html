@@ -107,6 +107,22 @@
    footer a:hover {
       color: var(#640817);
    }
+   #read-aloud-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            padding: 15px 20px;
+            background-color: #640817;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 16px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+   #read-aloud-button:hover {
+            background-color: #000000;
+        }
    </style>
    <!--[if lt IE 9]>
    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
@@ -205,6 +221,7 @@
             </div>
          </div>
       </div>
+      <button id="read-aloud-button" onclick="readText()">🔊 Read Page</button>
    </section>
    <!-- end Playlist Section -->
       <!-- end header -->
@@ -278,6 +295,16 @@
       <script src="js/bootstrap.bundle.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.js"></script>
       <script src="js/owl.carousel.min.js"></script>
-      <script src="js/custom.js"></script>
+      <script src="js/custom.js">
+              //test for read aloud feauture
+            function readText() {
+                     const text = "These are some of our newer music demos: These are some of Axel's favorites, Awesome Pink Floydish and Caniferous Forest. Awesome Pink Floydish the one on the left is a sprawling, atmospheric track that captures the essence of classic rock with soaring guitar solos and dreamy soundscapes. a tribute to the legends, with a modern twist with over 140,661 listeners. Caniferous Forest the one on the right is a deep, moody piece that takes listeners on a journey through dense sound layers, mirroring the mysterious beauty of nature. haunting melodies blend with raw rock energy for an immersive experience with 921,876 listeners.";
+                     const speech = new SpeechSynthesisUtterance(text);
+                     speech.lang = "en-US"; 
+                     window.speechSynthesis.speak(speech);
+               }
+               
+
+      </script>
    </body>
 </html>

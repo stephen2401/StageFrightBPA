@@ -109,7 +109,7 @@
                            <div class="row">
                               <div class="col-md-8">
                                  <div class="photog"  id="content">
-                                    <h1>Stage<br>Fright</h1>
+                                    <h1 class="georgia">Stage<br>Fright</h1>
                                     <h2 class="stage-slogan">Own the Stage, Banish the Fright</h2> <!--Needs style.css editing-->
                                  </div>
                               </div>
@@ -117,7 +117,6 @@
                         </div>
                      </div>
                   </div>
-                  
                </div>
             </div>
          </div>
@@ -407,13 +406,13 @@
    function readText() {
             const text = "Hello welome to the home page of the band stage fright! Our slogan: Own the Stage, Banish the Fright. About Stage Fright: StageFright is a dynamic rock band, Blending classic and modern rock influences, they deliver electrifying performances and heartfelt lyrics. Who Makes Up Stage Fright?: Stage Fright is made up of Four members: Alex Reed, Maya Torres, Jaxon Lee, and Sophie Nguyen. Merchandise: Support the up and coming band Stage Fright, while showing off your Spirit and Style! Upcoming Tours: Our up and coming tours. Type in your email to subscribe to our newsletters and to get updates on our band. Some of our reasorces: Home, What we do, Media, Travel Advice, Protection, Care";
             const speech = new SpeechSynthesisUtterance(text);
-            speech.lang = "en-US";
+            speech.lang = "en-US"; 
             window.speechSynthesis.speak(speech);
         }
         function readSection(section) {
             const text = {
                 about: "More about us",
-                members: "The members of our band",
+                members: "Here are the members of our band",
                 ticket1: "Order tickets for our concert at the PNC Music Pavilion",
                 ticket2: "Order tickets for our concert at the Atlanta Coliseum",
                 ticket3: "Order tickets for our concert at the Columbus Athenaeum",
