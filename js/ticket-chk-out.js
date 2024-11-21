@@ -48,7 +48,7 @@ plansSelectors.forEach((planSelector) => {
 
 // General ticket count adjustment
 generalPlusBtn.addEventListener("click", () => {
-    if (generalTicketSelect.checked) {
+    if (generalTicketSelect.checked && ticketCount < 10) {
         ticketCount++;
         generalTicketCount.value = ticketCount;
         updateTicketDisplay("General Ticket", 25.00, ticketCount);
@@ -65,7 +65,7 @@ generalMinusBtn.addEventListener("click", () => {
 
 // VIP ticket count adjustment
 vipPlusBtn.addEventListener("click", () => {
-    if (vipTicketSelect.checked) {
+    if (vipTicketSelect.checked && ticketCount < 10) {
         ticketCount++;
         vipTicketCount.value = ticketCount;
         updateTicketDisplay("VIP Ticket", 55.00, ticketCount);
@@ -85,6 +85,16 @@ document.querySelector(".checkout-btn").onclick = () => {
     // Hide ticket selection and show payment form
     document.querySelector(".checkout-cont").style.display = "none";
     document.querySelector(".checkout-form").style.display = "flex";
+    if (generalTicketSelect.checked) {
+        sessionStorage.setItem("General Ticket", generalTicketCount.value);
+        console.log(generalTicketCount.value, "General Ticket");
+        sessionStorage.removeItem("VIP Ticket");
+    }
+    if (vipTicketSelect.checked) {
+        sessionStorage.setItem("VIP Ticket", vipTicketCount.value);
+        console.log(vipTicketCount.value, "VIP Ticket");
+        sessionStorage.removeItem("General Ticket");
+    }
 };
 
 // Payment form validation
@@ -129,7 +139,20 @@ document.getElementById("payment-form").onsubmit = function (event) {
             <button class="back-btn">Back</button>
         </div>
     `;
-
+    if (sessionStorage.getItem("General Ticket")) {
+    let ticketData = sessionStorage.getItem("General Ticket");
+    localStorage.setItem("General Ticket", ticketData);
+    sessionStorage.removeItem("General Ticket");
+    }
+    if (sessionStorage.getItem("VIP Ticket")) {
+        let ticketData = sessionStorage.getItem("VIP Ticket");
+        localStorage.setItem("VIP Ticket", ticketData);
+        sessionStorage.removeItem("VIP Ticket");
+    }
+    localStorage.setItem("Email", email);
+    localStorage.setItem("Card", cardNumber);
+    localStorage.setItem("Expiry", expiry);
+    localStorage.setItem("CVV", cvv);
     document.querySelector(".back-btn").onclick = () => location.reload();
 };
 
@@ -137,6 +160,8 @@ document.getElementById("payment-form").onsubmit = function (event) {
 const cancelButton = document.querySelector(".cancel-btn");
 if (cancelButton) {
     cancelButton.onclick = () => location.reload();
+    sessionStorage.removeItem("General Ticket");
+    sessionStorage.removeItem("VIP Ticket");
 }
 
 // Optional: handle return button if it exists
