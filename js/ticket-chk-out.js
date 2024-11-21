@@ -107,7 +107,7 @@ document.getElementById("payment-form").onsubmit = function (event) {
     const cvv = document.getElementById("cvv").value;
 
     // Basic validation for card number, expiry, and CVV
-    const emailPattern = /^[\w]{1,}[\w.+-]{0,}@[\w-]{2,}([.][a-zA-Z]{2,}|[.][\w-]{2,}[.][a-zA-Z]{2,})$/;
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     const cardPattern = /^\d{16}$/;
     const expiryPattern = /^\d{2}\/\d{2}$/;
     const cvvPattern = /^\d{3}$/;
