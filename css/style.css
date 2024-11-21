@@ -384,6 +384,7 @@ button {
     display: block;
     text-decoration: none;
     text-transform: uppercase;
+    
 }
 
 .site-navbar ul li {
@@ -703,7 +704,7 @@ button {
     font-size: 50px;
     font-weight:900;
     -webkit-text-stroke-width: 3px;
-    -webkit-text-stroke-color: black;
+    -webkit-text-stroke-color: rgb(0, 0, 0);
 }
 .mheader p{
     background-color: rgba(100, 8, 23, 0.8);;

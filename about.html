@@ -299,21 +299,34 @@
         }
 
         //test for read aloud feauture
-   function readText() {
-            const text = "About Stage Fright. Our sound: Drawing from influences like led zeppelin, foo fighters, and arctic monkeys, stagefright pushes boundaries while staying true to the roots of rock. their music is a mix of powerful riffs, haunting melodies, and lyrics that tell stories of love, loss, and everything in between. Our mission: Stagefright is committed to creating music that connects with people on a deep level. they believe in the power of live music to bring people together and aim to create a space where fans can lose themselves in the music, if only for a little while. Join us on the Journey: With a growing fan base and electrifying shows across the country, stagefright is ready to take their sound to new heights. whether you’re a lifelong rock fan or new to the genre, stagefright’s music is here to move you.";            
-            const speech = new SpeechSynthesisUtterance(text);
-            speech.lang = "en-US"; 
-            window.speechSynthesis.speak(speech);
-        }
-        function readSection(section) {
-            const text = {
-                music: "These are some of our music demos.",
-            };
-            const speech = new SpeechSynthesisUtterance(text[section]);
-            speech.lang = "en-US";
-            window.speechSynthesis.speak(speech);
-        }
+        let isReading = false;
+        let currentSpeech = null;
 
+   function readText() { 
+      const text = "About Stage Fright. Click this button to view our music. Our sound: Drawing from influences like led zeppelin, foo fighters, and arctic monkeys, stagefright pushes boundaries while staying true to the roots of rock. their music is a mix of powerful riffs, haunting melodies, and lyrics that tell stories of love, loss, and everything in between. Our mission: Stagefright is committed to creating music that connects with people on a deep level. they believe in the power of live music to bring people together and aim to create a space where fans can lose themselves in the music, if only for a little while. Join us on the Journey: With a growing fan base and electrifying shows across the country, stagefright is ready to take their sound to new heights. whether you’re a lifelong rock fan or new to the genre, stagefright’s music is here to move you.";         
+        if (isReading)
+        {
+         window.speechSynthesis.cancel();
+         isReading = false;
+        }
+        else
+        {
+         currentSpeech = new SpeechSynthesisUtterance(text);
+         currentSpeech.lang = "en-US"; 
+         window.speechSynthesis.speak(currentSpeech);
+         isReading = true;
+
+         currentSpeech.onend = () => 
+         {
+            isReading = false;
+         };
+        }
+        window.addEventListener("beforeunload", () => 
+      {
+         window.speechSynthesis.cancel();
+      });
+      document.getElementById("read-aloud-button").addEventListener("click", readText);
+   }
     </script>
    </body>
 </html>

@@ -403,16 +403,34 @@
         });
 }
    //test for read aloud feauture
+   let isReading = false;
+   let currentSpeech = null;
+
    function readText() {
-            const text = "Hello welome to the home page of the band stage fright! Our slogan: Own the Stage, Banish the Fright. About Stage Fright: StageFright is a dynamic rock band, Blending classic and modern rock influences, they deliver electrifying performances and heartfelt lyrics. Who Makes Up Stage Fright?: Stage Fright is made up of Four members: Alex Reed, Maya Torres, Jaxon Lee, and Sophie Nguyen. Merchandise: Support the up and coming band Stage Fright, while showing off your Spirit and Style! Upcoming Tours: Our up and coming tours. Type in your email to subscribe to our newsletters and to get updates on our band. Some of our reasorces: Home, What we do, Media, Travel Advice, Protection, Care";
-            const speech = new SpeechSynthesisUtterance(text);
-            speech.lang = "en-US"; 
-            window.speechSynthesis.speak(speech);
+            const text = "Hello welome to the home page of the band stage fright! Our slogan: Own the Stage, Banish the Fright. About Stage Fright: StageFright is a dynamic rock band, Blending classic and modern rock influences, they deliver electrifying performances and heartfelt lyrics. Click this button for More about us. Who Makes Up Stage Fright?: Stage Fright is made up of Four members: Alex Reed, Maya Torres, Jaxon Lee, and Sophie Nguyen. Click this button to meet our members. Merchandise: Support the up and coming band Stage Fright, while showing off your Spirit and Style! Upcoming Tours: Our up and coming tours. Type in your email to subscribe to our newsletters and to get updates on our band. Some of our reasorces: Home, What we do, Media, Travel Advice, Protection, Care";
+            if (isReading)
+        {
+         window.speechSynthesis.cancel();
+         isReading = false;
         }
-        function readSection(section) {
+        else
+        {
+         currentSpeech = new SpeechSynthesisUtterance(text);
+         currentSpeech.lang = "en-US"; 
+         window.speechSynthesis.speak(currentSpeech);
+         isReading = true;
+
+         currentSpeech.onend = () => 
+         {
+            isReading = false;
+         };
+        }
+        window.addEventListener("beforeunload", () => 
+      {
+         window.speechSynthesis.cancel();
+      });
+      function readSection(section) {
             const text = {
-                about: "More about us",
-                members: "Here are the members of our band",
                 ticket1: "Order tickets for our concert at the PNC Music Pavilion",
                 ticket2: "Order tickets for our concert at the Atlanta Coliseum",
                 ticket3: "Order tickets for our concert at the Columbus Athenaeum",
@@ -422,6 +440,9 @@
             speech.lang = "en-US";
             window.speechSynthesis.speak(speech);
         }
+      document.getElementById("read-aloud-button").addEventListener("click", readText);
+   }
+       
 
 </script>
    </body>
