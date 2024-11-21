@@ -107,7 +107,7 @@ document.getElementById("payment-form").onsubmit = function (event) {
     const cvv = document.getElementById("cvv").value;
 
     // Basic validation for card number, expiry, and CVV
-    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const emailPattern = /^[\w]{1,}[\w.+-]{0,}@[\w-]{2,}([.][a-zA-Z]{2,}|[.][\w-]{2,}[.][a-zA-Z]{2,})$/;
     const cardPattern = /^\d{16}$/;
     const expiryPattern = /^\d{2}\/\d{2}$/;
     const cvvPattern = /^\d{3}$/;
@@ -129,8 +129,6 @@ document.getElementById("payment-form").onsubmit = function (event) {
         return;
     }
 
-    
-
     // Show confirmation message
     document.querySelector(".title").innerHTML = "Checkout Complete";
     document.querySelector(".checkout-form").innerHTML = `
@@ -141,16 +139,20 @@ document.getElementById("payment-form").onsubmit = function (event) {
             <button class="back-btn">Back</button>
         </div>
     `;
-    if (sessionStorage.getItem("General Ticket") > 1) {
+    if (sessionStorage.getItem("General Ticket")) {
     let ticketData = sessionStorage.getItem("General Ticket");
     localStorage.setItem("General Ticket", ticketData);
     sessionStorage.removeItem("General Ticket");
     }
-    if (sessionStorage.getItem("VIP Ticket") > 1) {
+    if (sessionStorage.getItem("VIP Ticket")) {
         let ticketData = sessionStorage.getItem("VIP Ticket");
         localStorage.setItem("VIP Ticket", ticketData);
         sessionStorage.removeItem("VIP Ticket");
-        }
+    }
+    localStorage.setItem("Email", email);
+    localStorage.setItem("Card", cardNumber);
+    localStorage.setItem("Expiry", expiry);
+    localStorage.setItem("CVV", cvv);
     document.querySelector(".back-btn").onclick = () => location.reload();
 };
 

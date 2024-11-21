@@ -88,13 +88,13 @@
                 <h2>Payment Information</h2>
                 <form id="payment-form">
                 <label for="email">Email:</label>
-                <input type="email" id="email" maxlength="30" required pattern="[^\s@]+@[^\s@]+\.[^\s@]+">
+                <input type="email" id="email" maxlength="30" pattern="[\w]{1,}[\w.+-]{0,}@[\w-]{2,}([.][a-zA-Z]{2,}|[.][\w-]{2,}[.][a-zA-Z]{2,})$">
     
             <label for="card-number">Card Number:</label>
             <input type="text" id="card-number" maxlength="16" required pattern="\d{16}" placeholder="1234 5678 9012 3456">
     
             <label for="expiry">Expiry Date:</label>
-            <input type="text" id="expiry" maxlength="5" required placeholder="MM/YY" pattern="\d{2}/\d{2}">
+            <input type="text" id="expiry" maxlength="5" required placeholder="MM/YY" required pattern="\d{2}/\d{2}">
     
             <label for="cvv">CVV:</label>
             <input type="text" id="cvv" maxlength="3" required pattern="\d{3}" placeholder="123">
