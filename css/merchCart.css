@@ -3,22 +3,22 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
-  
-  body {
+}
+
+body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
     color: #333;
     padding: 20px;
-  }
-  
-  h1 {
+}
+
+h1 {
     text-align: center;
     margin-bottom: 30px;
-  }
-  
-  /* Cart Container */
-  .cart-container {
+}
+
+/* Cart Container */
+.cart-container {
     width: 80%;
     max-width: 1000px;
     margin: 0 auto;
@@ -26,62 +26,143 @@
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* Cart Table */
-  .cart-table {
+}
+
+/* Cart Table */
+.cart-table {
     width: 100%;
     border-collapse: collapse;
     margin-bottom: 20px;
-  }
-  
-  .cart-table th, .cart-table td {
+}
+
+.cart-table th, .cart-table td {
     padding: 12px;
     text-align: left;
     border-bottom: 1px solid #ddd;
-  }
-  
-  .cart-table th {
+}
+
+.cart-table th {
     background-color: #f0f0f0;
-  }
-  
-  .cart-table td input {
+}
+
+.cart-table td input {
     width: 50px;
     padding: 5px;
-  }
-  
-  .remove-btn {
+}
+
+.remove-btn {
     background-color: #e74c3c;
     color: white;
     border: none;
     padding: 8px 12px;
     cursor: pointer;
-  }
-  
-  .remove-btn:hover {
+}
+
+.remove-btn:hover {
     background-color: #c0392b;
-  }
-  
-  /* Cart Summary */
-  .cart-summary {
+}
+
+/* Cart Summary */
+.cart-summary {
     text-align: right;
     margin-top: 20px;
-  }
-  
-  .cart-summary p {
+}
+
+.cart-summary p {
     font-size: 16px;
     margin-bottom: 10px;
-  }
-  
-  .checkout-btn {
+}
+
+.checkout-btn {
     background-color: #2ecc71;
     color: white;
     border: none;
     padding: 12px 20px;
     cursor: pointer;
     font-size: 16px;
-  }
-  
-  .checkout-btn:hover {
+}
+
+.checkout-btn:hover {
     background-color: #27ae60;
-  }
+}
+
+/* Color and Size Options Styling */
+.options-section {
+    margin-top: 15px;
+    padding-left: 20px;
+}
+
+.options-section h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+/* Flexbox for Color and Size Options */
+.options-section .color-options,
+.options-section .size-options {
+  display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.options-section .color-options div,
+.options-section .size-options div {
+    cursor: pointer;
+}
+
+/* Color Options */
+.options-section .color-options div {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+}
+
+.options-section .color-options .grey {
+    background-color: grey;
+}
+
+.options-section .color-options .dark-grey {
+    background-color: darkgrey;
+}
+
+.options-section .color-options .black {
+    background-color: black;
+}
+
+.options-section .color-options .red {
+    background-color: red;
+}
+
+.options-section .color-options .orange {
+    background-color: orange;
+}
+
+/* Size Options */
+.options-section .size-options div {
+    padding: 5px 10px;
+    background-color: #f0f0f0;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.options-section .size-options .xs {
+    width: 60px;
+}
+
+.options-section .size-options .s {
+    width: 70px;
+}
+
+.options-section .size-options .m {
+    width: 80px;
+}
+
+.options-section .size-options .l {
+    width: 90px;
+}
+
+.options-section .size-options .xl {
+    width: 100px;
+}
