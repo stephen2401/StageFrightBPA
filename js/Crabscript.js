@@ -81,8 +81,19 @@ function addToCart(productId) {
 
     // Save the updated cart to localStorage
     localStorage.setItem("cart", JSON.stringify(cart));
-    showNotification(); // Display a nice notification
+    updateCartCount();
+
+    // Display a notification
+    showNotification();
 }
+
+// Update cart count in the HTML
+function updateCartCount() {
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+    const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+    document.getElementById('cart-count').textContent = totalItems;
+}
+
 
 // Change active category button
 function changeCategory(category) {
