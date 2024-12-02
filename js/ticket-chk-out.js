@@ -85,6 +85,8 @@ document.querySelector(".checkout-btn").onclick = () => {
     // Hide ticket selection and show payment form
     document.querySelector(".checkout-cont").style.display = "none";
     document.querySelector(".checkout-form").style.display = "flex";
+    
+    
     if (generalTicketSelect.checked) {
         sessionStorage.setItem("General Ticket", generalTicketCount.value);
         console.log(generalTicketCount.value, "General Ticket");
