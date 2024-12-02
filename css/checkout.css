@@ -8,7 +8,8 @@
 :root {
     --primary-color: #f2f2f2;
     --secondary-color: #000000;
-    --tertiary-color: #2962ff;
+    /*--tertiary-color: #2962ff; */
+    --tertiary-color: #640817;
     --quaternary-color: #7a6d86;
     --quinary-color: #131722;
 }
