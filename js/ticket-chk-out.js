@@ -85,6 +85,8 @@ document.querySelector(".checkout-btn").onclick = () => {
     // Hide ticket selection and show payment form
     document.querySelector(".checkout-cont").style.display = "none";
     document.querySelector(".checkout-form").style.display = "flex";
+    
+    
     if (generalTicketSelect.checked) {
         sessionStorage.setItem("General Ticket", generalTicketCount.value);
         console.log(generalTicketCount.value, "General Ticket");
@@ -94,6 +96,11 @@ document.querySelector(".checkout-btn").onclick = () => {
         sessionStorage.setItem("VIP Ticket", vipTicketCount.value);
         console.log(vipTicketCount.value, "VIP Ticket");
         sessionStorage.removeItem("General Ticket");
+    }
+    if (generalTicketSelect.checked == false && vipTicketSelect.checked == false) {
+        document.querySelector(".checkout-cont").style.display = "flex";
+        document.querySelector(".checkout-form").style.display = "none";
+        alert("Please Select a Ticket type.");
     }
 };
 
@@ -108,8 +115,8 @@ document.getElementById("payment-form").onsubmit = function (event) {
 
     // Basic validation for card number, expiry, and CVV
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    const cardPattern = /^\d{16}$/;
-    const expiryPattern = /^\d{2}\/\d{2}$/;
+    const cardPattern = /^(?:\d[ -]*?){13,16}$/;
+    const expiryPattern = /^(0[1-9]|1[0-2])\/?([0-9]{2})$/;
     const cvvPattern = /^\d{3}$/;
 
     if (!emailPattern.test(email)) {
