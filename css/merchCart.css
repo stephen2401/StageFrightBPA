@@ -244,6 +244,7 @@ h1 {
     border-radius: 6px;
     text-align: center;
     transition: background-color 0.3s ease;
+    padding-left: 20px;
 }
 
 .checkout-btn:hover {

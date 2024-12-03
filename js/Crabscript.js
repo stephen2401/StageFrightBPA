@@ -2,7 +2,7 @@ const products = {
     category1: [
         { id: 1, name: "Product 1", image: "image1.jpg", price: "20" },
         { id: 2, name: "Product 2", image: "image2.jpg", price: "25" },
-        { id: 3, name: "Product 3", image: "image3.jpg", price: "30" }
+        { id: 3, name: "Product 3", image: "image3.jpg", price: "30" },
     ],
     category2: [
         { id: 4, name: "Product 4", image: "image4.jpg", price: "35" },
