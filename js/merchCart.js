@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <h3>Color</h3>
             <div class="color-box grey" data-color="grey"></div>
             <div class="color-box dark-grey" data-color="dark-grey"></div>
-            <div class="color-box black" data-color="black"></div>
+            <div class="color-box black" data-color="BPA T-Shirt (Black Logo 1) (1).png"></div>
             <div class="color-box red" data-color="red"></div>
             <div class="color-box orange" data-color="orange"></div>
           </div>
@@ -93,7 +93,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const productImage = e.target.closest('.cart-item').querySelector('.product-image img');
 
       if (productImage) {
-        productImage.src = `/images/${selectedColor}-tshirt.png`;
+        productImage.src = `/images/${selectedColor}`;
         productImage.alt = `${selectedColor} T-shirt`;
       }
 
