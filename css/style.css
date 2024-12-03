@@ -512,7 +512,7 @@ button {
 /** banner section **/
 
 .full_bg {
-    background: url(../images/banner.png);
+    background: url(/images/Home\ Page.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
