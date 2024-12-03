@@ -330,3 +330,12 @@ h1 {
         font-size: 16px;
     }
 }
+
+.color-box.selected{
+  transform: scale(1.2);
+}
+.size-box.selected {
+  background-color: #27ae60;
+  transform: scale(1.2);
+  color: white;
+}

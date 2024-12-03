@@ -3,14 +3,12 @@ document.addEventListener('DOMContentLoaded', () => {
   const cartContainer = document.querySelector('.cart-container');
   const cartSummary = document.querySelector('.cart-summary p strong');
 
-  // Check if cart is empty
   if (cart.length === 0) {
     cartContainer.innerHTML = '<p>Your cart is empty.</p>';
     updateCartSummary();
     return;
   }
 
-  // Create cart items dynamically
   cart.forEach(item => {
     const cartItem = document.createElement('div');
     cartItem.classList.add('cart-item');
@@ -37,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
       cartItem.innerHTML = `
         <div class="product-details">
           <div class="product-image">
-            <img src="/images/tsshirt.png" alt="Product Image">
+            <img src="/images/default-tshirt.png" alt="Product Image">
           </div>
           <div class="product-info">
             <h3>${item.name}</h3>
@@ -89,10 +87,36 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  document.querySelectorAll('.color-box').forEach(box => {
+    box.addEventListener('click', (e) => {
+      const selectedColor = e.target.dataset.color;
+      const productImage = e.target.closest('.cart-item').querySelector('.product-image img');
+
+      if (productImage) {
+        productImage.src = `/images/${selectedColor}-tshirt.png`;
+        productImage.alt = `${selectedColor} T-shirt`;
+      }
+
+      e.target.parentNode.querySelectorAll('.color-box').forEach(box => box.classList.remove('selected'));
+      e.target.classList.add('selected');
+    });
+  });
+
+  document.querySelectorAll('.size-box').forEach(box => {
+    box.addEventListener('click', (e) => {
+      const selectedSize = e.target.dataset.size;
+
+      e.target.parentNode.querySelectorAll('.size-box').forEach(box => box.classList.remove('selected'));
+      e.target.classList.add('selected');
+
+      console.log(`Selected size: ${selectedSize}`);
+    });
+  });
+
   updateCartSummary();
 });
 
-// Update quantity in cart
+// Update cart logic
 function updateQuantity(productId, newQuantity) {
   let cart = JSON.parse(localStorage.getItem('cart')) || [];
   const item = cart.find(p => p.id == productId);
@@ -104,7 +128,6 @@ function updateQuantity(productId, newQuantity) {
   }
 }
 
-// Remove item from cart
 function removeFromCart(productId) {
   let cart = JSON.parse(localStorage.getItem('cart')) || [];
   cart = cart.filter(p => p.id != productId);
@@ -113,14 +136,12 @@ function removeFromCart(productId) {
   updateCartSummary();
 }
 
-// Update cart summary
 function updateCartSummary() {
   const cart = JSON.parse(localStorage.getItem('cart')) || [];
   const subtotal = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
   document.querySelector('.cart-summary p strong').textContent = `Subtotal: $${subtotal.toFixed(2)}`;
 }
 
-// Update total price of a single item
 function updateCartItem(productId) {
   const cart = JSON.parse(localStorage.getItem('cart')) || [];
   const item = cart.find(p => p.id == productId);
