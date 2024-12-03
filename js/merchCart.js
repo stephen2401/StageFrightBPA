@@ -1,56 +1,86 @@
 document.addEventListener('DOMContentLoaded', () => {
   const cart = JSON.parse(localStorage.getItem('cart')) || [];
-  const cartTableBody = document.querySelector('.cart-table tbody');
+  const cartContainer = document.querySelector('.cart-container');
 
+  // Check if cart is empty
   if (cart.length === 0) {
-    cartTableBody.innerHTML = '<tr><td colspan="5">Your cart is empty.</td></tr>';
+    cartContainer.innerHTML = '<p>Your cart is empty.</p>';
     return;
   }
 
-  cart.forEach((item, index) => {
-    const row = document.createElement('tr');
-    row.innerHTML = `
-      <td><img src="${item.image}" alt="${item.name}" class="product-image" width="50"></td>
-      <td>${item.name}</td>
-      <td>$${item.price}</td>
-      <td><input type="number" value="${item.quantity}" min="1" data-id="${item.id}" class="quantity-input"></td>
-      <td>$${(item.price * item.quantity).toFixed(2)}</td>
-      <td><button class="remove-btn" data-id="${item.id}">Remove</button></td>
-    `;
-
-    // Add color and size options below the first three items (index 0, 1, 2)
-    if (index < 3) {
-      const optionsSection = document.createElement('div');
-      optionsSection.classList.add('options-section');
-
-      // Color Options
-      optionsSection.innerHTML += `
-        <h3>Color</h3>
-        <div class="color-options">
-          <div class="grey" data-color="grey"></div>
-          <div class="dark-grey" data-color="dark-grey"></div>
-          <div class="black" data-color="black"></div>
-          <div class="red" data-color="red"></div>
-          <div class="orange" data-color="orange"></div>
+  // Create cart items dynamically
+  cart.forEach(item => {
+    const cartItem = document.createElement('div');
+    cartItem.classList.add('cart-item');
+    cartItem.setAttribute('data-id', item.id);
+    
+    if (![1, 2, 3].includes(item.id)) {
+      // Add product image, name, and price
+      cartItem.innerHTML = `
+        <div class="product-details">
+          <div class="product-info">
+            <h3>${item.name}</h3>
+            <p>$${item.price}</p>
+          </div>
+        </div>
+        <div class="product-options">
+          <div class="quantity">
+            <input type="number" value="${item.quantity}" min="1" class="quantity-input" data-id="${item.id}">
+          </div>
+          <div class="price-total">
+            <p>Total: $${(item.price * item.quantity).toFixed(2)}</p>
+          </div>
+          <button class="remove-btn" data-id="${item.id}">Remove</button>
         </div>
       `;
+      cartContainer.appendChild(cartItem);
+    }
+    // Only add color and size options for certain products
+    if ([1, 2, 3].includes(item.id)) {
+      cartItem.innerHTML = `
+          <div class="product-details">
+          <div class="product-image">
+            <img src="/images/tsshirt.png" alt="Product Image">
+          </div>
+          <div class="product-info">
+            <h3>${item.name}</h3>
+            <p>$${item.price}</p>
+          </div>
+        </div>
 
-      // Size Options
-      optionsSection.innerHTML += `
-        <h3>Size</h3>
-        <div class="size-options">
-          <div class="xs" data-size="x-small">XS</div>
-          <div class="s" data-size="small">S</div>
-          <div class="m" data-size="medium">M</div>
-          <div class="l" data-size="large">L</div>
-          <div class="xl" data-size="x-large">XL</div>
+        <div class="product-options">
+          <div class="quantity">
+            <input type="number" value="${item.quantity}" min="1" class="quantity-input" data-id="${item.id}">
+          </div>
+          <div class="price-total">
+            <p>Total: $${(item.price * item.quantity).toFixed(2)}</p>
+          </div>
+          <button class="remove-btn" data-id="${item.id}">Remove</button>
+        </div>
+        <div class="options-section">
+          <div class="color-options">
+            <h3>Color</h3>
+            <div class="color-box grey" data-color="grey"></div>
+            <div class="color-box dark-grey" data-color="dark-grey"></div>
+            <div class="color-box black" data-color="black"></div>
+            <div class="color-box red" data-color="red"></div>
+            <div class="color-box orange" data-color="orange"></div>
+          </div>
+          <div class="size-options">
+            <h3>Size</h3>
+            <div class="size-box xs" data-size="x-small">XS</div>
+            <div class="size-box s" data-size="small">S</div>
+            <div class="size-box m" data-size="medium">M</div>
+            <div class="size-box l" data-size="large">L</div>
+            <div class="size-box xl" data-size="x-large">XL</div>
+          </div>
         </div>
       `;
-
-      row.appendChild(optionsSection);
+      cartContainer.appendChild(cartItem);
     }
 
-    cartTableBody.appendChild(row);
+    // Append the cart item to the container
+    cartContainer.appendChild(cartItem);
   });
 
   // Event listeners for quantity changes, removal, color, and size selection
@@ -66,16 +96,15 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Event listeners for color and size selections
   document.querySelectorAll('.color-options div').forEach(colorBox => {
     colorBox.addEventListener('click', (e) => {
-      updateColor(e.target.dataset.color, e.target.closest('tr').querySelector('.quantity-input').dataset.id);
+      updateColor(e.target.dataset.color, e.target.closest('.cart-item').dataset.id);
     });
   });
 
   document.querySelectorAll('.size-options div').forEach(sizeBox => {
     sizeBox.addEventListener('click', (e) => {
-      updateSize(e.target.dataset.size, e.target.closest('tr').querySelector('.quantity-input').dataset.id);
+      updateSize(e.target.dataset.size, e.target.closest('.cart-item').dataset.id);
     });
   });
 
