@@ -57,7 +57,11 @@ h1 {
     gap: 10px;
     width: 30%;
 }
-
+@media only screen and (max-width: 776px) {
+    .product-details {
+      flex-direction: column;
+    }
+  }
 .product-image img {
     width: 100px;
     height: auto;
@@ -93,7 +97,17 @@ h1 {
     align-content: stretch;
     align-items: center;
 }
-
+.product-options2 {
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+    width: 60%;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: row;
+    align-content: center;
+    padding-left: 55px;
+}
 .product-options .quantity input {
     width: 50px;
     padding: 6px;
@@ -107,7 +121,19 @@ h1 {
     border-color: #2ecc71;
     outline: none;
 }
+.product-options2 .quantity input {
+    width: 50px;
+    padding: 6px;
+    font-size: 14px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    transition: border 0.3s ease;
+}
 
+.product-options2 .quantity input:focus {
+    border-color: #2ecc71;
+    outline: none;
+}
 .remove-btn {
     background-color: #e74c3c;
     color: white;

@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <p>$${item.price}</p>
           </div>
         </div>
-        <div class="product-options">
+        <div class="product-options2">
           <div class="quantity">
             <input type="number" value="${item.quantity}" min="1" class="quantity-input" data-id="${item.id}">
           </div>
