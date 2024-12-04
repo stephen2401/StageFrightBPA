@@ -519,7 +519,6 @@ button {
     height: 100vh;
     padding-bottom: 150px;
     position: relative;
-    background-attachment: fixed; /* Make the background fixed while scrolling */
 }
 
 
