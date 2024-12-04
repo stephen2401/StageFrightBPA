@@ -967,7 +967,7 @@ button {
 .crabShop {
     display: flex;
     padding: 10px 20px;
-    color: #8c0a24;
+    color: white;
     border: 2px solid #8c0a24;
     border-radius: 8px;
     font-size: 16px;
@@ -979,7 +979,7 @@ button {
 }
 
 .crabShop:hover {
-    color: #000;
+    color: white;
     background-color: #8c0a24;
     transform: scale(1.1);
 }

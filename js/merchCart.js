@@ -3,20 +3,43 @@ document.addEventListener('DOMContentLoaded', () => {
   const cartContainer = document.querySelector('.cart-container');
   const cartSummary = document.querySelector('.cart-summary p strong');
 
-  // Check if cart is empty
   if (cart.length === 0) {
     cartContainer.innerHTML = '<p>Your cart is empty.</p>';
     updateCartSummary();
     return;
   }
 
-  // Create cart items dynamically
+  // Mapping product IDs to their respective images
+  const productImages = {
+    1: {
+      grey: '/images/BPA T-Shirt (Grey Logo 1).png',
+      darkgrey: '/images/BPA T-Shirt (White Logo 1).png',
+      black: '/images/BPA T-Shirt (Black Logo 1) (1).png',
+      red: '/images/BPA T-Shirt (Red Logo 1).png',
+      orange: '/images/BPA T-Shirt (Orange Logo 1).png',
+    },
+    2: {
+      grey: '/images/product2-grey.png',
+      darkgrey: '/images/product2-darkgrey.png',
+      black: '/images/product2-black.png',
+      red: '/images/BPA T-Shirt (Red Logo 1).png',
+      orange: '/images/product2-orange.png',
+    },
+    3: {
+      grey: '/images/product3-grey.png',
+      darkgrey: '/images/product3-darkgrey.png',
+      black: '/images/product3-black.png',
+      red: '/images/product3-red.png',
+      orange: '/images/product3-orange.png',
+    }
+  };
+
   cart.forEach(item => {
     const cartItem = document.createElement('div');
     cartItem.classList.add('cart-item');
     cartItem.setAttribute('data-id', item.id);
 
-    if (![1, 2, 3].includes(item.id)) {
+    if (!productImages[item.id]) {
       cartItem.innerHTML = `
         <div class="product-details">
           <div class="product-info">
@@ -37,7 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
       cartItem.innerHTML = `
         <div class="product-details">
           <div class="product-image">
-            <img src="/images/tsshirt.png" alt="Product Image">
+            <img src="/images/BPA T-Shirt (Grey Logo ${item.id}).png" alt="Product Image">
           </div>
           <div class="product-info">
             <h3>${item.name}</h3>
@@ -56,19 +79,19 @@ document.addEventListener('DOMContentLoaded', () => {
         <div class="options-section">
           <div class="color-options">
             <h3>Color</h3>
-            <div class="color-box grey" data-color="grey"></div>
-            <div class="color-box dark-grey" data-color="dark-grey"></div>
-            <div class="color-box black" data-color="black"></div>
-            <div class="color-box red" data-color="red"></div>
-            <div class="color-box orange" data-color="orange"></div>
+            <div class="color-box grey" data-color="grey" data-product-id="${item.id}"></div>
+            <div class="color-box dark-grey" data-color="darkgrey" data-product-id="${item.id}"></div>
+            <div class="color-box black" data-color="black" data-product-id="${item.id}"></div>
+            <div class="color-box red" data-color="red" data-product-id="${item.id}"></div>
+            <div class="color-box orange" data-color="orange" data-product-id="${item.id}"></div>
           </div>
           <div class="size-options">
             <h3>Size</h3>
-            <div class="size-box xs" data-size="x-small">XS</div>
-            <div class="size-box s" data-size="small">S</div>
-            <div class="size-box m" data-size="medium">M</div>
-            <div class="size-box l" data-size="large">L</div>
-            <div class="size-box xl" data-size="x-large">XL</div>
+            <div class="size-box xs" data-size="XS">XS</div>
+            <div class="size-box s" data-size="S">S</div>
+            <div class="size-box m" data-size="M">M</div>
+            <div class="size-box l" data-size="L">L</div>
+            <div class="size-box xl" data-size="XL">XL</div>
           </div>
         </div>`;
     }
@@ -76,7 +99,7 @@ document.addEventListener('DOMContentLoaded', () => {
     cartContainer.appendChild(cartItem);
   });
 
-  // Event listeners for quantity changes, removal, color, and size selection
+  // Event listeners for quantity changes, removal, color selection, and size selection
   document.querySelectorAll('.quantity-input').forEach(input => {
     input.addEventListener('change', (e) => {
       updateQuantity(e.target.dataset.id, e.target.value);
@@ -86,6 +109,32 @@ document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.remove-btn').forEach(button => {
     button.addEventListener('click', (e) => {
       removeFromCart(e.target.dataset.id);
+    });
+  });
+
+  document.querySelectorAll('.color-box').forEach(box => {
+    box.addEventListener('click', (e) => {
+      const selectedColor = e.target.dataset.color;
+      const productId = e.target.dataset.productId;
+      const productImage = e.target.closest('.cart-item').querySelector('.product-image img');
+
+      if (productImages[productId] && productImage) {
+        productImage.src = productImages[productId][selectedColor];
+        productImage.alt = `${selectedColor} T-shirt`;
+      }
+
+      e.target.parentNode.querySelectorAll('.color-box').forEach(box => box.classList.remove('selected'));
+      e.target.classList.add('selected');
+    });
+  });
+
+  document.querySelectorAll('.size-box').forEach(box => {
+    box.addEventListener('click', (e) => {
+      const selectedSize = e.target.dataset.size;
+
+      e.target.parentNode.querySelectorAll('.size-box').forEach(box => box.classList.remove('selected'));
+      e.target.classList.add('selected');
+      console.log(`Size ${selectedSize} selected for this item.`);
     });
   });
 
