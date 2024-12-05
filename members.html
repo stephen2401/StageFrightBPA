@@ -62,6 +62,58 @@
          margin-top: -33px; /* move the image up */
          width: 250px;
         }
+        #memain {
+         background: url(images/mem.jpg);
+        }
+        #alex {
+         background: url(images/alex.jpg);
+        }
+        #maya {
+         background: url(images/maya.jpg);
+        }
+        #jaxon {
+         background: url(images/jaxon.jpg)
+        }
+        #soph {
+         background: url(images/sophie.jpg);
+        }
+
+      /* styles for tablets (screens 768px or smaller) */
+      @media screen and (max-width: 1030px) {  
+         #memain {
+         background: url(images/mem.jpg);
+        }
+        #alex {
+         background: url(images/alex3.jpg);
+        }
+        #maya {
+         background: url(images/maya3.jpg);
+        }
+        #jaxon {
+         background: url(images/jaxon3.jpg)
+        }
+        #soph {
+         background: url(images/sophie3.jpg);
+        }
+      }
+        /* styles for smaller phones (screens 480px or smaller) */
+      @media screen and (max-width: 480px) {
+         #memain {
+         background: url(images/mem.jpg);
+        }
+        #alex {
+         background: url(images/alex2.jpg);
+        }
+        #maya {
+         background: url(images/maya2.jpg);
+        }
+        #jaxon {
+         background: url(images/jaxon2.jpg)
+        }
+        #soph {
+         background: url(images/sophie2.jpg);
+        }
+}
   </style>
 </head>
 <body class="main-layout">
@@ -121,7 +173,7 @@
     <div class="carousel-inner"> <!--Ryan drew all the images for the band members :) -->
 
       <!-- first slide -->
-      <div class="carousel-item active" style="background: url(images/mem.jpg);">
+      <div class="carousel-item active" id="memain">
          <div class="carousel-caption cuplle">
             <div class="container">
                <div class="row">
@@ -137,7 +189,7 @@
       </div>
 
       <!-- second slide -->
-      <div class="carousel-item" style="background: url(images/alex.jpg);">
+      <div class="carousel-item" id="alex">
          <div class="carousel-caption cuplle">
             <div class="container">
                <div class="row">
@@ -154,7 +206,7 @@
       </div>
       
       <!-- third slide -->
-      <div class="carousel-item" style="background: url(images/maya.jpg);">
+      <div class="carousel-item" id="maya" >
         <div class="carousel-caption cuplle">
            <div class="container">
               <div class="row">
@@ -172,7 +224,7 @@
    
 
    <!-- fourth slide -->
-   <div class="carousel-item" style="background: url(images/jaxon.jpg);">
+   <div class="carousel-item" id="jaxon">
     <div class="carousel-caption cuplle">
        <div class="container">
           <div class="row">
@@ -188,7 +240,7 @@
  </div>
 
  <!-- fifth slide -->
- <div class="carousel-item" style="background: url(images/sophie.jpg);">
+ <div class="carousel-item" id="soph">
   <div class="carousel-caption cuplle">
      <div class="container">
         <div class="row">
