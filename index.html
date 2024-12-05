@@ -5,7 +5,7 @@
       <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <!-- mobile metas -->
-      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="viewport" content="initial-scale=1, maximum-scale=1">
       <!-- site metas -->
       <title>Stage Fright</title>
@@ -50,13 +50,57 @@
          margin-top: -33px; /* move the image up */
          width: 250px;
         }
+        h2 {
+     font-size: 22px;
+}
+       /* default styles (desktop and larger screens) */
+.full_bg {
+  background: url('/images/Home.jpg'); 
+  background-size: cover; /* keeps the image covering the area */
+  background-position: center; 
+  background-repeat: no-repeat; /* prevents repeating */
+  height: 100vh; /* full height for desktop */
+  padding-bottom: 150px;
+  position: relative;
+}
+
+/* styles for tablets (screens 768px or smaller) */
+@media screen and (max-width: 1030px) {
+  .full_bg {
+    background: url('/images/Home.jpg');
+    background-size: contain; 
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 50vh; /* slightly reduced height */
+    padding-bottom: 120px;
+  }
+  h2 {
+  font-size: 3rem; /* larger text for desktops */
+}
+}
+
+/* styles for smaller phones (screens 480px or smaller) */
+@media screen and (max-width: 480px) {
+  .full_bg {
+    background: url('/images/Home.jpg');
+    background-size: contain; /* ensures no cropping */
+    background-position: center;
+    background-repeat: no-repeat;
+    height: auto; /* allow the image to adjust naturally */
+    padding-bottom: 50px;
+  }
+  h2 {
+  font-size: 1.2rem; /* larger text for desktops */
+}
+}
+
       </style>
    </head>
    <!-- body -->
    <body class="main-layout">
       <!-- loader  -->
       <div class="loader_bg">
-         <div class="loader"><img src="images/loading.gif" alt="#"/></div>
+         <div class="loader"><img src="images/loading.gif" alt="loading screen gif"/></div>
       </div>
       <!-- end loader -->
       <!-- top -->
@@ -113,7 +157,7 @@
                         <div class="container">
                            <div class="row">
                               <div class="col-md-8">
-                                 <div class="photog"  id="content">
+                                 <div class="photog">
                                     
                                  </div>
                               </div>
@@ -127,7 +171,7 @@
       </div>
       <!-- end banner -->
       <!-- about -->
-      <div class="about">
+      <div class="about"> <!--Ryan took the background image on a camera and made it :) -->
          <div class="container_width">
             <div class="row d_flex">
                    <div class="col-md-7">
@@ -154,7 +198,7 @@
             <div class="row d_flex grid">
                <div class="col-md-7">
                   <div class="coronata_img text_align_center">
-                     <figure><img src="images/Stage Fright Member Image.png" alt="#"/></figure> <!--dimensions: 709 x 448-->
+                     <figure><img src="images/corona.png" alt="#"/></figure> <!--dimensions: 709 x 448-->
                   </div>
                </div>
                <div class="col-md-5 oder1">
@@ -238,7 +282,7 @@
             <div class="row d_flex">
                <div class=" col-md-4">
                   <div class="latest text_align_center">
-                     <figure><img src="images/tick.jpg" alt="#"/></figure> <!--image is from https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRpGOGxky8y8qFbRTnesTutyqQKf2565zi1gACvQ1EHODknDvRj-->
+                     <figure><img src="images/tick.jpg" alt="#"/></figure> 
                       <a class="read_more" href="tours.html"  onclick="readSection('ticket1')">Order Tickets</a> <!--leads to ticket page that stephen works on-->
                      <div class="nostrud"  id="content">
                         <h3>StageFright Live at PNC Music Pavilion</h3> <br>
@@ -248,7 +292,7 @@
                </div>
                <div class=" col-md-4">
                   <div class="latest text_align_center">
-                     <figure><img src="images/tick.jpg" alt="#"/></figure> <!--image is from https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRpGOGxky8y8qFbRTnesTutyqQKf2565zi1gACvQ1EHODknDvRj-->
+                     <figure><img src="images/tick.jpg" alt="#"/></figure> 
                       <a class="read_more" href="tours.html" onclick="readSection('ticket2')">Order Tickets</a> <!--leads to ticket page that stephen works on-->
                      <div class="nostrud"  id="content"> 
                         <h3>Stagefright Live at Atlanta Coliseum</h3> <br>
@@ -258,11 +302,11 @@
                </div>
                <div class=" col-md-4">
                   <div class="latest text_align_center">
-                     <figure><img src="images/tick.jpg" alt="#"/></figure> <!--image is from https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRpGOGxky8y8qFbRTnesTutyqQKf2565zi1gACvQ1EHODknDvRj-->
+                     <figure><img src="images/tick.jpg" alt="#"/></figure> 
                       <a class="read_more" href="tours.html"  onclick="readSection('ticket3')">Order Tickets</a> <!--leads to ticket page that stephen works on-->
                      <div class="nostrud"   id="content">
                         <h3>Stagefright Live at the Columbus Athenaeum</h3> <br>
-                        <p>Columbus's own StageFright is back to electrify the Athenaeum! Hometown legends Alex, Maya, Jaxon, and Sophie will deliver their mix of classic and modern rock, promising a night that’s intense, raw, and unforgettable. Columbus, it’s time to rock with your own!</p>
+                        <p>Columbus's own StageFright is back to electrify the Athenaeum! Hometown legends Alex, Maya, Jaxon, and Sophie will deliver their mix of classic and modern rock. Columbus, it’s time to rock with your own!</p>
                      </div>
                   </div>
                </div>
@@ -274,7 +318,7 @@
 <!-- update -->
 <div class="update">
    
-   <div class="cevery_bg"> <!--dimensions: 1920 x 339 (the 339 needs to be bigger like 350 maybe)--> <!--image from https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPaROrve72_r5z8KiPju_5yzVzelu9Uigf-lQigrjO94ZlyUbE-->
+   <div class="cevery_bg"> <!--dimensions: 1920 x 339 (the 339 needs to be bigger like 350 maybe)--> 
       <div class="container">
          <div class="row">
             <div class="col-md-12">
