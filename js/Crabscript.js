@@ -1,7 +1,7 @@
 const products = {
     category1: [
-        { id: 1, name: "Product 1", image: "image1.jpg", price: "20" },
-        { id: 2, name: "Product 2", image: "image2.jpg", price: "25" },
+        { id: 1, name: "T-Shirt (Logo 1)", image: "/images/BPA T-Shirt (White Logo 1).png", price: "20" },
+        { id: 2, name: "T-Shirt (Logo 2)", image: "/images/BPA T-Shirt (White Logo 2).png", price: "25" },
         { id: 3, name: "Product 3", image: "image3.jpg", price: "30" }
     ],
     category2: [
