@@ -708,8 +708,9 @@ button {
 }
 
 .mheader p{
+    display: flex;
     background-color: rgba(100, 8, 23, 0.8);;
-    width: 650px;
+    width: auto;
     margin: auto;
 }
 
