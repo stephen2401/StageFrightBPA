@@ -2,7 +2,7 @@ const products = {
     category1: [
         { id: 1, name: "Product 1", image: "image1.jpg", price: "20" },
         { id: 2, name: "Product 2", image: "image2.jpg", price: "25" },
-        { id: 3, name: "Product 3", image: "image3.jpg", price: "30" },
+        { id: 3, name: "Product 3", image: "image3.jpg", price: "30" }
     ],
     category2: [
         { id: 4, name: "Product 4", image: "image4.jpg", price: "35" },
@@ -93,7 +93,6 @@ function updateCartCount() {
     document.getElementById('cart-count').textContent = totalItems;
 }
 
-
 // Change active category button
 function changeCategory(category) {
     const buttons = document.querySelectorAll('.crabButton');
@@ -113,9 +112,10 @@ function showNotification() {
     setTimeout(() => {
       notification.remove();
     }, 3000);
-  }
-  
-  // Automatically display Category 1 on page load
-  document.addEventListener("DOMContentLoaded", () => {
+}
+
+// Automatically display Category 1 on page load and update the cart count
+document.addEventListener("DOMContentLoaded", () => {
     renderProducts("category1"); // Render Category 1 products
-  });
+    updateCartCount(); // Ensure the cart count is updated on page load
+});
