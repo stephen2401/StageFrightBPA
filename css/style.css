@@ -710,7 +710,7 @@ button {
 .mheader p{
     display: flex;
     background-color: rgba(100, 8, 23, 0.8);;
-    width: auto;
+    width: 35%;
     margin: auto;
 }
 
