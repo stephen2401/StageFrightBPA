@@ -95,6 +95,9 @@
 
 /* styles for tablets (screens 768px or smaller) */
 @media screen and (max-width: 1030px) {
+   .smallg {
+      width:284px;
+}
   .full_bg {
     background: url('/images/Home.jpg');
     background-size: contain; 
@@ -116,6 +119,7 @@
       width: 90%; /* increase the width for laptop screens */
       max-width: 1200px; /* set a max width to prevent it from being too wide */
       height: 50%;
+      position: relative;
 }
 #blue {
    font-size: 29px;
@@ -124,6 +128,9 @@
 
 /* styles for smaller phones (screens 480px or smaller) */
 @media screen and (max-width: 480px) {
+   .smallg {
+      width:150px;
+}
   #big {
    font-size: 25px
   }
@@ -233,7 +240,7 @@
                </div>
                <div class="col-md-5">
                   <div class="about_img text_align_center">
-                     <figure><img src="images/small.jpg" alt="#"/></figure> <!--dimensions: 478 x 471, also no background--> <!--image to the right-->
+                     <figure><img class="smallg" src="images/small.jpg" alt="#"/></figure> <!--dimensions: 478 x 471, also no background--> <!--image to the right-->
                   </div>
                </div>
               
