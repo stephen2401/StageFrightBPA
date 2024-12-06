@@ -63,6 +63,35 @@
   padding-bottom: 150px;
   position: relative;
 }
+#little {
+   font-size:25px
+}
+#little2 {
+   font-size: 21px;
+}
+#little3 {
+   font-size: 19px;
+}
+#big {
+   font-size: 46px;
+}
+
+#blue {
+   font-size: 33px;
+}
+
+/** about section **/
+
+.about {
+    background: #640817;
+    opacity:0.9;
+    padding: 80px 50px;
+    position: relative;
+    margin: 0 70px;
+    box-shadow: 3px 0 62px rgba(13, 3, 3, 0.18);
+    border-radius: 60px;
+    margin-top: -130px;
+}
 
 /* styles for tablets (screens 768px or smaller) */
 @media screen and (max-width: 1030px) {
@@ -74,23 +103,43 @@
     height: 50vh; /* slightly reduced height */
     padding-bottom: 120px;
   }
-  h2 {
-  font-size: 3rem; /* larger text for desktops */
+  #big {
+   font-size: 37px
+  }
+  #little2 {
+  font-size: 19px; /* larger text for desktops */
+}
+   #little {
+      font-size: 22px;
+   }
+   .about {
+      width: 90%; /* increase the width for laptop screens */
+      max-width: 1200px; /* set a max width to prevent it from being too wide */
+      height: 50%;
+}
+#blue {
+   font-size: 29px;
 }
 }
 
 /* styles for smaller phones (screens 480px or smaller) */
 @media screen and (max-width: 480px) {
-  .full_bg {
-    background: url('/images/Home.jpg');
-    background-size: contain; /* ensures no cropping */
-    background-position: center;
-    background-repeat: no-repeat;
-    height: auto; /* allow the image to adjust naturally */
-    padding-bottom: 50px;
+  #big {
+   font-size: 25px
   }
-  h2 {
-  font-size: 1.2rem; /* larger text for desktops */
+  #little2 {
+  font-size: 16px; /* larger text for desktops */
+}
+   #little {
+      font-size: 18px;
+   }
+   .about {
+        margin: 0 20px; /* reduce side margins to fit smaller screens */
+        padding: 50px 20px; /* adjust padding for better proportions */
+        border-radius: 30px; /* smaller radius for compact design */
+    }
+#blue {
+   font-size: 19px;
 }
 }
 
@@ -176,8 +225,8 @@
             <div class="row d_flex">
                    <div class="col-md-7">
                   <div class="titlepage text_align_left"  id="content">
-                     <h2 class="georgia">About Stage Fright </h2>
-                     <p  style="font-family: Garamond; font-size:25px;">StageFright is a dynamic rock band, Blending classic and modern rock influences, they deliver electrifying performances and heartfelt lyrics.
+                     <h2 class="georgia" id="big">About Stage Fright </h2>
+                     <p  style="font-family: Garamond;" id="little">StageFright is a dynamic rock band, Blending classic and modern rock influences, they deliver electrifying performances and heartfelt lyrics.
                      </p>
                      <a class="read_more" href="about.html" onclick="readSection('about')">About More</a> <!--About webpage-->
                   </div>
@@ -203,8 +252,8 @@
                </div>
                <div class="col-md-5 oder1">
                   <div class="titlepage text_align_left"  id="content">
-                     <h2 class="georgia">Who makes up Stage Fright?</h2>
-                     <p class="gara" style="font-size: 21px;">Stage Fright is made up of Four members: Alex Reed, Maya Torres, Jaxon Lee, and Sophie Nguyen.
+                     <h2 class="georgia" id="big">Who makes up Stage Fright?</h2>
+                     <p class="gara" id="little2">Stage Fright is made up of Four members: Alex Reed, Maya Torres, Jaxon Lee, and Sophie Nguyen.
                      </p>
                      <a class="mem" href="members.html" onclick="readSection('members')">Members</a> <!--members page-->
                   </div>
@@ -220,8 +269,8 @@
             <div class="row">
                <div class="col-md-12">
                   <div class="titlepage text_align_center"  id="content">
-                     <h2 class="georgia" >Merchandise</h2> <!--doesn't lead to a page just shows-->
-                     <p class="gara" style="font-size: 19px;">Support the up and coming band Stage Fright, while showing off your Spirit and Style!
+                     <h2 class="georgia" id="big">Merchandise</h2> <!--doesn't lead to a page just shows-->
+                     <p class="gara" id="little3">Support the up and coming band Stage Fright, while showing off your Spirit and Style!
                      </p>
                   </div>
                </div>
@@ -274,8 +323,8 @@
             <div class="row">
                <div class="col-md-12">
                   <div class="titlepage text_align_center "  id="content">
-                     <h2 class="georgia">Upcoming Tours</h2>
-                     <p class="gara" style="font-size:19px;">Up and coming Tours</p>  
+                     <h2 class="georgia" id="big">Upcoming Tours</h2>
+                     <p class="gara" id="little3">Up and coming Tours</p>  
                   </div>
                </div>
             </div>
@@ -285,7 +334,7 @@
                      <figure><img src="images/tick.jpg" alt="#"/></figure> 
                       <a class="read_more" href="tours.html"  onclick="readSection('ticket1')">Order Tickets</a> <!--leads to ticket page that stephen works on-->
                      <div class="nostrud"  id="content">
-                        <h3>StageFright Live at PNC Music Pavilion</h3> <br>
+                        <h3 id="blue">StageFright Live at PNC Music Pavilion</h3> <br>
                         <p>Experience the raw energy of stagefright as they light up pnc music pavilion! with a unique blend of classic and modern rock, Alex, Maya, Jaxon, and Sophie bring a powerful sound and unforgettable vibe to every show. get ready for a night of electrifying music!</p>
                      </div>
                   </div>
@@ -295,7 +344,7 @@
                      <figure><img src="images/tick.jpg" alt="#"/></figure> 
                       <a class="read_more" href="tours.html" onclick="readSection('ticket2')">Order Tickets</a> <!--leads to ticket page that stephen works on-->
                      <div class="nostrud"  id="content"> 
-                        <h3>Stagefright Live at Atlanta Coliseum</h3> <br>
+                        <h3 id="blue">Stagefright Live at Atlanta Coliseum</h3> <br>
                         <p>Get ready, atlanta! stagefright is bringing their explosive rock sound to the coliseum. with powerful vocals and dynamic performances, Alex, maya, Jaxon, and Sophie are set to deliver a night you won’t forget. don’t miss the energy and the music that’ll shake the stage!</p>
                      </div>
                   </div>
@@ -305,8 +354,8 @@
                      <figure><img src="images/tick.jpg" alt="#"/></figure> 
                       <a class="read_more" href="tours.html"  onclick="readSection('ticket3')">Order Tickets</a> <!--leads to ticket page that stephen works on-->
                      <div class="nostrud"   id="content">
-                        <h3>Stagefright Live at the Columbus Athenaeum</h3> <br>
-                        <p>Columbus's own StageFright is back to electrify the Athenaeum! Hometown legends Alex, Maya, Jaxon, and Sophie will deliver their mix of classic and modern rock. Columbus, it’s time to rock with your own!</p>
+                        <h3 id="blue">Stagefright Live at the Athenaeum</h3> <br>
+                        <p>Columbus's own stagefright is back to electrify the athenaeum! hometown legends alex, maya, jaxon, and sophie will bring their iconic mix of classic hits and modern rock. don’t miss the energy, the music, and the unforgettable night columbus will remember!</p>
                      </div>
                   </div>
                </div>
