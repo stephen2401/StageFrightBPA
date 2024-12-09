@@ -121,7 +121,19 @@
          display: block; /* make it behave like a block */
          margin-top: -33px; /* move the image up */
          width: 250px;
+         position: relative;
         }
+        @media screen and (max-width: 1216px)
+{
+   .logo-link {
+         display: block; /* make it behave like a block */
+         margin-top: -33px; /* move the image up */
+         width: 150px;
+         position: relative; /* locks its position relative to a parent */
+         top: 0; /* adjust as needed */
+         left: 0; /* adjust as needed */
+        }
+};
      </style>
    </head>
    <!-- body -->

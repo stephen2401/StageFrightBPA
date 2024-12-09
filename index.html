@@ -46,9 +46,10 @@
             background-color: #640817;
         }
         .logo-link {
-         display: block; /* make it behave like a block */
-         margin-top: -33px; /* move the image up */
+         display: block; 
+         margin-top: -33px; /* move it up */
          width: 250px;
+         position: relative; 
         }
         h2 {
      font-size: 22px;
@@ -92,6 +93,18 @@
     border-radius: 60px;
     margin-top: -130px;
 }
+@media screen and (max-width: 1216px)
+{
+   .logo-link {
+         display: block; /* make it behave like a block */
+         margin-top: -33px; /* move the image up */
+         width: 150px;
+         position: relative; /* locks its position relative to a parent */
+         top: 0; /* adjust as needed */
+         left: 0; /* adjust as needed */
+        }
+};
+   
 
 /* styles for tablets (screens 768px or smaller) */
 @media screen and (max-width: 1030px) {
@@ -115,9 +128,7 @@
    #little {
       font-size: 22px;
    }
-   .about {
-      width: 90%; /* increase the width for laptop screens */
-      max-width: 1200px; /* set a max width to prevent it from being too wide */
+   .about {    
       height: 50%;
       position: relative;
 }
@@ -141,9 +152,9 @@
       font-size: 18px;
    }
    .about {
-        margin: 0 20px; /* reduce side margins to fit smaller screens */
-        padding: 50px 20px; /* adjust padding for better proportions */
-        border-radius: 30px; /* smaller radius for compact design */
+        margin: 20px 20px; /* reduce side margins to fit smaller screens */
+        padding: 50px 50px; /* adjust padding for better proportions */
+        border-radius: 50px; /* smaller radius for compact design */
     }
 #blue {
    font-size: 19px;
