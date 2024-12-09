@@ -41,3 +41,15 @@ $('.tab a').on('click', function (e) {
   $(target).fadeIn(800);
   
 });
+/*
+document.getElementById("sign-up").onsubmit = function (event) {
+  event.preventDefault();
+  const firstName = document.getElementById("first_name").value;
+  const lastName = document.getElementById("last_name").value;
+  const emailSignUp = document.getElementById("email");
+};
+*/
+const userInfo = {
+  
+};
+
