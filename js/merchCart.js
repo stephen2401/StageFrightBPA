@@ -19,18 +19,39 @@ document.addEventListener('DOMContentLoaded', () => {
       orange: '/images/BPA T-Shirt (Orange Logo 1).png',
     },
     2: {
-      grey: '/images/product2-grey.png',
-      darkgrey: '/images/product2-darkgrey.png',
-      black: '/images/product2-black.png',
-      red: '/images/BPA T-Shirt (Red Logo 1).png',
-      orange: '/images/product2-orange.png',
+      grey: '/images/BPA T-Shirt (Grey Logo 2).png',
+      darkgrey: '/images/BPA T-Shirt (White Logo 2).png',
+      black: '/images/BPA T-Shirt (Black Logo 2).png',
+      red: '/images/BPA T-Shirt (Red Logo 2).png',
+      orange: '/images/BPA T-Shirt (Orange Logo 2).png',
     },
     3: {
-      grey: '/images/product3-grey.png',
-      darkgrey: '/images/product3-darkgrey.png',
-      black: '/images/product3-black.png',
-      red: '/images/product3-red.png',
-      orange: '/images/product3-orange.png',
+      grey: '/images/BPA Zip (Grey Logo 1).png',
+      darkgrey: '/images/BPA Zip (White Logo 1).png',
+      black: '/images/BPA Zip (Black Logo 1).png',
+      red: '/images/BPA Zip (Red Logo 1).png',
+      orange: '/images/BPA Zip (Orange Logo 1).png',
+    },
+    4: {
+      grey: '/images/BPA Zip (Grey Logo 2).png',
+      darkgrey: '/images/BPA Zip (White Logo 2).png',
+      black: '/images/BPA Zip (Black Logo 2).png',
+      red: '/images/BPA Zip ( Red Logo 2).png',
+      orange: '/images/BPA Zip (Orange Logo 2).png',
+    },
+    5: {
+      grey: '/images/BPA Hoodie (Grey Logo 1) (1).png',
+      darkgrey: '/images/BPA Hoodie (White Logo 1).png',
+      black: '/images/BPA Hoodie (1) (2).png',
+      red: '/images/BPA Hoodie (Red Logo 1).png',
+      orange: '/images/BPA Hoodie (Orange Logo 1).png',
+    },
+    6: {
+      grey: '/images/BPA Hoodie (Grey Logo 2).png',
+      darkgrey: '/images/BPA Hoodie (White Logo 2).png',
+      black: '/images/BPA Hoodie (logo 2).png',
+      red: '/images/BPA Hoodie (Red Logo 2).png',
+      orange: '/images/BPA Hoodie (Orange Logo 2).png',
     }
   };
 
@@ -38,6 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const cartItem = document.createElement('div');
     cartItem.classList.add('cart-item');
     cartItem.setAttribute('data-id', item.id);
+    
 
     if (!productImages[item.id]) {
       cartItem.innerHTML = `

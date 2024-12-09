@@ -710,7 +710,7 @@ button {
 .mheader p{
     display: flex;
     background-color: rgba(100, 8, 23, 0.8);;
-    width: 35%;
+    width: 38.5%;
     margin: auto;
 }
 
@@ -821,7 +821,7 @@ button {
 /** shop page **/
 /* Background */
 .crabBackground {
-    background: url(../images/merchbg.jpg) no-repeat center center fixed;
+    background: url(../images/bgmem.jpg) no-repeat center center fixed;
     background-size:cover; /* Ensures the background image covers the entire page */
     min-height: 100vh; /* Ensures it covers the full viewport height */
     display: flex;
