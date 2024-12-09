@@ -95,9 +95,7 @@ h1 {
      font-size: 24px;
 }
 
-h2 {
-     font-size: 22px;
-}
+
 
 h3 {
      font-size: 18px;
@@ -511,15 +509,6 @@ button {
 
 /** banner section **/
 
-.full_bg {
-    background: url(/images/Home\ Page.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 100vh;
-    padding-bottom: 150px;
-    position: relative;
-}
 
 
 
@@ -637,27 +626,16 @@ button {
 /** end banner section **/
 
 
-/** about section **/
 
-.about {
-    background: #640817;
-    opacity:0.9;
-    padding: 80px 50px;
-    position: relative;
-    margin: 0 70px;
-    box-shadow: 3px 0 62px rgba(13, 3, 3, 0.18);
-    border-radius: 60px;
-    margin-top: -130px;
-}
 
 .container_width {max-width: 1380px;
- padding: 0 15px;
- display: block;
- margin: 0 auto;
- clear: both;
-
-
-}
+    padding: 0 15px;
+    display: block;
+    margin: 0 auto;
+    clear: both;
+   
+   
+   }
 
 .about .titlepage {
      padding-bottom: 0;
@@ -708,9 +686,8 @@ button {
 }
 
 .mheader p{
-    display: flex;
     background-color: rgba(100, 8, 23, 0.8);;
-    width: 35%;
+    width: 650px;
     margin: auto;
 }
 
@@ -725,7 +702,8 @@ button {
 .msub1 {
     display: flex;
     flex-direction: column;
-    padding: 20px;
+    align-items: center;
+    padding: 15px;
     width: 90%;
     max-width: 290px;
     height: auto;
@@ -734,8 +712,6 @@ button {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s, box-shadow 0.3s;
     text-align: center;
-    align-items: center;
-    justify-content: center;
 }
 
 .msub1:hover {
@@ -787,18 +763,10 @@ button {
 }
 
 .mimage {
-    width: 110%;
-    margin-bottom: 40px;
+    max-width: 110%;
+    margin-bottom: 10px;
 }
-.mimage2 {
-    width: 110%;
-    margin-bottom: 80px;
-    margin-top: 40px;
-}
-.mimage3 {
-    width: 70%;
-    margin-bottom: 50px;
-}
+
 @media (max-width: 768px) {
     .mheader h1 {
         font-size: 36px;
@@ -1760,20 +1728,28 @@ padding-bottom: 40px;}
 .search-icon {
     cursor: pointer;
 }
+.search-bar {
+    transition: all 0.3s ease-in-out;
+}
 
 .search-bar {
-    display: none; /* Hidden by default */
+    display: none; /* keeping it hidden until it’s needed */
     position: absolute;
-    top: 0; /* Aligns the top of the search bar with the icon */
-    left: 100%; /* Positions the search bar to the right of the icon */
-    margin-left: 10px; /* Adds some space between the icon and the search bar */
-    padding: 10px;
-    border: 1px solid black;
-    border-radius: 4px;
-    background-color: #640817;
-    z-index: 1000; /* Ensures it appears above other elements */
-    color:#f1f1f1;
+    top: 0; /* matches the top of the search icon */
+    left: 100%; /* makes it pop out right next to the icon */
+    margin-left: 10px; 
+    padding: 10px; 
+    border: 1px solid black; /* gives it a border so it looks clean */
+    border-radius: 4px; /* smooth edges, cuz sharp ones are meh */
+    background-color:  rgba(100, 8, 23, 0.5);
+    z-index: 1000; /* makes sure it’s on top of everything else */
+    color: #640817; 
+    width: 200px; 
+
 }
+
+
+
 
 /* Show search bar when the icon is hovered or when the input is focused */
 .search-container:hover .search-bar,
