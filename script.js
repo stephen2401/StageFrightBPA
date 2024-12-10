@@ -41,7 +41,6 @@ $('.tab a').on('click', function (e) {
   $(target).fadeIn(800);
   
 });
-
 document.getElementById("sign-up").onsubmit = function (event) {
   event.preventDefault();
   const firstName = document.getElementById("first_name").value;
@@ -49,4 +48,12 @@ document.getElementById("sign-up").onsubmit = function (event) {
   const emailSignUp = document.getElementById("email").value;
   const phoneNumber = document.getElementById("phone").value;
   const password = document.getElementById("password").value;
+
+  localStorage.setItem("First Name", firstName);
+  localStorage.setItem("Last Name", lastName);
+  localStorage.setItem("Emails", emailSignUp);
+  localStorage.setItem("Phone", phoneNumber);
+  localStorage.setItem("Password", password);
+
 };
+
