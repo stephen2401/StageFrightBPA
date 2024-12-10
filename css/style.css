@@ -31,8 +31,14 @@ import Files
      font-weight: normal;
      font-style: normal;
 }
-
-
+@font-face {
+    font-family: 'caleb';
+    src: url(/fonts/Road_Rage.otf);
+}
+@font-face {
+    font-family: 'caleb2';
+    src: url(/fonts/edo.ttf);
+}
 /*--------------------------------------------------------------------- 
 basic 
 ---------------------------------------------------------------------*/
@@ -847,13 +853,13 @@ button {
 /* Category Buttons */
 .category-buttons {
     display: flex;
-    gap: 15px;
+    gap: 25px;
     margin-top: 20px;
 }
 
 .crabButton {
-    padding: 10px 20px;
-    background-color: black;
+    margin: 10px 30px;
+    background-color: rgba(0, 0, 0, 0);
     color: white;
     font-weight: bold;
     border: none;
@@ -861,19 +867,21 @@ button {
     cursor: pointer;
     transition: background-color 0.3s, transform 0.2s;
     position: relative;
-    font-size: 17px;
+    font-size: 30px;
+    letter-spacing: 4px;
+    font-family: 'caleb';
 }
 
 .crabButton:hover {
-    background-color: black;
     transform: scale(1.05);
-    color: #9e1122;
+    color: white;
+    border-bottom: 7px solid white;
 }
 
 /* Active Category Button Styling */
 .crabButton.active {
-    background-color: black; /* Highlight active button */
-    color: #9e1122;
+    color: white;
+    border-bottom: 7px solid white;
 }
 
 .crabButton.active:hover {
@@ -924,8 +932,11 @@ button {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
+    gap: 15px;
     margin-top: 20px;
+    margin-left: 100px;
+    margin-right: 100px;
+    padding: auto;
 }
 @media only screen and (max-width: 760px) {
     .product-container {
@@ -938,13 +949,13 @@ button {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 20px;
     padding: 15px;
-    width: 280px;
+    width: 320px;
     background-color: rgba(0, 0, 0, 0.7);
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s, box-shadow 0.3s;
+    font-family: 'caleb2';
 }
 
 .crab:hover {
@@ -954,8 +965,8 @@ button {
 
 /* Product Image Styling */
 .crab .img {
-    height: 180px;
-    width: 250px;
+    height: 250px;
+    width: 300px;
     background: url(../images/merchPlaceholder.png) no-repeat center center;
     background-size: contain;
     margin-bottom: 15px;

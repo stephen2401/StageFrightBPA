@@ -59,7 +59,6 @@ function renderProducts(category) {
 
         productCard.appendChild(productImage);
         productCard.appendChild(productName);
-        productCard.appendChild(productPrice);
         productCard.appendChild(addButton);
 
         container.appendChild(productCard);
