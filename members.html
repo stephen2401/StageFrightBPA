@@ -5,11 +5,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>Stage Fright - Members</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/carousel-custom.css">
-    <link rel="icon" href="images/fevicon.png" type="image/gif">
+    <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <!-- bootstrap css -->
+      <link rel="stylesheet" href="css/bootstrap.min.css">
+      <!-- style css -->
+      <link rel="stylesheet" href="css/style.css">
+      <!-- Responsive-->
+      <link rel="stylesheet" href="css/responsive.css">
+      <!-- fevicon -->
+      <link rel="icon" href="images/fevicon.png" type="image/gif" />
+      <!-- Scrollbar Custom CSS -->
+      <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+       <link rel="stylesheet" href="css/owl.carousel.min.css"> 
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+      <link rel="stylesheet" href="https://rawgit.com/LeshikJanz/libraries/master/Bootstrap/baguetteBox.min.css">
+      <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
     <style>
+      .logo-link {
+         display: block; /* make it behave like a block */
+         margin-top: -33px; /* move the image up */
+         width: 250px; }
       /* Fullscreen or larger carousel */
       .carousel,
         .carousel-inner,
@@ -79,6 +98,9 @@
 
       /* styles for tablets (screens 1528px or smaller) */
       @media screen and (max-width: 1528px) {  
+         .logo-link {
+            display: none;
+         }
          #memain {
          background: url(images/mem.jpg);
         }
@@ -114,6 +136,13 @@
         }
 }
 @media screen and (max-width: 964px) {
+   .carousel-caption h1 {
+      font-size: 2.3rem;
+   }
+   .carousel-caption p {
+      font-size: 0.8rem;
+      max-width: 90%;
+   }
          #memain {
          background: url(images/mem.jpg);
         }
@@ -131,6 +160,13 @@
         }
 }
 @media screen and (max-width: 756px) {
+   .carousel-caption h1 {
+      font-size: 2rem;
+   }
+   .carousel-caption p {
+      font-size: 0.5rem;
+      line-height: 1.4;
+   }
          #memain {
          background: url(images/mem.jpg);
         }
