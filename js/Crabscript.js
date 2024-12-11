@@ -59,7 +59,6 @@ function renderProducts(category) {
 
         productCard.appendChild(productImage);
         productCard.appendChild(productName);
-        productCard.appendChild(productPrice);
         productCard.appendChild(addButton);
 
         container.appendChild(productCard);
@@ -102,10 +101,10 @@ function updateCartCount() {
 function changeCategory(category) {
     const buttons = document.querySelectorAll('.crabButton');
     buttons.forEach(button => button.classList.remove('active'));
-    const activeButton = document.querySelector(`.crabButton[data-category="${category}"]`);
-    if (activeButton) activeButton.classList.add('active');
+    document.querySelector(`.crabButton[onclick="changeCategory('${category}')"]`).classList.add('active');
     renderProducts(category);
 }
+
 
 // Function to show a notification when an item is added to the cart
 function showNotification() {
@@ -123,4 +122,49 @@ function showNotification() {
 document.addEventListener("DOMContentLoaded", () => {
     renderProducts("category1"); // Render Category 1 products
     updateCartCount(); // Ensure the cart count is updated on page load
+});
+// Function to render New Arrivals
+function renderNewArrivals() {
+    const newArrivals = [
+        { id: 1, name: "T-Shirt (Logo 1)", image: "/images/BPA T-Shirt (White Logo 1).png", price: 20 },
+        { id: 3, name: "Zip-Up Hoodie (logo 1)", image: "/images/BPA Zip (White Logo 1).png", price: 30 },
+        { id: 5, name: "Hoodie (Logo 1)", image: "/images/BPA Hoodie (White Logo 1).png", price: 20 }
+    ];
+
+    const newArrivalsContainer = document.getElementById('new-arrivals');
+    newArrivalsContainer.innerHTML = ''; // Clear previous content
+
+    newArrivals.forEach(product => {
+        const productCard = document.createElement('div');
+        productCard.className = 'crab';
+
+        const productImage = document.createElement('div');
+        productImage.className = 'img';
+        productImage.style.backgroundImage = `url('${product.image}')`;
+
+        const productName = document.createElement('h3');
+        productName.textContent = product.name;
+
+        const productPrice = document.createElement('p');
+        productPrice.textContent = `$${product.price}`;
+
+        const addButton = document.createElement('button');
+        addButton.className = 'crabShop';
+        addButton.textContent = 'Add to Cart';
+        addButton.onclick = () => addToCart(product.id);
+
+        productCard.appendChild(productImage);
+        productCard.appendChild(productName);
+        productCard.appendChild(productPrice);
+        productCard.appendChild(addButton);
+
+        newArrivalsContainer.appendChild(productCard);
+    });
+}
+
+// Render New Arrivals on page load
+document.addEventListener('DOMContentLoaded', () => {
+    renderNewArrivals(); // Populate New Arrivals section
+    renderProducts("category1"); // Render Category 1 products by default
+    updateCartCount(); // Ensure cart count is updated
 });
