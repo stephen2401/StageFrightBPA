@@ -42,52 +42,66 @@ $('.tab a').on('click', function (e) {
   
 });
 
-  document.getElementById("signup").onsubmit = function (event)  {
-  event.onsubmit = () => location.reload();
+document.getElementById("signup").onsubmit = function (event) {
+  // Prevent form submission
+  event.preventDefault();
 
-  const firstName = document.getElementById("first_name").value;
-  const lastName = document.getElementById("last_name").value;
-  const emailSignUp = document.getElementById("emailSet").value;
-  const phoneNumber = document.getElementById("phone").value;
-  const password = document.getElementById("passwordSet").value;
+  // Get form values
+  const firstName = document.getElementById("first_name").value.trim();
+  const lastName = document.getElementById("last_name").value.trim();
+  const emailSignUp = document.getElementById("emailSet").value.trim();
+  const phoneNumber = document.getElementById("phone").value.trim();
+  const password = document.getElementById("passwordSet").value.trim();
 
+  // Validation flags
+  let isValid = true;
+  let errorMessage = "";
 
-  localStorage.setItem("First Name", firstName);
-  localStorage.setItem("Last Name", lastName);
-  localStorage.setItem("Emails", emailSignUp);
-  localStorage.setItem("Phone", phoneNumber);
-  localStorage.setItem("Password", password);
-  
+  // Check if all fields are filled
+  if (!firstName || !lastName || !emailSignUp || !phoneNumber || !password) {
+    errorMessage += "All fields are required.\n";
+    isValid = false;
+  }
+
+  // Validate email format
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailRegex.test(emailSignUp)) {
+    errorMessage += "Please enter a valid email address.\n";
+    isValid = false;
+  }
+
+  // Validate phone number (basic validation for digits only)
+  const phoneRegex = /^\d{10}$/;
+  if (!phoneRegex.test(phoneNumber)) {
+    errorMessage += "Please enter a valid 10-digit phone number.\n";
+    isValid = false;
+  }
+
+  // Validate password (example: minimum 6 characters)
+  if (password.length < 6) {
+    errorMessage += "Password must be at least 6 characters long.\n";
+    isValid = false;
+  }
+
+  if (isValid) {
+    // Save to localStorage
+    localStorage.setItem("First Name", firstName);
+    localStorage.setItem("Last Name", lastName);
+    localStorage.setItem("Emails", emailSignUp);
+    localStorage.setItem("Phone", phoneNumber);
+    localStorage.setItem("Password", password);
+
+    alert("Signup successful!");
+    location.reload();
+  } else {
+    // Show error messages
+    alert(errorMessage);
+  }
 };
 
-/*
-document.getElementById("login").onsubmit = function validateLogin(inputEmail, inputPassword) {
-  const storedEmail = localStorage.getItem("Emails");
-    const storedPassword = localStorage.getItem("Password");
-    const inputEmail = document.getElementById("inputEmail").value;
-    const inputPassword = document.getElementById("inputPassword").value;
 
-    if (storedEmail && storedPassword) {
-      if (inputEmail === storedEmail && inputPassword === storedPassword) {
-          return true; // Login successful
-      } else {
-          return false; // Login failed
-      }
-  } else {
-      console.error("No email or password found in localStorage.");
-      return false; // Login failed because no credentials are stored
-  }
-}
 
-const email = 'user@example.com'; // Replace with user input
-const password = 'securepassword'; // Replace with user input
 
-if (validateLogin(email, password)) {
-    console.log("Login successful!");
-} else {
-    console.log("Login failed. Please check your credentials.");
-}
-*/
 
 // Function to check email and password against localStorage
 document.getElementById("login").onsubmit = function (event) {
@@ -104,16 +118,17 @@ document.getElementById("login").onsubmit = function (event) {
   // Check if both email and password match the stored values
   if (storedEmail && storedPassword) {
       if (inputEmail === storedEmail && inputPassword === storedPassword) {
-          console.log("Login successful!");
+          alert("Login successful!");
           location.reload();
           // Perform successful login actions here
           return true;
       } else {
-          console.log("Login failed. Please check your credentials.");
+          alert("Login failed. Please check your credentials.");
           return false; 
       }
   } else {
       console.error("No email or password found in localStorage.");
+      alert("Please Sign up");
       return false; 
   }
   
