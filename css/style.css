@@ -827,7 +827,7 @@ button {
 /** shop page **/
 /* Background */
 .crabBackground {
-    background: url(../images/bgmem.jpg) no-repeat center center fixed;
+    background: url(../images/cmb.webp) no-repeat center center fixed;
     background-size:cover; /* Ensures the background image covers the entire page */
     min-height: 100vh; /* Ensures it covers the full viewport height */
     display: flex;
@@ -860,16 +860,18 @@ button {
 .crabButton {
     margin: 10px 30px;
     background-color: rgba(0, 0, 0, 0);
-    color: white;
-    font-weight: bold;
+    color: black;
+    font-weight:bolder;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s, transform 0.2s;
     position: relative;
-    font-size: 30px;
+    font-size: 40px;
     letter-spacing: 4px;
     font-family: 'caleb';
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: red;
 }
 
 .crabButton:hover {
@@ -885,7 +887,7 @@ button {
 }
 
 .crabButton.active:hover {
-    background-color: black; /* Darker shade on hover when active */
+    transform: scale(1.05);
 }
 
 /* Cart Button Styling */
@@ -951,11 +953,12 @@ button {
     align-items: center;
     padding: 15px;
     width: 320px;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.9);
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s, box-shadow 0.3s;
     font-family: 'caleb2';
+    border: 1px solid red;
 }
 
 .crab:hover {
@@ -1127,7 +1130,55 @@ button {
       transform: translateX(-50%) translateY(20px);
     }
   }
-  
+/* New Arrivals Section */
+.new-arrivals-box {
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%; /* Adjust width as needed */
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.new-arrivals-box h2 {
+    color: white;
+    font-size: 2rem;
+    margin-bottom: 15px;
+    font-family: 'caleb';
+    -webkit-text-stroke-color: #b71c1c;
+    -webkit-text-stroke-width: 1px;
+}
+
+/* Products within the New Arrivals box */
+.new-arrivals-box .product-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+} 
+/* Reminder Section */
+.reminder-box {
+    background-color: rgba(0, 0, 0, 0.8); /* Black transparent background */
+    border: 2px solid red; /* Red border */
+    border-radius: 15px; /* Rounded edges */
+    padding: 20px;
+    margin: 40px auto 20px; /* Add space at the bottom */
+    width: 90%; /* Adjust width */
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    color: white; /* Text color */
+    font-family: 'caleb';
+}
+
+.reminder-box h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    text-transform: uppercase; /* Optional: Make it all caps */
+}
+
+.reminder-box p {
+    font-size: 1rem;
+    margin: 0;
+    line-height: 1.5;
+}
 
 .coronata {
     background: #000000;
