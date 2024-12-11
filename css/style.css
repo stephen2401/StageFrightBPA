@@ -877,13 +877,11 @@ button {
 .crabButton:hover {
     transform: scale(1.05);
     color: white;
-    border-bottom: 7px solid white;
 }
 
 /* Active Category Button Styling */
 .crabButton.active {
     color: white;
-    border-bottom: 7px solid white;
 }
 
 .crabButton.active:hover {
@@ -953,7 +951,7 @@ button {
     align-items: center;
     padding: 15px;
     width: 320px;
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: rgba(0, 0, 0, 0.8);
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s, box-shadow 0.3s;

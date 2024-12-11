@@ -101,10 +101,10 @@ function updateCartCount() {
 function changeCategory(category) {
     const buttons = document.querySelectorAll('.crabButton');
     buttons.forEach(button => button.classList.remove('active'));
-    const activeButton = document.querySelector(`.crabButton[data-category="${category}"]`);
-    if (activeButton) activeButton.classList.add('active');
+    document.querySelector(`.crabButton[onclick="changeCategory('${category}')"]`).classList.add('active');
     renderProducts(category);
 }
+
 
 // Function to show a notification when an item is added to the cart
 function showNotification() {
