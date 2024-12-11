@@ -108,21 +108,21 @@
               </div>
               <div class="form-group">
                 <label style="font-family: garamond;"> Your Email<span class="req">*</span> </label>
-                <input type="email" class="form-control" id="email" required data-validation-required-message="Please enter your email address." autocomplete="off">
+                <input type="email" class="form-control" id="emailSet" required data-validation-required-message="Please enter your email address." autocomplete="off">
                 <p class="help-block text-danger"></p>
               </div>
               <div class="form-group">
                 <label style="font-family: garamond;"> Your Phone<span class="req">*</span> </label>
-                <input type="tel" class="form-control" id="phone" required data-validation-required-message="Please enter your phone number." autocomplete="off">
+                <input type="tel" class="form-control" maxlength="10" id="phone" required data-validation-required-message="Please enter your phone number." autocomplete="off">
                 <p class="help-block text-danger"></p>
               </div>
               <div class="form-group">
                 <label style="font-family: garamond;"> Password<span class="req">*</span> </label>
-                <input type="password" class="form-control" id="password" required data-validation-required-message="Please enter your password" autocomplete="off">
+                <input type="password" class="form-control" id="passwordSet" required data-validation-required-message="Please enter your password" autocomplete="off">
                 <p class="help-block text-danger"></p>
               </div>
               <div class="mrgn-30-top">
-                <button type="submit" class="btn btn-larger btn-block" style="font-family: georgias;">
+                <button type="submit" id="sign-up" class="btn btn-larger btn-block" style="font-family: georgias;">
                 Sign up
                 </button>
               </div>
@@ -133,12 +133,12 @@
             <form id="login">
               <div class="form-group">
                 <label style="font-family: garamond;"> Your Email<span class="req">*</span> </label>
-                <input type="email" class="form-control" id="email" required data-validation-required-message="Please enter your email address." autocomplete="off">
+                <input type="email" class="form-control" id="inputEmail" required data-validation-required-message="Please enter your email address." autocomplete="off">
                 <p class="help-block text-danger"></p>
               </div>
               <div class="form-group">
                 <label style="font-family: garamond;"> Password<span class="req">*</span> </label>
-                <input type="password" class="form-control" id="password" required data-validation-required-message="Please enter your password" autocomplete="off">
+                <input type="password" class="form-control" id="inputPassword" required data-validation-required-message="Please enter your password" autocomplete="off">
                 <p class="help-block text-danger"></p>
               </div>
               <div class="mrgn-30-top">
