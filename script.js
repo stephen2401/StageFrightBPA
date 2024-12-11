@@ -41,19 +41,20 @@ $('.tab a').on('click', function (e) {
   $(target).fadeIn(800);
   
 });
-document.getElementById("sign-up").onsubmit = function (event) {
-  event.preventDefault();
+
+document.getElementById("sign-up").onsubmit = function (event)  {
+  event.onclick
   const firstName = document.getElementById("first_name").value;
   const lastName = document.getElementById("last_name").value;
-  const emailSignUp = document.getElementById("email").value;
+  const emailSignUp = document.getElementById("emailSet").value;
   const phoneNumber = document.getElementById("phone").value;
-  const password = document.getElementById("password").value;
+  const password = document.getElementById("passwordSet").value;
 
   localStorage.setItem("First Name", firstName);
   localStorage.setItem("Last Name", lastName);
   localStorage.setItem("Emails", emailSignUp);
   localStorage.setItem("Phone", phoneNumber);
   localStorage.setItem("Password", password);
-
+  
 };
-
+//document.getElementById("sign-up").onsubmit = () => location.reload();
