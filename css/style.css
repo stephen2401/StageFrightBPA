@@ -692,6 +692,7 @@ button {
 }
 
 .mheader p{
+    display: flex;
     background-color: rgba(100, 8, 23, 0.8);;
     width: 38.5%;
     margin: auto;
@@ -708,8 +709,7 @@ button {
 .msub1 {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    padding: 15px;
+    padding: 20px;
     width: 90%;
     max-width: 290px;
     height: auto;
@@ -718,6 +718,8 @@ button {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s, box-shadow 0.3s;
     text-align: center;
+    align-items: center;
+    justify-content: center;
 }
 
 .msub1:hover {
@@ -769,10 +771,18 @@ button {
 }
 
 .mimage {
-    max-width: 110%;
-    margin-bottom: 10px;
+    width: 110%;
+    margin-bottom: 40px;
 }
-
+.mimage2 {
+    width: 110%;
+    margin-bottom: 80px;
+    margin-top: 40px;
+}
+.mimage3 {
+    width: 70%;
+    margin-bottom: 50px;
+}
 @media (max-width: 768px) {
     .mheader h1 {
         font-size: 36px;
