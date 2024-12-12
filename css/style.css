@@ -1012,7 +1012,29 @@ button {
     padding-bottom: 5px;
     color:#000;
 }
+/* Adjust category buttons container for smaller screens */
+@media only screen and (max-width: 760px) {
+    .category-buttons {
+        flex-direction: column; /* Stack buttons vertically */
+        gap: 15px; /* Reduce the gap */
+        align-items: center; /* Center buttons horizontally */
+        margin-top: 10px; /* Adjust spacing */
+    }
 
+    .crabButton {
+        font-size: 24px; /* Reduce font size for smaller screens */
+        margin: 5px; /* Adjust spacing around buttons */
+        letter-spacing: 2px; /* Adjust letter spacing */
+    }
+}
+
+/* For very small screens (e.g., phones) */
+@media only screen and (max-width: 480px) {
+    .crabButton {
+        font-size: 18px; /* Further reduce font size */
+        padding: 8px 12px; /* Adjust padding for better touch accessibility */
+    }
+}
 /* Remove Button Styling */
 .cart-item button {
     padding: 5px 10px;
