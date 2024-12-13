@@ -25,5 +25,5 @@ document.getElementById("merch-checkout").onsubmit = function (event) {
     localStorage.setItem("Merch CVV", merchCVV);
 
     alert("Purchase successful! Thank You!");
-    location.assign("merch.html");
+    location.assign("/merch.html");
 };
