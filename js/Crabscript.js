@@ -8,28 +8,26 @@ const products = {
         { id: 6, name: "Hoodie (logo 2)", image: "/images/BPA Hoodie (White Logo 2).png", price: 30 }
     ],
     category2: [
-        { id: 7, name: "Product 4", image: "image4.jpg", price: 35 },
-        { id: 8, name: "Product 5", image: "image5.jpg", price: 40 },
-        { id: 9, name: "Product 6", image: "image6.jpg", price: 45 }
+        { id: 7, name: "Song 1", image: "/images/BPA Album Cover.png", price: 35 },
+        { id: 8, name: "Song 2", image: "/images/BPA Album Cover.png", price: 40 },
+        { id: 9, name: "Song 3", image: "/images/BPA Album Cover.png", price: 45 }
     ],
     category3: [
-        { id: 10, name: "Product 7", image: "image7.jpg", price: 50 },
-        { id: 11, name: "Product 8", image: "image8.jpg", price: 55 },
-        { id: 12, name: "Product 9", image: "image9.jpg", price: 60 }
+        { id: 10, name: "Poster 1", image: "/images/Poster 1 (1).png", price: 50 },
+        { id: 11, name: "Poster 2", image: "/images/Poster 2.jpg", price: 55 },
     ],
     all: [
-        { id: 1, name: "helosks", image: "image1.jpg", price: 20 },
-        { id: 2, name: "Product 2", image: "image2.jpg", price: 25 },
-        { id: 3, name: "Product 3", image: "image3.jpg", price: 30 },
-        { id: 4, name: "Product 4", image: "image4.jpg", price: 35 },
-        { id: 5, name: "Product 5", image: "image5.jpg", price: 40 },
-        { id: 6, name: "Product 6", image: "image6.jpg", price: 45 },
-        { id: 7, name: "Product 7", image: "image7.jpg", price: 50 },
-        { id: 8, name: "Product 8", image: "image8.jpg", price: 55 },
-        { id: 9, name: "Product 9", image: "image9.jpg", price: 60 },
-        { id: 10, name: "jjjjj", image: "image7.jpg", price: 50 },
-        { id: 11, name: "Product 8", image: "image8.jpg", price: 55 },
-        { id: 12, name: "Product 9", image: "image9.jpg", price: 60 }
+        { id: 1, name: "T-Shirt (Logo 1)", image: "/images/BPA T-Shirt (White Logo 1).png", price: 20 },
+        { id: 2, name: "T-Shirt (Logo 2)", image: "/images/BPA T-Shirt (White Logo 2).png", price: 20 },
+        { id: 3, name: "Zip-Up Hoodie (logo 1)", image: "/images/BPA Zip (White Logo 1).png", price: 30 },
+        { id: 4, name: "Zip-Up Hoodie (Logo 2)", image: "/images/BPA Zip (White Logo 2).png", price: 20 },
+        { id: 5, name: "Hoodie (Logo 1)", image: "/images/BPA Hoodie (White Logo 1).png", price: 20 },
+        { id: 6, name: "Hoodie (logo 2)", image: "/images/BPA Hoodie (White Logo 2).png", price: 30 },
+        { id: 7, name: "Song 1", image: "/images/BPA Album Cover.png", price: 35 },
+        { id: 8, name: "Song 2", image: "/images/BPA Album Cover.png", price: 40 },
+        { id: 9, name: "Song 3", image: "/images/BPA Album Cover.png", price: 45 },
+        { id: 10, name: "Poster 1", image: "/images/Poster 1 (1).png", price: 50 },
+        { id: 11, name: "Poster 2", image: "/images/Poster 2.jpg", price: 55 }
     ]
 };
 
@@ -127,8 +125,8 @@ document.addEventListener("DOMContentLoaded", () => {
 function renderNewArrivals() {
     const newArrivals = [
         { id: 1, name: "T-Shirt (Logo 1)", image: "/images/BPA T-Shirt (White Logo 1).png", price: 20 },
-        { id: 3, name: "Zip-Up Hoodie (logo 1)", image: "/images/BPA Zip (White Logo 1).png", price: 30 },
-        { id: 5, name: "Hoodie (Logo 1)", image: "/images/BPA Hoodie (White Logo 1).png", price: 20 }
+        { id: 10, name: "Poster 1", image: "/images/Poster 1 (1).png", price: 50 },
+        { id: 11, name: "Poster 2", image: "/images/Poster 2.jpg", price: 55 },
     ];
 
     const newArrivalsContainer = document.getElementById('new-arrivals');
@@ -155,7 +153,6 @@ function renderNewArrivals() {
 
         productCard.appendChild(productImage);
         productCard.appendChild(productName);
-        productCard.appendChild(productPrice);
         productCard.appendChild(addButton);
 
         newArrivalsContainer.appendChild(productCard);
