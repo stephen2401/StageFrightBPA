@@ -678,24 +678,28 @@ button {
 /* merch page */
 .mheader {
     text-align: center;
-    background: url(../images/merchMoon.jpg) no-repeat center center;
+    background: url(../images/calebbg2.webp) no-repeat center center;
     background-size: cover;
     padding: 75px 20px;
     color: white;
 }
 
 .mheader h1 {
-    font-size: 50px;
-    font-weight: 900;
-    -webkit-text-stroke-width: 3px;
-    -webkit-text-stroke-color: black;
+    font-size: 90px;
+    font-weight:900;
+    font-family: 'caleb';
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #610013;
 }
 
 .mheader p{
     display: flex;
+    font-size: 30px;
     background-color: rgba(100, 8, 23, 0.8);;
-    width: 38.5%;
+    width: 88%;
+    padding:10px;
     margin: auto;
+    font-family: 'caleb2';
 }
 
 .mrow {
@@ -720,6 +724,7 @@ button {
     text-align: center;
     align-items: center;
     justify-content: center;
+    font-family: 'caleb2';
 }
 
 .msub1:hover {
@@ -759,6 +764,7 @@ button {
     cursor: pointer;
     transition: background-color 0.3s, transform 0.2s;
     outline: none;
+    font-family: 'caleb2';
 }
 
 .mshop:hover {
