@@ -156,10 +156,10 @@ document.getElementById("payment-form").onsubmit = function (event) {
         localStorage.setItem("VIP Ticket", ticketData);
         sessionStorage.removeItem("VIP Ticket");
     }
-    localStorage.setItem("Email", email);
-    localStorage.setItem("Card", cardNumber);
-    localStorage.setItem("Expiry", expiry);
-    localStorage.setItem("CVV", cvv);
+    localStorage.setItem("Tickets Email", email);
+    localStorage.setItem("Tickets Card", cardNumber);
+    localStorage.setItem("Tickets Expiry", expiry);
+    localStorage.setItem("Tickets CVV", cvv);
     document.querySelector(".back-btn").onclick = () => location.reload();
 };
 
