@@ -25,6 +25,7 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
     <style>
+      
       .logo-link {
          display: block; /* make it behave like a block */
          margin-top: -33px; /* move the image up */
@@ -35,6 +36,7 @@
         .carousel-item {
             height: 90vh; /* Full viewport height */
             min-height: 600px; /* Makes it responsive on smaller screens */
+            flex-wrap: wrap;
         }
 
         /* Bottom-right aligned captions */
@@ -45,6 +47,7 @@
          text-align: left; /* adjust text alignment for left positioning */
          padding: 10px 15px;
          color: #fff;
+         flex-wrap: wrap;
       }
 
         .carousel-caption h1 {
@@ -98,9 +101,7 @@
 
       /* styles for tablets (screens 1528px or smaller) */
       @media screen and (max-width: 1528px) {  
-         .logo-link {
-            display: none;
-         }
+         
          #memain {
          background: url(images/mem.jpg);
         }
@@ -117,6 +118,17 @@
          background: url(images/sophie3.jpg);
         }
       }
+      @media screen and (max-width: 1216px)
+{
+   .logo-link {
+         display: block; /* make it behave like a block */
+         margin-top: -33px; /* move the image up */
+         width: 150px;
+         position: relative; 
+         top: 0; 
+         left: 0; 
+        }
+};
         /* styles for smaller phones (screens 480px or smaller) */
       @media screen and (max-width: 1141px) {
          #memain {
