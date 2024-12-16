@@ -138,5 +138,14 @@ document.getElementById("login").onsubmit = function (event) {
 // localStorage.setItem('Emails', 'user@example.com');
 // localStorage.setItem('Password', 'securepassword');
 
+const returnHome = document.getElementById("return-log");
+if (returnHome) {
+  returnHome.onclick = () => location.assign("index.html");
+}
+const returnHome1 = document.getElementById("return-log1");
+if (returnHome1) {
+  returnHome1.onclick = () => location.assign("index.html");
+}
+
 
 
