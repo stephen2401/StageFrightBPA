@@ -1428,7 +1428,7 @@ ul.top_infomation li a {
 }
 
 ul.top_infomation li a:hover {
-    color: #000000;
+    color: #640817;
 }
 
 ul.top_infomation li i:hover {
@@ -1494,3 +1494,64 @@ padding-bottom: 40px;}
     padding-top: 145px;
     padding-bottom: 80px;
 }
+
+
+/**search page code**/
+.search-container {
+    position: relative;
+    display: inline-block;
+}
+
+.search-icon {
+    cursor: pointer;
+}
+.search-bar {
+    transition: all 0.3s ease-in-out;
+}
+
+.search-bar {
+    display: none; /* keeping it hidden until it’s needed */
+    position: absolute;
+    top: 0; /* matches the top of the search icon */
+    left: 100%; /* makes it pop out right next to the icon */
+    margin-left: 10px; 
+    padding: 10px; 
+    border: 1px solid black; /* gives it a border so it looks clean */
+    border-radius: 4px; /* smooth edges, cuz sharp ones are meh */
+    background-color:  rgba(100, 8, 23, 0.5);
+    z-index: 1000; /* makes sure it’s on top of everything else */
+    color: #640817; 
+    width: 200px; 
+
+}
+
+
+
+
+/* Show search bar when the icon is hovered or when the input is focused */
+.search-container:hover .search-bar,
+.search-container:focus-within .search-bar {
+    display: block; /* Shows the search bar when active */
+}
+
+/* Keep the search bar visible when focused */
+.search-container .search-bar:focus {
+    display: block; /* Ensures it remains visible when focused */
+}
+
+.stage-slogan {
+    font-family: Garamond ;
+    font-size:25px;
+}
+
+.georgia {
+    font-family: Georgia
+}
+.gara {
+    font-family: Garamond ;
+}
+
+#music {
+    background: url(/images/music.png);
+}
+
