@@ -1135,13 +1135,28 @@ button {
     }
   }
 /* New Arrivals Section */
+/* Updated New Arrivals Section */
 .new-arrivals-box {
     padding: 20px;
-    margin: 20px auto;
-    width: 80%; /* Adjust width as needed */
+    margin: 20px auto; /* Centers the section horizontally */
+    width: 90%; /* Adjust width to remain responsive */
+    max-width: 1200px; /* Limit the maximum width for larger screens */
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Ensures content stays centered */
 }
+
+/* Products within the New Arrivals box */
+.new-arrivals-box .product-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center products horizontally */
+    gap: 15px; /* Space between products */
+    width: 100%; /* Ensures the container spans the full width */
+}
+
 
 .new-arrivals-box h2 {
     color: white;
