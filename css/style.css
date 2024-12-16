@@ -695,7 +695,7 @@ button {
 .mheader p{
     display: flex;
     font-size: 30px;
-    background-color: rgba(100, 8, 23, 0.8);;
+    background-color: rgba(100, 8, 23, 0.3);;
     width: 88%;
     padding:10px;
     margin: auto;
