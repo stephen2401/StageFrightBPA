@@ -70,3 +70,17 @@ button.checkout-button {
 button.checkout-button:hover {
     background-color: #218838;
 }
+
+button.return-button {
+    width: 100%;
+    padding: 15px;
+    background-color: #a72828;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+button.return-button:hover {
+    background-color: #d60d0d;
+}

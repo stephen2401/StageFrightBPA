@@ -27,3 +27,8 @@ document.getElementById("merch-checkout").onsubmit = function (event) {
     alert("Purchase successful! Thank You!");
     location.assign("/merch.html");
 };
+
+const returnMerch = document.getElementById("return-log2");
+if (returnMerch) {
+    returnMerch.onclick = () => location.assign("/merchCart.html");
+}
