@@ -811,7 +811,7 @@ button {
 /** shop page **/
 /* Background */
 .crabBackground {
-    background: url(../images/cmb.webp) no-repeat center center fixed;
+    background: url(../images/cb10.webp) no-repeat center center fixed;
     background-size:cover; /* Ensures the background image covers the entire page */
     min-height: 100vh; /* Ensures it covers the full viewport height */
     display: flex;
@@ -844,7 +844,7 @@ button {
 .crabButton {
     margin: 10px 30px;
     background-color: rgba(0, 0, 0, 0);
-    color: black;
+    color: #610013;
     font-weight:bolder;
     border: none;
     border-radius: 5px;
@@ -854,8 +854,8 @@ button {
     font-size: 40px;
     letter-spacing: 4px;
     font-family: 'caleb';
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: red;
+    -webkit-text-stroke-width: .001px;
+    -webkit-text-stroke-color: #ddd;
 }
 
 .crabButton:hover {
@@ -940,7 +940,7 @@ button {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s, box-shadow 0.3s;
     font-family: 'caleb2';
-    border: 1px solid red;
+    border: 1px solid #610013;
 }
 
 .crab:hover {
@@ -975,7 +975,7 @@ button {
     display: flex;
     padding: 10px 20px;
     color: white;
-    border: 2px solid #8c0a24;
+    border: 2px solid #610013;
     border-radius: 8px;
     font-size: 16px;
     font-weight: bold;
@@ -1044,7 +1044,7 @@ button {
 /* Remove Button Styling */
 .cart-item button {
     padding: 5px 10px;
-    background-color: #d32f2f;
+    background-color: #610013;
     color: white;
     border: none;
     border-radius: 5px;
@@ -1159,11 +1159,11 @@ button {
 
 
 .new-arrivals-box h2 {
-    color: white;
+    color: #ddd;
     font-size: 2rem;
     margin-bottom: 15px;
     font-family: 'caleb';
-    -webkit-text-stroke-color: #b71c1c;
+    -webkit-text-stroke-color: #610013;
     -webkit-text-stroke-width: 1px;
 }
 
@@ -1176,7 +1176,7 @@ button {
 /* Reminder Section */
 .reminder-box {
     background-color: rgba(0, 0, 0, 0.8); /* Black transparent background */
-    border: 2px solid red; /* Red border */
+    border: 2px solid #610013; /* Red border */
     border-radius: 15px; /* Rounded edges */
     padding: 20px;
     margin: 40px auto 20px; /* Add space at the bottom */
