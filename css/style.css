@@ -821,6 +821,7 @@ button {
     padding: 20px;
 }
 
+                    
 /* Shop Title */
 .crabt {
     font-size: 5rem;
@@ -1343,6 +1344,7 @@ button {
     padding: 25px 25px 0px 25px;
     box-shadow: 3px 0 62px rgba(13, 3, 3, 0.20);
     margin-bottom: 70px;
+    height: 750px;
 }
 
 
