@@ -400,10 +400,10 @@ button {
 }
 
 .site-navbar ul li a:hover {
-    color: red;
+    color: rgb(186, 0, 0);
 }
 .site-navbar ul li a.active {
-    color:red;
+    color:rgb(186, 0, 0);
 }
 
 /* navbar regular css end */
