@@ -141,7 +141,7 @@
     .slider {
       position: relative;
       width: 100%;
-      height: 145vh;
+      height: fit-content;
       overflow: hidden;
     }
 
@@ -303,6 +303,12 @@
 }
 @media screen and (max-width: 1216px)
 {
+   .slider {
+      position: relative;
+      width: 100%;
+      height: 120pc;
+      overflow: hidden;
+   }
    .logo-link {
          display: block; /* make it behave like a block */
          margin-top: -33px; /* move the image up */
@@ -311,56 +317,67 @@
          top: 0; 
          left: 0; 
         }
+        .playlist-card {
+         background-color: #333;
+         border-radius: 8px;
+         overflow: hidden;
+         width: 380px;
+         text-align: center;
+         color: #fff;
+         height: fit-content;
+      }
 };
-     
+#a {
+   
+}     
+
   </style>
 </head>
-<body>
- </div>
- <!-- end loader -->
-
- <!-- header -->
- <header class="header-area">
-    <div class="left">
-       <div class="search-container">
-          <img src="images/search.png" alt="Search" class="search-icon">
-          <form action="search-results.html" method="GET">
-              <input type="text" class="search-bar" name="query" placeholder="Type to search..." required>
-          </form>
+<body class="main-layout">
+ <!-- loader  -->
+ 
+<!-- end loader -->
+<!-- top -->
+     <!-- header -->
+        <header class="header-area">
+         <div class="left">
+         <div class="search-container">
+           <img src="images/search.png" alt="Search" class="search-icon">
+          <input type="text" class="search-bar" id="searchInput" placeholder="Type to search..." oninput="highlightText()">
+         </div>
+         </div>
+      <div class="right">
+         <a href="login.html"><i class="fa fa-user" aria-hidden="true"></i></a>
       </div>
-    </div>
-    <div class="right">
-       <a href="login.html"><i class="fa fa-user" aria-hidden="true"></i></a>
-    </div>
-    <div class="container">
-       <div class="row d_flex">
-          <div class="col-sm-3 logo_sm">
-             <div class="logo">
-                <a href="index.html"></a>
-             </div>
-          </div>
-          <div class="col-lg-10 offset-lg-1 col-md-12 col-sm-9">
-             <div class="navbar-area">
-                <nav class="site-navbar">
-                   <ul>
-                      <li><a href="index.html">Home</a></li>
-                      <li><a class="active" href="about.html">About</a></li>
-                      <li><a href="members.html">Members</a></li>
-                      <li><a href="index.html"><img src="images/small.png" alt="Stage Fright" class="logo-link"></a></li> 
-                      <li><a href="merch.html">Merch</a></li>
-                      <li><a href="tours.html">Tours</a></li>
-                       
-                      <li><a href="contact.html">Contact </a></li>
-                   </ul>
-                   <button class="nav-toggler">
-                   <span></span>
-                   </button>
-                </nav>
-             </div>
-          </div>
-       </div>
-    </div>
- </header>
+      <div class="container">
+         <div class="row d_flex">
+            <div class="col-sm-3 logo_sm">
+               <div class="logo">
+                  <a href="index.html"></a>
+               </div>
+            </div>
+            <div class="col-lg-10 offset-lg-1 col-md-12 col-sm-9">
+               <div class="navbar-area">
+                  <nav class="site-navbar">
+                     <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a class="active" href="about.html">About</a></li>
+                        <li><a href="members.html">Members</a></li>
+                        <li><a href="index.html"><img src="images/small.png" alt="Stage Fright" class="logo-link"></a></li> 
+                        <li><a href="merch.html">Merch</a></li>
+                        <li><a href="tours.html">Tours</a></li>
+                         
+                        <li><a href="contact.html">Contact </a></li>
+                     </ul>
+                     <button class="nav-toggler">
+                     <span></span>
+                     </button>
+                  </nav>
+               </div>
+            </div>
+         </div>
+      </div>
+   </header>
 <div class="slider">
     <div class="slides">
         <div class="slide slide1">
@@ -410,8 +427,8 @@
    <section class="playlist-section" id="music"> <!--background image from https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwRCaZL27s7kRmnCnUOCQFqC_Muk4bSTIEy0wc7QvcPTYl30e_-->
     <div class="container">
        <br><br><br><br><br>
-       <h2 style="text-align: center; color: #fff; font-size:44px; font-family:georgia;">These are some of our newer music demos:</h2>
-       <p style="text-align: center; font-size: 19px; font-family:Garamond;">These are some of Axel's favorites, Awesome Pink Floydish and Caniferous Forest</p>
+       <h2 id="a" style="text-align: center; color: #fff; font-size:44px; font-family:georgia;">These are some of our newer music demos:</h2>
+       <p id="b" style="text-align: center; font-size: 19px; font-family:Garamond;">These are some of Axel's favorites, Awesome Pink Floydish and Caniferous Forest</p>
        <div class="playlist-container">
           <!-- Awesome Pink Floydish --> <!--Section for songs. Just 2 of these.--> <!--song covers also both from pinterest :) -->
           <div class="playlist-card">
@@ -527,6 +544,11 @@
    </footer>
    <!-- end footer -->
    <!-- Javascript files-->
+   <script src="js/jquery.min.js"></script>
+   <script src="js/bootstrap.bundle.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.js"></script>
+   <script src="js/owl.carousel.min.js"></script>
+   <script src="js/custom.js"></script>
     <button class="arrow arrow-left disabled" onclick="changeSlide(-1)">&#8592;</button>
     <button class="arrow arrow-right" onclick="changeSlide(1)">&#8594;</button>
   </div>
